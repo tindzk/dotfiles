@@ -1,0 +1,40 @@
+[user]
+	email = tim@metastack.pl
+	name = Tim Nieradzik
+[alias]
+	br = branch
+	ci = commit -v
+	co = checkout
+	df = diff
+	lg = log --stat
+	rb = svn rebase
+	rlog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"%
+	st = status -a
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[diff]
+	rename = copy
+	color = auto
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = true
+[mergetool "vimdiff"]
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[mirror]
+	summary = true
+[apply]
+	whitespace = strip
+[core]
+	filemode = true
+	autocrlf = input
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[branch "master"]
+	rebase = true
