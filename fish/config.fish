@@ -14,10 +14,14 @@ function fish_prompt
 end
 
 # Lua/Torch
-set PATH $PATH $HOME/.luarocks/bin
-set PATH $PATH $HOME/torch/install/bin
-set LD_LIBRARY_PATH $LD_LIBRARY_PATH $HOME/torch/install/lib
-set DYLD_LIBRARY_PATH $DYLD_LIBRARY_PATH $HOME/torch/install/lib
+set -x PATH $PATH $HOME/.luarocks/bin
+set -x PATH $PATH $HOME/torch/install/bin
+set -x LD_LIBRARY_PATH $HOME/torch/install/lib
+set -x DYLD_LIBRARY_PATH $HOME/torch/install/lib
+
+# cuDNN
+set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH:$HOME/cuda/lib64
+set -x DYLD_LIBRARY_PATH $DYLD_LIBRARY_PATH:$HOME/cuda/lib64
 
 # Java/Scala
 set JAVA_OPTS $JAVA_OPTS "
