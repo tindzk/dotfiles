@@ -33,7 +33,7 @@ set JAVA_OPTS $JAVA_OPTS "
 set SBT_OPTS $JAVA_OPTS
 
 # Vim
-fish_vi_mode
+fish_vi_key_bindings
 set EDITOR nvim
 
 # Aliases
