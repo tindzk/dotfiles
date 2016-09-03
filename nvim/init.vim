@@ -105,6 +105,9 @@
 	set ls=2
 
 	set statusline=%<%f\ %h%w%m%r%y%=L:%l/%L\ (%p%%)\ C:%c%V\ B:%o\ F:%{foldlevel('.')}
+
+	" Change cursor when exiting insert mode
+	:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " }}}
 
 " {{{ Search

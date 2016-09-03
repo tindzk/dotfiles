@@ -1,5 +1,6 @@
 #!/bin/sh
-ln -s ~/dotfiles/fish ~/.config/fish
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/mpv ~/.mpv
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
