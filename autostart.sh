@@ -4,3 +4,4 @@ nitrogen --restore &
 trojita &
 pcmanfm-qt -d &
 lxqt-connman-applet &
+lxqt-notificationd &

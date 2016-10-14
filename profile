@@ -21,6 +21,6 @@ export JAVA_OPTS="$JAVA_OPTS
 export SBT_OPTS=$JAVA_OPTS
 
 # See https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE
-export QT_QPA_PLATFORMTHEME=qt5ct
+# export QT_QPA_PLATFORMTHEME=qt5ct
 
 export XDG_CONFIG_HOME="$HOME/.config" 

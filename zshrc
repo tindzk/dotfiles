@@ -51,3 +51,5 @@ alias g=git
 alias p=mpv
 alias t=task
 alias ls="ls --color=auto"
+
+source ~/.profile
