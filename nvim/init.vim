@@ -1,29 +1,23 @@
+" {{{ Plugins
+	call plug#begin('~/.config/nvim/plugged')
+	Plug 'scrooloose/nerdtree'
+	Plug 'jistr/vim-nerdtree-tabs'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'derekwyatt/vim-scala'
+	Plug 'ensime/ensime-vim'
+	Plug 'luochen1990/rainbow'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'Shougo/echodoc'
+	call plug#end()
+
+	let g:rainbow_active                        = 1
+	let g:nerdtree_tabs_open_on_console_startup = 1
+" }}}
+
 " {{{ Colours and syntax highlighting
-	if has("gui_running")
-		" Font
-		" set guifont=Monaco\ 14
-		" set guifont=ProFont\ 8
-		" set guifont=Inconsolata\ Medium\ 18
-		" set guifont=Monospace\ 10
-		" set guifont=Monaco\ 7
-		" set guifont=Monaco\ 12
-		" set guifont=Droid\ Sans\ Mono\ 10
-		" set guifont=MonteCarlo\ 6
-
-		" Disable the blinking cursor
-		set guicursor=a:blinkon0
-
-		" Select the color scheme
-		" colorscheme asmanian_blood
-		" colorscheme bclear
-		" colorscheme vanzan_color
-		colorscheme bclear
-
-		" GUI options
-		" set guioptions=abcegvirLT
-	endif
-
-	if ! has("gui_running")
+	if !has("gui_running")
 		" Enable support for 256 colors
 		set t_Co=256
 
@@ -31,6 +25,7 @@
 		" colorscheme wombat
 		" colorscheme asmanian_blood
 		" colorscheme bclear
+		" colorscheme vanzan_color
 
 		" Disable mouse
 		set mouse=
@@ -48,6 +43,13 @@
 
 	" Get rid of highlighted text after searching by pressing <F1>
 	map <F1> :noh<CR>
+
+	" Highlight current line in insert mode.
+	autocmd InsertEnter * se cul
+	autocmd InsertLeave * se nocul
+
+	" Highlight variable under cursor
+	autocmd CursorMoved * silent! exe printf('match HighlightMatches /\<%s\>/', expand('<cword>'))
 " }}}
 
 " {{{ General
@@ -65,10 +67,6 @@
 	" Toggle paste-mode with <F7>
 	set pastetoggle=<F7>
 
-	" Highlight current line in insert mode.
-	autocmd InsertEnter * se cul
-	autocmd InsertLeave * se nocul
-
 	" Use UTF-8 everywhere
 	set enc=utf-8
 	set fenc=utf-8
@@ -79,9 +77,6 @@
 
 	" Do not create backup files
 	set nobackup
-
-	" Turn off message "Thanks for flying vim"
-	" set notitle
 
 	" Show current mode
 	set showmode
@@ -97,9 +92,6 @@
 
 	" Switch between header and source file
 	map ,a <Esc>:A<CR>
-
-	" Highlight variable under cursor
-	autocmd CursorMoved * silent! exe printf('match HighlightMatches /\<%s\>/', expand('<cword>'))
 
 	" Show filename in status bar
 	set ls=2
@@ -118,35 +110,32 @@
 
 	" Highlight search results
 	set hlsearch
-
-	" Set working directory to current file
-	" set autochdir
 " }}}
 
 " {{{ Browser
-function! Browser()
-	let line0 = getline(".")
-	let line = matchstr(line0, "http[^ ]*")
+	function! Browser()
+		let line0 = getline(".")
+		let line = matchstr(line0, "http[^ ]*")
 
-	:if line == ""
-		let line = matchstr(line0, "ftp[^ ]*")
-	:endif
+		:if line == ""
+			let line = matchstr(line0, "ftp[^ ]*")
+		:endif
 
-	:if line == ""
-		let line = matchstr(line0, "file[^ ]*")
-	:endif
+		:if line == ""
+			let line = matchstr(line0, "file[^ ]*")
+		:endif
 
-	let line = escape(line, "#?&;|%!)")
+		let line = escape(line, "#?&;|%!)")
 
-	exec ':silent !chromium ' . line . ' &'
-endfunction
+		exec ':silent !chromium ' . line . ' &'
+	endfunction
 
-map ,w :call Browser ()<CR>
+	map ,w :call Browser ()<CR>
 " }}}
 
 " {{{ Spell checking
 	" Specify the dictionaries for use in spell checking
-	set spelllang=de,en,pl,fr
+	set spelllang=de,en,pl,fr,uk,ru
 
 	" Keep spell checking disabled by default
 	set nospell
@@ -214,4 +203,25 @@ map ,w :call Browser ()<CR>
 
 	set linebreak
 	set showbreak=¶
+" }}}
+
+" {{{ Scala
+	" See https://github.com/ensime/ensime-vim/issues/282
+	let g:deoplete#enable_at_startup = 1
+	let g:deoplete#omni#input_patterns={}
+	let g:deoplete#omni#input_patterns.scala = [
+	  \ '[^. *\t]\.\w*',
+	  \ '[:\[,] ?\w*',
+	  \ '^import .*'
+	  \]
+
+	autocmd FileType scala,java
+		\ nnoremap <buffer> <silent> <LocalLeader>t :EnType<CR>             |
+		\ nnoremap <buffer> <silent> <LocalLeader>T :EnTypeCheck<CR>        |
+		\ nnoremap <buffer> <silent> gb             :e#<CR>                 |
+		\ nnoremap <buffer> <silent> gd             :EnDeclaration<CR>      |
+		\ nnoremap <buffer> <silent> gD             :EnDeclarationSplit<CR> |
+		\ nnoremap <buffer> <silent> <LocalLeader>i :EnSuggestImport<CR>    |
+		\ nnoremap <buffer> <silent> <LocalLeader>r :EnRename<CR>           |
+		\ inoremap                   <S-Tab>        <C-x><C-o>
 " }}}
