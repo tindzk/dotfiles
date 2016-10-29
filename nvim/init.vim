@@ -178,11 +178,13 @@
 " }}}
 
 " {{{ Indention
+	set tabstop=2
+	set shiftwidth=2
+	set softtabstop=2
+	set expandtab
+
 	set autoindent
 	set smartindent
-
-	set tabstop=4
-	set shiftwidth=4
 
 	" Enable word wrapping after 80 characters
 	set textwidth=80
