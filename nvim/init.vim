@@ -67,6 +67,9 @@
 	" Toggle paste-mode with <F7>
 	set pastetoggle=<F7>
 
+	" Incremental substitutions
+	set inccommand=split
+
 	" Use UTF-8 everywhere
 	set enc=utf-8
 	set fenc=utf-8
