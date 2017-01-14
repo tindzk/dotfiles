@@ -1,16 +1,6 @@
 #!/bin/sh
 export EDITOR=nvim
 
-# Lua/Torch
-export PATH=$PATH:$HOME/.luarocks/bin
-export PATH=$PATH:$HOME/torch/install/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/torch/install/lib
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$HOME/torch/install/lib
-
-# cuDNN
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/cuda/lib64
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$HOME/cuda/lib64
-
 # Java/Scala
 export JAVA_OPTS="$JAVA_OPTS 
   -Dscala.color
