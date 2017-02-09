@@ -1,0 +1,150 @@
+#
+# ~/.screenrc
+#
+
+# Digraphs: Press '~ + Ctrl-v', then enter ~n and you will get ñ
+# Monitor window for silence (and disable): ~ + _
+# Monitor window for activity (and disable): ~ + M
+# TODO ` + tab
+
+# Use backtick for prefix key instead of Ctrl-A
+escape					``
+
+# Switch between windows with j and k
+bind					j			prev
+bind					k			next
+
+bind					p			prev
+bind					n			next
+
+bind					j			focus down
+bind					k			focus up
+
+bind					}			history
+
+# Resize the current region. The space will be removed from or added to
+# the region below or if there's not enough space from the region above.
+bind					=			resize =
+bind					+			resize +5
+bind					-			resize -5
+bind					_			resize max
+
+# Allow bold colors
+attrcolor				b ".I"
+
+# Enable 256-color support for xterm's and Rxvt's
+# AB = background; AF = foreground
+term					"screen-256color"
+termcapinfo				*xterm*|*rxvt*|xs|(dt|k|E)term 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Erase background with current background color
+defbce					on
+
+# Detach screen on disconnect (= hangup); send all running programs to the background
+# The session can be resumed using screen -r
+autodetach				on
+
+# Enable/disable multiuser mode. Standard screen operation is singleuser.
+# In multiuser mode the commands acladd, aclchg, aclgrp and acldel can be used
+# to enable (and disable) other user accessing this screen session.
+# Requires suid-root.
+multiuser				off
+
+# This affects the copying of text regions with the `C-a [' command
+crlf					off
+
+# Same  as the login command except that the default setting for new
+# windows is changed.
+deflogin				off
+
+# If set to "on", screen will append to the "hardcopy.n" files
+# created by the command "C-a h", otherwise these files are
+# overwritten each time. Default is `off'.
+hardcopy_append			on
+
+# Do not show the intro with the copyright notice during startup
+startup_message			off
+
+# Number of lines being kept in buffer
+defscrollback			10000
+
+# Define the time all windows are monitored for before displaying a message
+silencewait				15
+
+# Change the way screen does highlighting for text marking and
+# printing messages.
+sorendition				kG
+sorendition				02 40
+sorendition				10 99
+
+# When any activity occurs in a background window that is being
+# monitored, screen displays a notification in the message line.
+# There are also some specials like embedded branches (with %?),
+# color codes (with %{xy}) and padding (with %=, %<, %>).
+# you can find their description in the manual in section
+# "STRING ESCAPES":
+activity				"Activity in window %n%f (%t)"
+
+# When a bell character is sent to a background window screen
+# displays a notification in the message line.
+bell					"Bell in window %n%f (%t)"
+
+# The message specified here is displayed whenever a `Power detach'
+# was performed
+pow_detach_msg			"Screen session of \$LOGNAME \$:cr:\$:nl:ended"
+
+# Use regular audible bell
+vbell					off
+
+# Sets the visual bell message. This message is printed to the status
+# line if the window receives a bell character (^G).
+vbell_msg				"This window received a visual bell"
+
+# After two minutes of inactivity start the screensaver `cmatrix'
+# blankerprg			cmatrix -s -f -o -u 10 -C blue
+# idle					120
+#
+# cmatrix -a -b -u 2
+#
+# idle 120 eval "screen rain -d 50" "idle 0"
+
+# blankerprg				rain -d 50
+# idle					900	blanker
+
+# Set the caption on the bottom line
+caption					always		"%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %1`"
+
+# Add scrolling support
+termcapinfo				*xterm*|*rxvt*|xs|(dt|k|E)term ti@:te@
+
+# Do not block
+nonblock				on
+
+# Enable UTF-8
+defutf8					on
+encoding				UTF-8
+
+# Disable Ctrl-S/Ctrl-Q "flow control"
+defflow					off
+
+# Set the default shell to `zsh'
+#shell					zsh
+
+# Connect windows to the display so programs like MPlayer can find it when
+# we are inside a screen in a terminal application in a graphical environment
+# setenv					DISPLAY ':0'
+# DISPLAY=localhost:10.0 for X forwarding
+
+# Restore window contents after using e.g. vi
+altscreen				on
+
+# Add a few key bindings for starting applications in screen windows
+# bind					M			screen -t mutt mutt
+# bind					L			screen cmatrix -f -o -u 10
+
+# Open up the following applications when screen starts
+# screen -t zsh			0	zsh
+# screen -t mail		1	mutt
+# screen -t music		5	ncmpcpp
+# screen -t mixer		6	alsamixer
+# select				0

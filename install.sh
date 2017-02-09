@@ -6,3 +6,4 @@ ln -s ~/dotfiles/mpv ~/.mpv
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/konsole ~/.local/share/konsole
 ln -s ~/dotfiles/inputrc ~/.inputrc
+ln -s ~/dotfiles/screenrc ~/.screenrc
