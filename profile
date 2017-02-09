@@ -1,5 +1,6 @@
 #!/bin/sh
 export EDITOR=nvim
+export BROWSER=firefox
 
 # Java/Scala
 export JAVA_OPTS="$JAVA_OPTS 
