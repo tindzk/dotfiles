@@ -82,7 +82,9 @@
 	set nobackup
 
 	" Show current mode
-	set showmode
+	" set showmode
+	" TODO Disabled for echodoc
+	set noshowmode
 
 	" HTML code may contain CSS
 	let html_use_css = 1
@@ -102,7 +104,7 @@
 	set statusline=%<%f\ %h%w%m%r%y%=L:%l/%L\ (%p%%)\ C:%c%V\ B:%o\ F:%{foldlevel('.')}
 
 	" Change cursor when exiting insert mode
-	:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " }}}
 
 " {{{ Search
@@ -153,6 +155,7 @@
 
 " {{{ Git
 	autocmd FileType gitcommit set textwidth=68
+    \ let g:nerdtree_tabs_open_on_console_startup = 0
 " }}}
 
 " {{{ Tabs
@@ -212,7 +215,7 @@
 
 " {{{ Scala
 	" See https://github.com/ensime/ensime-vim/issues/282
-	let g:deoplete#enable_at_startup = 1
+	" let g:deoplete#enable_at_startup = 1
 	let g:deoplete#omni#input_patterns={}
 	let g:deoplete#omni#input_patterns.scala = [
 	  \ '[^. *\t]\.\w*',
