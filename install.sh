@@ -10,3 +10,7 @@ ln -s ~/dotfiles/screenrc ~/.screenrc
 
 mkdir -p ~/.config/zathura/
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
+
+mkdir -p ~/.config/polybar/
+ln -s ~/dotfiles/polybar/config ~/.config/polybar/config
+ln -s ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
