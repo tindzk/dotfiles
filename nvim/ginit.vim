@@ -1,3 +1,2 @@
-" GuiFont ProFont:h8
-GuiFont Terminus:h12
+GuiFont ProFont:h8
 colorscheme lucius

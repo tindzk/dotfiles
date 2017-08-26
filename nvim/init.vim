@@ -1,19 +1,17 @@
 " {{{ Plugins
 	call plug#begin('~/.config/nvim/plugged')
-	Plug 'scrooloose/nerdtree'
-	Plug 'jistr/vim-nerdtree-tabs'
+	Plug 'equalsraf/neovim-gui-shim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'derekwyatt/vim-scala'
-	Plug 'ensime/ensime-vim'
 	Plug 'luochen1990/rainbow'
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	Plug 'Shougo/echodoc'
+	Plug 'Shougo/unite.vim'
+	Plug 'Shougo/vimfiler.vim'
+	Plug 'junegunn/vim-easy-align'
 	call plug#end()
 
-	let g:rainbow_active                        = 1
-	let g:nerdtree_tabs_open_on_console_startup = 1
+	let g:rainbow_active               = 1
+	let g:vimfiler_as_default_explorer = 1
 " }}}
 
 " {{{ Colours and syntax highlighting
@@ -35,7 +33,7 @@
 	syntax on
 
 	" Show trailing whitepace and spaces before a tab
-	highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+	highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 	match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 	" Show red column indicating line length
@@ -44,21 +42,14 @@
 	" Get rid of highlighted text after searching by pressing <F1>
 	map <F1> :noh<CR>
 
-	" Highlight current line in insert mode.
+	" Underline current line in insert mode.
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
-
-	" Highlight variable under cursor
-	autocmd CursorMoved * silent! exe printf('match HighlightMatches /\<%s\>/', expand('<cword>'))
 " }}}
 
 " {{{ General
 	" Show matching bracket
 	set showmatch
-
-	" highlight Special guifg=SlateBlue guibg=GhostWhite
-	" nnoremap <F12><Tab>      :syntax match SpecialKey "\t"<CR>
-	" inoremap <F12><Tab> <C-O>:syntax match SpecialKey "\t"<CR>
 
 	" Uses color `SpecialKey' to highlight tabs, trailing spaces, etc.
 	set lcs=tab:»-,trail:·,eol:¶
@@ -86,22 +77,8 @@
 	" TODO Disabled for echodoc
 	set noshowmode
 
-	" HTML code may contain CSS
-	let html_use_css = 1
-
 	" Show the line number in the ruler
 	set ruler
-
-	" Lines
-	map ,l maH:let x="Shown range: Lines ".line(".")<CR>L:let x=x." - ".line(".")<CR>:echo x<CR>
-
-	" Switch between header and source file
-	map ,a <Esc>:A<CR>
-
-	" Show filename in status bar
-	set ls=2
-
-	set statusline=%<%f\ %h%w%m%r%y%=L:%l/%L\ (%p%%)\ C:%c%V\ B:%o\ F:%{foldlevel('.')}
 
 	" Change cursor when exiting insert mode
 	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
@@ -122,20 +99,21 @@
 		let line0 = getline(".")
 		let line = matchstr(line0, "http[^ ]*")
 
-		:if line == ""
+		if line == ""
 			let line = matchstr(line0, "ftp[^ ]*")
-		:endif
+		endif
 
-		:if line == ""
+		if line == ""
 			let line = matchstr(line0, "file[^ ]*")
-		:endif
+		endif
 
 		let line = escape(line, "#?&;|%!)")
 
 		exec ':silent !chromium ' . line . ' &'
 	endfunction
 
-	map ,w :call Browser ()<CR>
+	" Open links in browser by pressing <Ctrl-o>
+	map <c-o> :call Browser ()<CR>
 " }}}
 
 " {{{ Spell checking
@@ -145,46 +123,34 @@
 	" Keep spell checking disabled by default
 	set nospell
 
-	" Toggle spell checking functionality with ,s
-	inoremap ,s <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-	nnoremap ,s :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-
-	" Syntax highlighting
-	" map ,s :if has("syntax_items")<CR>syntax off<CR>else<CR>syntax on<CR>endif<CR><CR>
+	" Toggle spell checking with <Ctrl-s>
+	inoremap <c-s> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	nnoremap <c-s>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
 " }}}
 
 " {{{ Git
 	autocmd FileType gitcommit set textwidth=68
-    \ let g:nerdtree_tabs_open_on_console_startup = 0
 " }}}
 
 " {{{ Tabs
-	" Switch between the last two visited tabs
+	" Switch between the last two visited tabs with <Ctrl-Tab>
+	let g:last_tab = 0
 	autocmd TabLeave * let g:last_tab = tabpagenr()
-	imap ,f :execute 'normal '.g:last_tab.'gt'<CR>
-	nmap ,f :execute 'normal '.g:last_tab.'gt'<CR>
-
-	" Next tab
-	map ,n :tabnext<CR>
-	imap ,n <ESC>:tabnext<CR>i
-	vmap ,n <ESC>:tabnext<CR>v
-
-	" Previous tab
-	map ,p :tabprev<CR>
-	imap ,p <ESC>:tabprev<CR>i
-	vmap ,p <ESC>:tabprev<CR>v
+	" Terminal
+	nmap <c-i>   :execute 'normal '.g:last_tab.'gt'<CR>
+	" GUI
+	nmap <c-tab> :execute 'normal '.g:last_tab.'gt'<CR>
 
 	" New tab
-	map ,c :tabnew
-	imap ,c <ESC>":tabnew
-	vmap ,c <ESC>":tabnew
+	map <c-n> :tabnew<CR>
 " }}}
 
-" {{{ Indention
+" {{{ Indention and line breaks
 	set tabstop=2
 	set shiftwidth=2
 	set softtabstop=2
-	set expandtab
+
+	autocmd FileType scala set expandtab
 
 	set autoindent
 	set smartindent
@@ -211,25 +177,4 @@
 
 	set linebreak
 	set showbreak=¶
-" }}}
-
-" {{{ Scala
-	" See https://github.com/ensime/ensime-vim/issues/282
-	" let g:deoplete#enable_at_startup = 1
-	let g:deoplete#omni#input_patterns={}
-	let g:deoplete#omni#input_patterns.scala = [
-	  \ '[^. *\t]\.\w*',
-	  \ '[:\[,] ?\w*',
-	  \ '^import .*'
-	  \]
-
-	autocmd FileType scala,java
-		\ nnoremap <buffer> <silent> <LocalLeader>t :EnType<CR>             |
-		\ nnoremap <buffer> <silent> <LocalLeader>T :EnTypeCheck<CR>        |
-		\ nnoremap <buffer> <silent> gb             :e#<CR>                 |
-		\ nnoremap <buffer> <silent> gd             :EnDeclaration<CR>      |
-		\ nnoremap <buffer> <silent> gD             :EnDeclarationSplit<CR> |
-		\ nnoremap <buffer> <silent> <LocalLeader>i :EnSuggestImport<CR>    |
-		\ nnoremap <buffer> <silent> <LocalLeader>r :EnRename<CR>           |
-		\ inoremap                   <S-Tab>        <C-x><C-o>
 " }}}
