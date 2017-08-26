@@ -9,9 +9,11 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'tpope/vim-eunuch'
 	Plug 'cocopon/vaffle.vim'
+	Plug 'junegunn/goyo.vim'
+	Plug 'junegunn/limelight.vim'
+	Plug 'itchyny/vim-cursorword'
+	Plug 'mhinz/vim-startify'
 	call plug#end()
-
-	let g:rainbow_active = 1
 " }}}
 
 " {{{ Colours and syntax highlighting
@@ -43,6 +45,22 @@
 	autocmd InsertLeave * se nocul
 " }}}
 
+" {{{ Distraction-free writing
+	" Enter distraction-free mode with :Goyo
+
+	" Only highlight current paragraph with Limelight
+	autocmd! User GoyoEnter Limelight
+	autocmd! User GoyoLeave Limelight!
+
+	" Color name (:help cterm-colors) or ANSI code
+	let g:limelight_conceal_ctermfg = 'gray'
+	let g:limelight_conceal_ctermfg = 240
+
+	" Color name (:help gui-colors) or RGB color
+	let g:limelight_conceal_guifg = 'DarkGray'
+	let g:limelight_conceal_guifg = '#777777'
+" }}}
+
 " {{{ Whitespace characters
 	" Show trailing whitepace characters (e.g. spaces, tabs)
 	" Can be removed with :StripWhitespace
@@ -52,6 +70,32 @@
 	" Highlight tabs and EOL when pressing F12
 	set lcs=tab:»-,trail:·,eol:¶
 	map <F12> :set list!<CR>
+" }}}
+
+" {{{ Startify
+	let g:startify_list_order = [
+		\ ['Bookmarks:'],
+		\ 'bookmarks',
+		\ ['Open recent files:'],
+		\ 'files',
+		\ ['Sessions:'],
+		\ 'sessions'
+		\ ]
+
+	let g:startify_bookmarks = [
+			\ { 'n': '~/Notes' },
+			\ { 'w': '~/Notes/Work.txt' },
+			\ { 'd': '~/dev' },
+			\ { 'l': '~/dotfiles' }
+			\ ]
+
+	let g:startify_fortune_use_unicode = 1
+	let g:startify_change_to_vcs_root  = 1
+	let g:startify_session_persistence = 1
+" }}}
+
+" {{{ Rainbow
+	let g:rainbow_active = 1
 " }}}
 
 " {{{ General
@@ -140,7 +184,7 @@
 	nmap <c-tab> :execute 'normal '.g:last_tab.'gt'<CR>
 
 	" New tab
-	map <c-n> :tabnew<CR>
+	map <c-n> :tabnew %:p:h<CR>
 " }}}
 
 " {{{ Indention and line breaks
