@@ -9,6 +9,7 @@
 	Plug 'Shougo/vimfiler.vim'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'ntpeters/vim-better-whitespace'
+	Plug 'tpope/vim-eunuch'
 	call plug#end()
 
 	let g:rainbow_active = 1
