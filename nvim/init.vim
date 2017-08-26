@@ -5,11 +5,10 @@
 	Plug 'vim-airline/vim-airline'
 	Plug 'derekwyatt/vim-scala'
 	Plug 'luochen1990/rainbow'
-	Plug 'Shougo/unite.vim'
-	Plug 'Shougo/vimfiler.vim'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'tpope/vim-eunuch'
+	Plug 'cocopon/vaffle.vim'
 	call plug#end()
 
 	let g:rainbow_active = 1
@@ -53,17 +52,6 @@
 	" Highlight tabs and EOL when pressing F12
 	set lcs=tab:»-,trail:·,eol:¶
 	map <F12> :set list!<CR>
-" }}}
-
-" {{{ Vimfiler
-	let g:vimfiler_as_default_explorer = 1
-
-	" Open Vimfiler	explorer when no arguments were specified
-	autocmd VimEnter * if !argc() | VimFilerExplorer | endif
-
-	" Close NeoVim if the only window left open is a vimfiler buffer
-	autocmd BufEnter * if (!has('vim_starting') && winnr('$') == 1
-		\ && &filetype ==# 'vimfiler') | quit | endif
 " }}}
 
 " {{{ General
