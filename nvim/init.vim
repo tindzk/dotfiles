@@ -8,6 +8,7 @@
 	Plug 'Shougo/unite.vim'
 	Plug 'Shougo/vimfiler.vim'
 	Plug 'junegunn/vim-easy-align'
+	Plug 'ntpeters/vim-better-whitespace'
 	call plug#end()
 
 	let g:rainbow_active               = 1
@@ -32,10 +33,6 @@
 	" Turn syntax highlighting on
 	syntax on
 
-	" Show trailing whitepace and spaces before a tab
-	highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-	match ExtraWhitespace /\s\+$\| \+\ze\t/
-
 	" Show red column indicating line length
 	hi ColorColumn ctermbg=5
 
@@ -47,13 +44,21 @@
 	autocmd InsertLeave * se nocul
 " }}}
 
+" {{{ Whitespace characters
+	" Show trailing whitepace characters (e.g. spaces, tabs)
+	" Can be removed with :StripWhitespace
+	" Feature provided by vim-better-whitespace
+	highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+
+	" Highlight tabs and EOL when pressing F12
+	set lcs=tab:»-,trail:·,eol:¶
+	map <F12> :set list!<CR>
+
+" }}}
+
 " {{{ General
 	" Show matching bracket
 	set showmatch
-
-	" Uses color `SpecialKey' to highlight tabs, trailing spaces, etc.
-	set lcs=tab:»-,trail:·,eol:¶
-	map <F12> :set list!<CR>
 
 	" Toggle paste-mode with <F7>
 	set pastetoggle=<F7>
