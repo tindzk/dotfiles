@@ -1,7 +1,7 @@
 #!/bin/sh
-~/dotfiles/keyboard.sh &
-nitrogen --restore &
-trojita &
-pcmanfm-qt -d &
-lxqt-connman-applet &
-lxqt-notificationd &
+$HOME/keyboard.sh
+$HOME/.config/polybar/launch.sh
+nitrogen --set-auto --random $HOME/Wallpapers/
+albert &
+redshift &
+# lxqt-connman-applet &
