@@ -10,6 +10,7 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/konsole ~/.local/share/konsole
 ln -s ~/dotfiles/inputrc ~/.inputrc
 ln -s ~/dotfiles/screenrc ~/.screenrc
+ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 
 mkdir -p ~/.config/zathura/
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc

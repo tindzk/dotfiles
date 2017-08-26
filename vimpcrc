@@ -1,0 +1,2 @@
+map { :seek- 30<C-M>
+map } :seek+ 30<C-M>
