@@ -1,0 +1,20 @@
+set guioptions  			svh
+set adjust-open 			width
+set statusbar-basename      true
+set window-title-home-tilde true
+set selection-clipboard     clipboard
+set smooth-scroll 			true
+
+set recolor                     "true"
+set recolor-keephue             "true"
+set recolor-lightcolor          "#e0e0e0"
+set recolor-darkcolor           "#303030"
+
+# set recolor-darkcolor  "#93A1A1"
+# set recolor-lightcolor "#002B36"
+
+map c recolor
+map . navigate next
+map , navigate previous
+map C-u navigate half-up
+map C-d navigate half-down
