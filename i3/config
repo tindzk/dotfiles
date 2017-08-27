@@ -66,7 +66,8 @@ mode "$mode_gaps_outer" {
 
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
