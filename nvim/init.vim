@@ -49,7 +49,10 @@
 	function! OnGoyoEnter()
 		if exists('g:GuiFont')
 			let g:goyo_font = g:GuiFont
+			call GuiWindowFullScreen(1)
 			call GuiFont('Ubuntu Mono:h14')
+			call GuiLinespace(8)
+			call Goyo('80x85%')  " Force recalculating as we changed the dimensions
 		endif
 		Limelight
 	endfunction
@@ -57,6 +60,8 @@
 	function! OnGoyoLeave()
 		if exists('g:GuiFont')
 			call GuiFont(g:goyo_font)
+			call GuiLinespace(0)
+			call GuiWindowFullScreen(0)
 		endif
 		Limelight!
 	endfunction
