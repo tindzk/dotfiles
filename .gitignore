@@ -2,9 +2,4 @@
 *.spl
 *.sug
 
-# Neovim
-.netrwhist
-
-# Fish
-fish_history
-fishd.*
+nvim/plugged/

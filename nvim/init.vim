@@ -16,6 +16,7 @@
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'ctrlpvim/ctrlp.vim'
 	call plug#end()
 " }}}
 
