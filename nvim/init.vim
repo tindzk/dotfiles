@@ -254,8 +254,34 @@
 	" See https://vi.stackexchange.com/questions/2768/how-do-you-open-a-new-buffer-in-the-current-window
 	set hidden
 
-	nnoremap <Tab>   :bnext!<CR>
-	nnoremap <S-Tab> :bprev!<CR>
-	nnoremap <C-W>   :bdelete<CR>
-	nnoremap <C-N>   :ene<CR>
+	" Default key combinations listed here:
+	" http://codeincomplete.com/posts/split-windows-and-tabs-in-vim/
+
+	"nnoremap <S-Tab> :bprev!<CR>
+
+	" Switch panes with <Tab>
+	map <Tab> <C-W>w
+
+	" Split window vertically with |
+	map <Bar> <C-W>v<C-W><Right>
+
+	" Split window horizontally with -
+	map - <C-W>s<C-W><Down>
+
+	" Cycle buffers with <Shift> + <Tab>
+	nnoremap <S-Tab> :bnext!<CR>
+
+	" New buffer with <Ctrl> + n
+	nnoremap <C-N> :ene<CR>
+
+	" New buffer with <Ctrl> + q
+	nnoremap <C-Q> :bdelete<CR>
+" }}}
+
+" {{{ Airline
+	" Enable the list of buffers
+	let g:airline#extensions#tabline#enabled = 1
+
+	" Show just the filename
+	let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
