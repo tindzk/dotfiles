@@ -13,6 +13,9 @@
 	Plug 'junegunn/limelight.vim'
 	Plug 'itchyny/vim-cursorword'
 	Plug 'mhinz/vim-startify'
+	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'vim-pandoc/vim-pandoc-syntax'
 	call plug#end()
 " }}}
 
@@ -236,4 +239,9 @@
 
 	set linebreak
 	set showbreak=¶
+" }}}
+
+" {{{ Markdown
+	" Enable table formatting with :TableModeEnable
+	let g:pandoc#modules#disabled = ["folding"]
 " }}}
