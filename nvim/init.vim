@@ -17,19 +17,13 @@
 " }}}
 
 " {{{ Colours and syntax highlighting
-	if !has("gui_running")
-		" Enable support for 256 colors
-		set t_Co=256
-
-		" Select the color scheme
-		" colorscheme wombat
-		" colorscheme asmanian_blood
-		" colorscheme bclear
-		" colorscheme vanzan_color
-
-		" Disable mouse
-		set mouse=
-	endif
+	" Select colour scheme
+	" colorscheme asmanian_blood
+	" colorscheme bclear
+	" colorscheme lucius
+	" colorscheme vanzan_color
+	" colorscheme molokai
+	colorscheme wombat
 
 	" Turn syntax highlighting on
 	syntax on
@@ -49,16 +43,26 @@
 	" Enter distraction-free mode with :Goyo
 
 	" Only highlight current paragraph with Limelight
-	autocmd! User GoyoEnter Limelight
-	autocmd! User GoyoLeave Limelight!
+	" Also change font and restore default when leaving
+	let g:goyo_font = ''
 
-	" Color name (:help cterm-colors) or ANSI code
-	let g:limelight_conceal_ctermfg = 'gray'
-	let g:limelight_conceal_ctermfg = 240
+	function! OnGoyoEnter()
+		if exists('g:GuiFont')
+			let g:goyo_font = g:GuiFont
+			call GuiFont('Ubuntu Mono:h14')
+		endif
+		Limelight
+	endfunction
 
-	" Color name (:help gui-colors) or RGB color
-	let g:limelight_conceal_guifg = 'DarkGray'
-	let g:limelight_conceal_guifg = '#777777'
+	function! OnGoyoLeave()
+		if exists('g:GuiFont')
+			call GuiFont(g:goyo_font)
+		endif
+		Limelight!
+	endfunction
+
+	autocmd! User GoyoEnter call OnGoyoEnter()
+	autocmd! User GoyoLeave call OnGoyoLeave()
 " }}}
 
 " {{{ Whitespace characters
@@ -121,9 +125,17 @@
 
 	" Show the line number in the ruler
 	set ruler
+" }}}
 
-	" Change cursor when exiting insert mode
-	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" {{{ TUI
+	" Enable support for colours in TUI
+	set termguicolors
+
+	" Use block cursor in normal mode
+	set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+
+	" Disable mouse in TUI; will be overridden in ginit.vim
+	set mouse=
 " }}}
 
 " {{{ Search

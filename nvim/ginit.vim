@@ -1,2 +1,2 @@
 GuiFont ProFont:h8
-colorscheme lucius
+set mouse=a
