@@ -16,7 +16,8 @@
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
-	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+	Plug '907th/vim-auto-save'
 	call plug#end()
 " }}}
 
@@ -41,6 +42,10 @@
 	" Underline current line in insert mode.
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
+" }}}
+
+" {{{ Auto-save
+	let g:auto_save = 1
 " }}}
 
 " {{{ Distraction-free writing
@@ -134,6 +139,10 @@
 
 	" Show the line number in the ruler
 	set ruler
+
+	" Better auto-completion
+	set wildmenu
+	set wildmode=longest:list,full
 " }}}
 
 " {{{ TUI
@@ -195,19 +204,6 @@
 	autocmd FileType gitcommit set textwidth=68
 " }}}
 
-" {{{ Tabs
-	" Switch between the last two visited tabs with <Ctrl-Tab>
-	let g:last_tab = 0
-	autocmd TabLeave * let g:last_tab = tabpagenr()
-	" Terminal
-	nmap <c-i>   :execute 'normal '.g:last_tab.'gt'<CR>
-	" GUI
-	nmap <c-tab> :execute 'normal '.g:last_tab.'gt'<CR>
-
-	" New tab
-	map <c-n> :tabnew %:p:h<CR>
-" }}}
-
 " {{{ Indention and line breaks
 	set tabstop=2
 	set shiftwidth=2
@@ -245,4 +241,21 @@
 " {{{ Markdown
 	" Enable table formatting with :TableModeEnable
 	let g:pandoc#modules#disabled = ["folding"]
+" }}}
+
+" {{{ LeaderF
+	let g:Lf_ShortcutF  = '<C-F>'
+	let g:Lf_ShortcutB  = '<C-B>'
+	let g:Lf_CommandMap = {'<C-C>': ['<Esc>', '<C-C>']}
+	map <c-m> :LeaderfMru<CR>
+" }}}
+
+" {{{ Buffers
+	" See https://vi.stackexchange.com/questions/2768/how-do-you-open-a-new-buffer-in-the-current-window
+	set hidden
+
+	nnoremap <Tab>   :bnext!<CR>
+	nnoremap <S-Tab> :bprev!<CR>
+	nnoremap <C-W>   :bdelete<CR>
+	nnoremap <C-N>   :ene<CR>
 " }}}
