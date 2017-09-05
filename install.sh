@@ -21,3 +21,5 @@ ln -s ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 
 mkdir -p ~/.config/i3/
 ln -s ~/dotfiles/i3/config ~/.config/i3/config
+
+ln -s ~/dotfiles/xsession ~/.xsession
