@@ -202,6 +202,7 @@
 
 " {{{ Git
 	autocmd FileType gitcommit set textwidth=68
+	autocmd FileType gitcommit set spell
 " }}}
 
 " {{{ Indention and line breaks
