@@ -11,13 +11,11 @@
 	Plug 'cocopon/vaffle.vim'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
-	Plug 'itchyny/vim-cursorword'
 	Plug 'mhinz/vim-startify'
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-	Plug '907th/vim-auto-save'
 	call plug#end()
 " }}}
 
@@ -42,10 +40,6 @@
 	" Underline current line in insert mode.
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
-" }}}
-
-" {{{ Auto-save
-	let g:auto_save = 1
 " }}}
 
 " {{{ Distraction-free writing
@@ -181,11 +175,19 @@
 
 		let line = escape(line, "#?&;|%!)")
 
-		exec ':silent !chromium ' . line . ' &'
+		exec ':silent !firefox ' . line . ' &'
 	endfunction
 
-	" Open links in browser by pressing <Ctrl-o>
+	function! BrowserSearch()
+		let line = getline(".")
+		exec ':silent !firefox "https://www.google.de/search?q=' . line . '" &'
+	endfunction
+
+	" Open links in browser by pressing <Ctrl> + o
 	map <c-o> :call Browser ()<CR>
+
+	" Search line in browser by pressing <Ctrl> + g
+	map <c-g> :call BrowserSearch ()<CR>
 " }}}
 
 " {{{ Spell checking
