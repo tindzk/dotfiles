@@ -1,4 +1,7 @@
-GuiFont ProFont:h8
+" GuiFont ProFont:h8
+" GuiFont Ubuntu Mono:h10
+GuiFont DejaVu Sans Mono:h6
+
 set mouse=a
 
 " Paste with middle mouse click
