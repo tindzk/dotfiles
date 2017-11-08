@@ -6,7 +6,9 @@ enable-ipc = true
 bottom = true
 ;dock = true
 width = 100%
-height = 27
+height = 50
+
+dpi = 192
 
 background = #1c1c1c
 foreground = #eefafafa
@@ -37,37 +39,38 @@ font-4 = Unifont:size=5;0
 font-5 = Termsynu:size=7;0
 
 modules-left = i3
-modules-center = xwindow
-modules-right = filesystem cpu memory wired-network mpd clock
+# modules-center = xwindow
+# modules-right = disk cpu memory wired-network mpd clock
+modules-right = disk cpu memory battery wireless-network mpd backlight clock
 
 tray-detached = false
 tray-position = right
 tray-padding = 2
+tray-maxsize = 40
 
 ; wm-restack = i3
 ; override-redirect = true
 
-[module/filesystem]
+[module/disk]
 type = internal/fs
 interval = 60
 
 mount-0 = /
-mount-1 = /Users
+mount-1 = /home
 
-label-mounted =  %mountpoint%%{F-}: %percentage_used%%
-label-unmounted =  %mountpoint% not mounted
+label-mounted =   %mountpoint%%{F-}: %percentage_used%%
+label-unmounted =   %mountpoint% not mounted
 
-[module/xbacklight]
-type = internal/xbacklight
-output = eDP-1
-format = <ramp> <bar>
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <ramp> <label>
 
-ramp-0 = 
-ramp-0-foreground = #666
-ramp-1 = 
-ramp-1-foreground = #999
-ramp-2 = 
-ramp-2-foreground = #fff
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 bar-width = 12
 bar-indicator = |
@@ -79,17 +82,6 @@ bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 6
 bar-empty-foreground = #44
-
-
-[module/backlight]
-type = internal/backlight
-card = intel_backlight
-format = <ramp> <label>
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #666
-interactive = true
 
 
 [module/i3]
@@ -139,9 +131,7 @@ interval = 1.5
 
 format = <label> <ramp-coreload>
 
-label = CPU
-label-font = 3
-label-foreground = #99
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
@@ -172,11 +162,11 @@ ramp-coreload-7-foreground = #ff5555
 type     = internal/memory
 interval = 0.2
 format   = <label>
-label    =  %gb_used% / %gb_total%
+label    =   %gb_used% / %gb_total%
 
 [module/wireless-network]
 type = internal/network
-interface = net1
+interface = wlp1s0
 interval = 2.0
 ping-interval = 10
 
@@ -185,15 +175,15 @@ label-connected = %essid%
 label-disconnected =    not connected
 label-disconnected-foreground = #66
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
-animation-packetloss-0 = 
+#animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
+#animation-packetloss-1 = 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
 
@@ -238,9 +228,9 @@ type = internal/date
 interval = 5
 format-background = #000
 format-foreground = #fff
-time              = "%H:%M"
+time              = " %H:%M"
 time-alt          = " %A, %B %d"
-format            = 🕓 <label>
+format            = <label>
 format-padding    = 1
 label             = "%time%"
 label-font        = 6
@@ -258,16 +248,17 @@ mapping                   = true
 
 [module/battery]
 type                         = internal/battery
-battery                      = BAT0
+battery                      = BAT1
 adapter                      = AC
-full-at                      = 99
+full-at                      = 97
+poll-interval                = 30
 
 format-charging              = <animation-charging> <label-charging>
 
 format-discharging           = <ramp-capacity> <label-discharging>
 label-discharging            = %percentage%% (%time%)
 
-format-full-prefix           = "  "
+format-full-prefix           = " "
 
 format-padding               = 2
 
@@ -307,38 +298,3 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = #efefef
-
-[module/powermenu]
-type = custom/menu
-
-format-padding = 3
-format-background = #000
-format-foreground = #fff
-
-label-open = 
-label-close = 
-label-separator = " - "
-
-menu-0-0 = Terminate WM
-menu-0-0-foreground = ${colors.accent}
-menu-0-0-exec = bspc quit -1
-menu-0-1 = Reboot
-menu-0-1-foreground = ${colors.accent}
-menu-0-1-exec = menu-open-1
-menu-0-2 = Power off
-menu-0-2-foreground = ${colors.accent}
-menu-0-2-exec = menu-open-2
-
-menu-1-0 = Cancel
-menu-1-0-foreground = ${colors.accent}
-menu-1-0-exec = menu-open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = ${colors.accent}
-menu-1-1-exec = reboot
-
-menu-2-0 = Power off
-menu-2-0-foreground = ${colors.accent}
-menu-2-0-exec = poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = ${colors.accent}
-menu-2-1-exec = menu-open-0
