@@ -1,9 +1,9 @@
 #!/bin/sh
 export EDITOR=nvim
-export BROWSER=chromium
+export BROWSER=firefox
 
 # Java/Scala
-export JAVA_OPTS="$JAVA_OPTS 
+export JAVA_OPTS="$JAVA_OPTS
   -Dscala.color
   -XX:InitialHeapSize=1024m
   -XX:MaxHeapSize=8192m
@@ -15,4 +15,9 @@ export SBT_OPTS=$JAVA_OPTS
 # Requires that qt5ct package is installed
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export XDG_CONFIG_HOME="$HOME/.config" 
+# HiDPI support
+# See https://wiki.archlinux.org/index.php/HiDPI
+export GDK_SCALE=2
+export QT_SCALE_FACTOR=2
+
+export XDG_CONFIG_HOME="$HOME/.config"
