@@ -54,4 +54,7 @@ alias p=mpv
 alias t=task
 alias ls="ls --color=auto"
 
+alias venv-mk="python -m venv venv"
+alias venv-ld="source venv/bin/activate"
+
 source ~/.profile
