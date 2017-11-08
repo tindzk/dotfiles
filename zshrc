@@ -56,5 +56,6 @@ alias ls="ls --color=auto"
 
 alias venv-mk="python -m venv venv"
 alias venv-ld="source venv/bin/activate"
+alias http="python3 -m http.server"
 
 source ~/.profile
