@@ -31,17 +31,15 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 6
 
-font-0 = NotoSans-Regular:size=8;0
-font-1 = Unifont:size=5;0
-font-2 = FontAwesome:size=8;0
-font-3 = NotoSans-Regular:size=8;-1
-font-4 = Unifont:size=5;0
-font-5 = Termsynu:size=7;0
+font-0 = "Noto Sans:size=8;1"
+font-1 = unifont:fontformat=truetype:size=5:antialias=false;0
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+font-3 = "DejaVu Sans:size=8;0"
 
 modules-left = i3
 # modules-center = xwindow
 # modules-right = disk cpu memory wired-network mpd clock
-modules-right = disk cpu memory battery wireless-network mpd backlight clock
+modules-right = disk cpu memory battery wireless-network backlight clock
 
 tray-detached = false
 tray-position = right
@@ -74,13 +72,13 @@ ramp-4 = 🌑
 
 bar-width = 12
 bar-indicator = |
-bar-indicator-font = 6
+bar-indicator-font = 1
 bar-indicator-foreground = #bbffffff
 bar-fill = ─
-bar-fill-font = 6
+bar-fill-font = 1
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 6
+bar-empty-font = 1
 bar-empty-foreground = #44
 
 
@@ -104,24 +102,24 @@ label-focused-foreground = #f3f3f3
 label-focused-background = #3f3f3f
 ;label-focused-underline = #${colors.accent}
 label-focused-underline = #9f78e1
-label-focused-font = 4
+label-focused-font = 1
 label-focused-padding = 4
 
 label-unfocused = %icon%  %name%
 label-unfocused-underline = #555555
-label-unfocused-font = 4
+label-unfocused-font = 1
 label-unfocused-padding = 4
 
 label-urgent = %icon%  %name%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-underline = #9b0a20
-label-urgent-font = 4
+label-urgent-font = 1
 label-urgent-padding = 4
 
 label-visible = %icon%  %name%
 label-visible-foreground = #55ffffff
-label-visible-font = 4
+label-visible-font = 1
 label-visible-padding = 4
 
 
