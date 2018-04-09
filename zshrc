@@ -51,8 +51,9 @@ background() { "$@" & }
 alias e='background nvim-qt'
 alias g=git
 alias p=mpv
-alias t=task
 alias ls="ls --color=auto"
+
+alias instructor=$HOME/dev/instructor/instructor
 
 alias venv-mk="python -m venv venv"
 alias venv-ld="source venv/bin/activate"
