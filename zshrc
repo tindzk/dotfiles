@@ -21,6 +21,7 @@ unsetopt CASE_GLOB
 # Completions
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
+fpath=($HOME/.bloop/zsh $fpath)
 compinit
 
 # Colours
@@ -53,6 +54,7 @@ alias g=git
 alias p=mpv
 alias ls="ls --color=auto"
 
+alias bloop=$HOME/.bloop/bloop
 alias instructor=$HOME/dev/instructor/instructor
 
 alias venv-mk="python -m venv venv"
