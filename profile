@@ -3,7 +3,6 @@ export EDITOR=nvim
 export BROWSER=firefox
 
 export JAVA_OPTS="
-  -Dscala.color
   -XX:InitialHeapSize=1024m
   -XX:MaxHeapSize=8192m
   -XX:+CMSClassUnloadingEnabled"
