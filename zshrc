@@ -19,6 +19,7 @@ unsetopt beep
 unsetopt CASE_GLOB
 
 # Completions
+export PATH=$HOME/.bloop:$PATH
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 fpath=($HOME/.bloop/zsh $fpath)
@@ -50,12 +51,15 @@ background() { "$@" & }
 
 # Aliases
 alias e='background nvim-qt'
+
 alias g=git
+alias gup="git submodule update --init --remote --recursive"
+
 alias p=mpv
 alias ls="ls --color=auto"
 
-alias bloop=$HOME/.bloop/bloop
 alias instructor=$HOME/dev/instructor/instructor
+alias seed="$HOME/dev/seed/seed --tmpfs"
 
 alias venv-mk="python -m venv venv"
 alias venv-ld="source venv/bin/activate"
