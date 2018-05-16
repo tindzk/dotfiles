@@ -10,7 +10,7 @@ setopt autocd
 setopt interactivecomments
 
 # Spelling corrections
-setopt correctall
+setopt correct
 
 # Disable beeping
 unsetopt beep
