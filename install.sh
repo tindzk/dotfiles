@@ -22,3 +22,4 @@ ln -s ~/dotfiles/i3/config ~/.config/i3/config
 ln -s ~/dotfiles/xsession ~/.xsession
 
 ln -s ~/dotfiles/termite ~/.config/termite
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
