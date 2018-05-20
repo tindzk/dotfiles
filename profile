@@ -2,8 +2,7 @@
 export EDITOR=nvim
 export BROWSER=firefox
 
-export IDEA_JDK=/usr/lib/jvm/intellij-jdk
-export JAVA_OPTS="-XX:InitialHeapSize=1024m -XX:MaxHeapSize=8192m"
+export JAVA_OPTS="-XX:InitialHeapSize=1024m -XX:MaxHeapSize=4096m"
 
 # See https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE
 # Requires that qt5ct package is installed
