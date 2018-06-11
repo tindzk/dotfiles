@@ -1,0 +1,4 @@
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+map d removeTab
+map u restoreTab
