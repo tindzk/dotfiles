@@ -38,3 +38,5 @@
 	autosetuprebase = always
 [branch "master"]
 	rebase = true
+[credential]
+	helper = store
