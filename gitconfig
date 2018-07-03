@@ -40,3 +40,5 @@
 	rebase = true
 [credential]
 	helper = store
+[log]
+	follow = true
