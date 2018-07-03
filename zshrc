@@ -56,6 +56,10 @@ alias g=git
 alias gin="git submodule update --init --recursive"
 alias gup="git submodule update --init --remote --recursive"
 
+alias gundo="git reset HEAD^ --"
+alias ga="git commit --amend"
+alias gae="git commit --amend --no-edit"
+
 alias p=mpv
 alias ls="ls --color=auto"
 
