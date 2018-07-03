@@ -53,6 +53,7 @@ background() { "$@" & }
 alias e='background nvim-qt'
 
 alias g=git
+alias gin="git submodule update --init --recursive"
 alias gup="git submodule update --init --remote --recursive"
 
 alias p=mpv
@@ -64,5 +65,9 @@ alias seed="$HOME/dev/seed/seed --tmpfs"
 alias venv-mk="python -m venv venv"
 alias venv-ld="source venv/bin/activate"
 alias http="python3 -m http.server"
+
+function e {
+	nvim-qt --no-ext-tabline -- "$@"
+}
 
 source ~/.profile
