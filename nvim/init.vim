@@ -16,6 +16,9 @@
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+	Plug 'mhartington/oceanic-next'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'othree/html5.vim'
 	call plug#end()
 " }}}
 
@@ -26,7 +29,12 @@
 	" colorscheme lucius
 	" colorscheme vanzan_color
 	" colorscheme molokai
-	colorscheme wombat
+	" colorscheme wombat
+
+	let g:oceanic_next_terminal_bold = 1
+	let g:oceanic_next_terminal_italic = 1
+	let g:airline_theme='oceanicnext'
+	colorscheme OceanicNext
 
 	" Turn syntax highlighting on
 	syntax on

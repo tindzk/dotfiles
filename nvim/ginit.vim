@@ -1,6 +1,6 @@
 " GuiFont ProFont:h8
-" GuiFont Ubuntu Mono:h10
-GuiFont DejaVu Sans Mono:h6
+" GuiFont DejaVu Sans Mono:h6
+GuiFont Ubuntu Mono:h6
 
 set mouse=a
 
