@@ -19,6 +19,7 @@
 	Plug 'mhartington/oceanic-next'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'othree/html5.vim'
+	Plug 'cespare/vim-toml'
 	call plug#end()
 " }}}
 
