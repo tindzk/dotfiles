@@ -53,7 +53,8 @@ background() { "$@" & }
 alias e='background nvim-qt'
 
 alias g=git
-alias gs="git status"
+alias gst="git status"
+alias gsh="git show"
 alias gc="git commit"
 alias gd="git diff"
 alias gl="git log"
