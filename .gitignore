@@ -3,3 +3,4 @@
 *.sug
 
 nvim/plugged/
+nvim/.netrwhist
