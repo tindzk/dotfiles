@@ -64,7 +64,7 @@ alias gam="$_git commit --amend"
 alias game="$_git commit --amend --no-edit"
 
 alias grep="echo Run: rg"  # ripgrep
-alias find="echo Run: fzf -q"
+alias find="echo Run: fd"
 
 alias p=mpv
 alias ls=exa
