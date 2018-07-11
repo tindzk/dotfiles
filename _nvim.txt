@@ -1,9 +1,16 @@
+Startify
+	SSave    Save session
+	SDelete  Delete session
+
 Outliner
 	File extension: .otl
-	\cb create checkbox
-	\cp create checkbox with percentage
-	\cx tick
-	\cz update percentages
-	\cd append date
-	zo open
-	zc close
+
+	\cb  create checkbox
+	\cp  create checkbox with percentage
+	\cx  tick
+	\cz  update percentages
+	\cd  append date
+	zo   open fold
+	zc   close fold
+	zx   close all other folds
+	zM   close all folds
