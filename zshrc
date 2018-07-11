@@ -59,8 +59,9 @@ alias gp="$_git push"
 alias gin="$_git submodule update --init --recursive"
 alias gup="$_git submodule update --init --remote --recursive"
 alias gundo="$_git reset HEAD^ --"
-alias ga="$_git commit --amend"
-alias gae="$_git commit --amend --no-edit"
+alias ga="$_git add"
+alias gam="$_git commit --amend"
+alias game="$_git commit --amend --no-edit"
 
 alias p=mpv
 alias ls="ls --color=auto"
@@ -97,8 +98,9 @@ gp   git push
 gin  git submodule update --init --recursive
 gup  git submodule update --init --remote --recursive
 gun  git reset HEAD^ --
-ga   git commit --amend
-gae  git commit --amend --no-edit
+ga   git add
+gam  git commit --amend
+game git commit --amend --no-edit
 p    mpv
 b    bloop
 e    nvim
