@@ -3,6 +3,9 @@ Splits
 	Ctrl-W |  Maximise width of current split
 	Ctrl-W =  Normalise all split sizes
 
+Terminal
+	Ctrl-w  Exit terminal mode
+
 Startify
 	SSave    Save session
 	SDelete  Delete session

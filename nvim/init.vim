@@ -298,3 +298,8 @@
 	" Show just the filename
 	let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
+
+" {{{ Terminal
+	" Exit terminal with Ctrl-w
+	tnoremap <C-w> <C-\><C-n>
+" }}}
