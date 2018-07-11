@@ -70,6 +70,7 @@ alias p=mpv
 alias ls=exa
 alias ll="exa --long --git"
 alias lt="exa --tree"
+alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
 alias seed="$HOME/dev/seed/seed --tmpfs"
@@ -111,6 +112,7 @@ p    mpv
 ls   exa
 ll   exa --long --git
 lt   exa --tree
+loc  tokei -f --sort=lines
 b    bloop
 e    nvim
 eg   nvim-qt
