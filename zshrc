@@ -54,7 +54,7 @@ alias gst="$_git status"
 alias gsh="$_git show"
 alias gc="$_git commit"
 alias gd="$_git diff"
-alias gl="$_git log"
+alias gl=tig
 alias gp="$_git push"
 alias gin="$_git submodule update --init --recursive"
 alias gup="$_git submodule update --init --remote --recursive"
@@ -99,7 +99,7 @@ gst  git status
 gsh  git show
 gc   git commit
 gd   git diff
-gl   git log
+gl   tig
 gp   git push
 gin  git submodule update --init --recursive
 gup  git submodule update --init --remote --recursive

@@ -23,3 +23,4 @@ ln -s ~/dotfiles/xsession ~/.xsession
 
 ln -s ~/dotfiles/termite ~/.config/termite
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tigrc ~/.tigrc
