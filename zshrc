@@ -63,6 +63,8 @@ alias ga="$_git add"
 alias gam="$_git commit --amend"
 alias game="$_git commit --amend --no-edit"
 
+alias grep="echo Run: rg"  # ripgrep
+
 alias p=mpv
 alias ls="ls --color=auto"
 
