@@ -42,3 +42,5 @@
 	helper = store
 [log]
 	follow = true
+[commit]
+	verbose = true
