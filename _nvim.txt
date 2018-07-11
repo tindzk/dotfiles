@@ -1,0 +1,9 @@
+Outliner
+	File extension: .otl
+	\cb create checkbox
+	\cp create checkbox with percentage
+	\cx tick
+	\cz update percentages
+	\cd append date
+	zo open
+	zc close
