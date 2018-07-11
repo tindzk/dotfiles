@@ -1,3 +1,8 @@
+Splits
+	Ctrl-W _  Maximise height of current split
+	Ctrl-W |  Maximise width of current split
+	Ctrl-W =  Normalise all split sizes
+
 Startify
 	SSave    Save session
 	SDelete  Delete session
