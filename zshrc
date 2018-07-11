@@ -79,6 +79,7 @@ alias pld="source venv/bin/activate"
 alias http="python3 -m http.server"
 
 alias e=/usr/bin/nvim
+alias cd="echo redundant"
 alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/nvim-qt
 alias vi="echo 'Run: e|eg'"
@@ -114,4 +115,5 @@ pld  source venv/bin/activate
 http python3 -m http.server'
 """
 
+source ~/dotfiles/auto-ls.zsh
 source ~/.profile
