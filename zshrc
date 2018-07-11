@@ -67,7 +67,9 @@ alias grep="echo Run: rg"  # ripgrep
 alias find="echo Run: fzf -q"
 
 alias p=mpv
-alias ls="ls --color=auto"
+alias ls=exa
+alias ll="exa --long --git"
+alias lt="exa --tree"
 
 alias instructor=$HOME/dev/instructor/instructor
 alias seed="$HOME/dev/seed/seed --tmpfs"
@@ -106,6 +108,9 @@ ga   git add
 gam  git commit --amend
 game git commit --amend --no-edit
 p    mpv
+ls   exa
+ll   exa --long --git
+lt   exa --tree
 b    bloop
 e    nvim
 eg   nvim-qt
