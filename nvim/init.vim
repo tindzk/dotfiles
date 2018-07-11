@@ -20,6 +20,7 @@
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'othree/html5.vim'
 	Plug 'cespare/vim-toml'
+	Plug 'vimoutliner/vimoutliner'
 	call plug#end()
 " }}}
 
