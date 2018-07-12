@@ -52,7 +52,13 @@ alias g=$_git
 alias git="echo Run: g"
 alias gst="$_git status"
 alias gsh="$_git show"
+alias gf="$_git fetch"
 alias gc="$_git commit"
+alias gca="$_git commit --amend"
+alias gcan="$_git commit --amend --no-edit"
+alias gco="$_git checkout"
+alias gcl="$_git checkout --theirs"  # Use local file
+alias gcr="$_git checkout --ours"    # Use remote file
 alias gd="$_git diff"
 alias gl=tig
 alias gp="$_git push"
@@ -60,8 +66,8 @@ alias gin="$_git submodule update --init --recursive"
 alias gup="$_git submodule update --init --remote --recursive"
 alias gundo="$_git reset HEAD^ --"
 alias ga="$_git add"
-alias gam="$_git commit --amend"
-alias game="$_git commit --amend --no-edit"
+alias gr="$_git rebase"
+alias grc="$_git rebase --continue"
 
 alias grep="echo Run: rg"  # ripgrep
 alias find="echo Run: fd"
@@ -91,14 +97,19 @@ alias nvim="echo 'Run: e|eg'"
 alias nvim-qt="echo 'Run: eg'"
 
 alias .=source
-
 alias '?'="""
 echo 'Aliases:
 .    source
 g    git
 gst  git status
 gsh  git show
+gf   git fetch
 gc   git commit
+gca  git commit --amend
+gcan git commit --amend --no-edit
+gco  git checkout
+gcl  git checkout --theirs  # Use local file
+gcr  git checkout --ours    # Use remote file
 gd   git diff
 gl   tig
 gp   git push
@@ -106,8 +117,8 @@ gin  git submodule update --init --recursive
 gup  git submodule update --init --remote --recursive
 gun  git reset HEAD^ --
 ga   git add
-gam  git commit --amend
-game git commit --amend --no-edit
+gr   git rebase
+grc  git rebase --continue
 p    mpv
 ls   exa
 ll   exa --long --git
