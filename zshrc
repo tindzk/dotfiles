@@ -96,6 +96,8 @@ alias vim="echo 'Run: e|eg'"
 alias nvim="echo 'Run: e|eg'"
 alias nvim-qt="echo 'Run: eg'"
 
+grb() { g show $1:$2 > $2 }
+
 alias .=source
 alias '?'="""
 echo 'Aliases:
@@ -119,6 +121,8 @@ gun  git reset HEAD^ --
 ga   git add
 gr   git rebase
 grc  git rebase --continue
+grb  git show \$1:\$2 > \$2     # Restore file <path> from <branch>
+                             # Usage: grb <branch> <path>
 p    mpv
 ls   exa
 ll   exa --long --git
