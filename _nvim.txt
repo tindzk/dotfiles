@@ -1,24 +1,100 @@
-Splits
-	Ctrl-W _  Maximise height of current split
-	Ctrl-W |  Maximise width of current split
-	Ctrl-W =  Normalise all split sizes
+Whitespaces
+	F12  Show trailing whitepace characters (e.g. spaces, tabs)
+	:StripWhitespace
+
+vim-multiple-cursors
+	Example: fp<C-n><C-n><C-n>cname
+	See https://github.com/terryma/vim-multiple-cursors
+
+Easy Align
+	:EasyAlign
+
+Browser
+	C-o  open link in browser
+	C-g  search line in Google
+
+Spell checking
+	<C-s>
+
+CtrlP
+	<C-b> Buffer completions
+	<C-p> File completions
+	<C-f> Cycle between modes
+
+vim-wheel  Screen-anchored cursor movement
+	<C-j>
+	<C-k>
+
+Writing
+	:Goyo  Enter distraction-free mode
+
+GUI
+	<C-+>  increase font size
+	<C-->  decrease font size
 
 Terminal
-	Ctrl-w  Exit terminal mode
+	Ctrl-w  exit terminal mode
+
+Fugitive
+	:Glog
+	:cnext  next revision
+	:Gedit  return to working copy
+	:Gblame
 
 Startify
-	SSave    Save session
-	SDelete  Delete session
+	:SSave    save session
+	:SDelete  delete session
 
-Outliner
-	File extension: .otl
+vim-orgmode
+	yah  yank heading
+	dah  delete heading
+	yar  yank subtree
+	dar  delete subtree
+	Enter    insert new item below  (normal mode)
+	S-Enter  insert new item below  (insert mode)
+	\cl  create list below
+	\cc  toggle checkbox status
+	\cn  insert new checkbox below
+	\cN  insert new checkbox above
+	<<   demote  heading
+	>>   promote heading
+	<ar  demote  subtree
+	>ar  promote subtree
 
-	\cb  create checkbox
-	\cp  create checkbox with percentage
-	\cx  tick
-	\cz  update percentages
-	\cd  append date
+Folds
 	zo   open fold
 	zc   close fold
 	zx   close all other folds
+	zR   open all folds
 	zM   close all folds
+
+Windows
+	<C-w>n  new horizontal split with empty buffer
+
+	<C-w>_  maximise height of current split
+	<C-w>|  maximise width of current split
+	<C-w>=  normalise all split sizes
+
+	<C-w>s  window horizontally
+	<C-w>v  window vertically
+
+	<C-w>c  close window
+	<C-w>o  close all other windows
+
+	<C-w>p  go to previous window
+	<C-w>w  go to next window
+
+	<C-w>h  go to left window
+	<C-w>j  go to window below
+	<C-w>k  go to window above
+	<C-w>l  go to right window
+
+	<C-w>H  move window to the left
+	<C-w>J  move window to the bottom
+	<C-w>K  move window to the top
+	<C-w>L  move window to the right
+
+Tabs
+	<C-t>n  new tab
+	<C-t>c  close tab
+	<C-t>N  jump to tab number N
