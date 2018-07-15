@@ -251,6 +251,11 @@
 	set showbreak=¶
 " }}}
 
+" {{{ Folds
+  " Collapse all folds in VimOutliner files by default
+  autocmd BufRead *.otl normal zM
+" }}}
+
 " {{{ Markdown
 	" Enable table formatting with :TableModeEnable
 	let g:pandoc#modules#disabled = ["folding"]
