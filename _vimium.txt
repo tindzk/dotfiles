@@ -1,4 +1,18 @@
+# Settings
 map <c-d> scrollPageDown
 map <c-u> scrollPageUp
 map d removeTab
 map u restoreTab
+map << moveTabLeft
+map >> moveTabRight
+
+# Shortcuts
+J      previous tab
+K      next tab
+^      go to previously-visited tab
+H      go back in history
+L      go forward in history
+g0     go to first tab
+g$     go to last tab
+T      search in open tabs
+<a-p>  pin/unpin tab
