@@ -18,7 +18,6 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'othree/html5.vim'
 	Plug 'reedes/vim-wheel'
-	Plug 'ryanoasis/vim-devicons'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-fugitive'
 	Plug 'vim-pandoc/vim-pandoc'
@@ -180,7 +179,7 @@
 " }}}
 " {{{ Spell checking
 	" Specify the dictionaries for use in spell checking
-	set spelllang=en,de,pl,fr,uk,ru
+	"set spelllang=en,de,pl,fr,uk,ru
 
 	" Keep spell checking disabled by default
 	set nospell
@@ -239,22 +238,14 @@
 	" Exit terminal with Ctrl-w
 	tnoremap <C-w> <C-\><C-n>
 " }}}
-" {{{ Lightline
-	" Configuration for vim-devicons
-	let g:lightline = {
-		\ 'component_function': {
-		\   'filetype': 'MyFiletype',
-		\   'fileformat': 'MyFileformat',
-		\ }
-		\ }
+" {{{ vim-orgmode
+	filetype plugin indent on
 
-	function! MyFiletype()
-		return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-	endfunction
+	" Hide warning
+	command -nargs=* -range SpeedDatingFormat
 
-	function! MyFileformat()
-		return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-	endfunction
+	" Indent body text
+	let g:org_indent=1
 " }}}
 " {{{ CtrlP
 	nnoremap <C-b> :CtrlPBuffer<CR>

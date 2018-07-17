@@ -18,13 +18,6 @@ unsetopt beep
 # Enable case-insensitive globbing
 unsetopt CASE_GLOB
 
-# Completions
-export PATH=$HOME/.bloop:$PATH
-zstyle :compinstall filename '~/.zshrc'
-autoload -Uz compinit
-fpath=($HOME/.bloop/zsh $fpath)
-compinit
-
 # Colours
 autoload -Uz colors
 colors
@@ -75,9 +68,9 @@ alias grep="echo Run: rg"  # ripgrep
 alias find="echo Run: fd"
 
 alias p=mpv
-alias ls=exa
-alias ll="exa --long --git"
-alias lt="exa --tree"
+#alias ls=exa
+alias ll="ls -l"
+alias lt="tree"
 alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
