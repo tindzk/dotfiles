@@ -121,31 +121,6 @@
 	" Highlight search results
 	set hlsearch
 " }}}
-" {{{ Browser
-	function! Browser()
-		let line0 = getline(".")
-		let line = matchstr(line0, "http[^ ]*")
-		if line == ""
-			let line = matchstr(line0, "ftp[^ ]*")
-		endif
-		if line == ""
-			let line = matchstr(line0, "file[^ ]*")
-		endif
-		let line = escape(line, "#?&;|%!)")
-		exec ':silent !firefox ' . line . ' &'
-	endfunction
-
-	function! BrowserSearch()
-		let line = getline(".")
-		exec ':silent !firefox "https://www.google.com/search?q=' . line . '" &'
-	endfunction
-
-	" Open links in browser
-	map <C-o> :call Browser()<CR>
-
-	" Search line in browser
-	map <C-g> :call BrowserSearch()<CR>
-" }}}
 " {{{ Spell checking
 	" Specify the dictionaries for use in spell checking
 	"set spelllang=en,de,pl,fr,uk,ru
