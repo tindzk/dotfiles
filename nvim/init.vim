@@ -45,6 +45,8 @@
 
 	" Show line numbers
 	set number
+	autocmd FileType org set nonumber
+	autocmd FileType pandoc set nonumber
 
 	" Do not create backup files
 	set nobackup
