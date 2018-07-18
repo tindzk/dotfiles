@@ -8,7 +8,6 @@
 	Plug 'derekwyatt/vim-scala'
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'itchyny/lightline.vim'
-	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'luochen1990/rainbow'
@@ -71,38 +70,6 @@
 	" Underline current line in insert mode.
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
-" }}}
-" {{{ Distraction-free writing
-	" Also change font and restore default when leaving
-	let g:GoyoFont = ''
-
-	function! OnGoyoEnter()
-		if exists('g:GuiFont')
-			let g:GoyoFont = g:GuiFont
-			call GuiWindowFullScreen(1)
-			call GuiFont('Ubuntu Mono:h14')
-			call GuiLinespace(8)
-		endif
-
-		" Only highlight current paragraph
-		Limelight
-	endfunction
-
-	function! OnGoyoLeave()
-		if exists('g:GuiFont')
-			call GuiFont(g:GoyoFont)
-			call GuiLinespace(0)
-			call GuiWindowFullScreen(0)
-		endif
-		Limelight!
-	endfunction
-
-	autocmd! User GoyoEnter call OnGoyoEnter()
-	autocmd! User GoyoLeave call OnGoyoLeave()
-
-	" On window resize, if goyo is active, do <c-w>= to resize the window
-	" https://github.com/junegunn/goyo.vim/issues/159#issuecomment-342417487
-	autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
 " }}}
 " {{{ Whitespace characters
 	" Show trailing whitepace characters (e.g. spaces, tabs)
