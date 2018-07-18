@@ -182,15 +182,6 @@
 	" Exit terminal with Ctrl-w
 	tnoremap <C-w> <C-\><C-n>
 " }}}
-" {{{ vim-orgmode
-	filetype plugin indent on
-
-	" Hide warning
-	command -nargs=* -range SpeedDatingFormat
-
-	" Indent body text
-	let g:org_indent=1
-" }}}
 " {{{ CtrlP
 	nnoremap <C-b> :CtrlPBuffer<CR>
 " }}}
