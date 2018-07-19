@@ -33,7 +33,12 @@ function zle-line-init zle-keymap-select () {
   esac
 
   # Prompt
-  PS1="%{$fg_bold[red]%}${PWD/#$HOME/~} #%{$reset_color%} "
+  if [[ "$USER" == "root" ]]; then
+    PS1="%{$fg_bold[red]%}${PWD/#$HOME/~} #%{$reset_color%} "
+  else
+    PS1="%{$fg_bold[blue]%}${PWD/#$HOME/~} $%{$reset_color%} "
+  fi
+
   zle reset-prompt
 }
 
