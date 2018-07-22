@@ -3,8 +3,10 @@ map <c-d> scrollPageDown
 map <c-u> scrollPageUp
 map d removeTab
 map u restoreTab
-map << moveTabLeft
-map >> moveTabRight
+map <a-j> moveTabLeft
+map <a-k> moveTabRight
+
+Select "Don't let pages steal the focus on load"
 
 # Shortcuts
 J      previous tab
