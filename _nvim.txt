@@ -1,102 +1,109 @@
+Editing
+  <C-x><C-o>  trigger completion
+
 Whitespaces
-	F12  Show trailing whitepace characters (e.g. spaces, tabs)
-	:StripWhitespace
+  F12  Show trailing whitepace characters (e.g. spaces, tabs)
+  :StripWhitespace
+  :retab  Convert tabs to spaces
+
+Vimwiki
+  \ww         Open wiki index file
+  \wt         Open wiki index file in new tab
+  \wd         Delete current wiki file
+  \wr         Rename current wiki file
+  <Enter>     Follow/Create wiki link
+  <S-Enter>   Split and follow/create wiki link
+  <C-Enter>   Vertical split and follow/create wiki link
+  <Backspace> Go back to previous wiki link
+  <Tab>       Jump to next link
+  <S-Tab>     Jump to previous link
+  <C-Space>   toggle list item on/off
+
+  Diary
+    \wi       open diary index file
+    \w\i      update current diary index
+    \w\w      open today's diary file
+    \w\t      open today’s diary file for wiki in new tab
 
 vim-multiple-cursors
-	Example: fp<C-n><C-n><C-n>cname
-	See https://github.com/terryma/vim-multiple-cursors
+  Example: fp<C-n><C-n><C-n>cname
+  See https://github.com/terryma/vim-multiple-cursors
 
 Easy Align
-	:EasyAlign
+  :EasyAlign
 
 Browser
-	C-o  open link in browser
-	C-g  search line in Google
+  C-o  open link in browser
+  C-g  search line in Google
 
 Spell checking
-	<C-s>
+  <C-s>
 
 CtrlP
-	<C-b> Buffer completions
-	<C-p> File completions
-	<C-f> Cycle between modes
+  <C-b> Buffer completions
+  <C-p> File completions
+  <C-f> Cycle between modes
 
 vim-wheel  Screen-anchored cursor movement
-	<C-j>
-	<C-k>
+  <C-j>
+  <C-k>
 
 Writing
-	:Goyo  Enter distraction-free mode
+  :Goyo  Enter distraction-free mode
 
 GUI
-	<C-+>  increase font size
-	<C-->  decrease font size
+  <C-+>  increase font size
+  <C-->  decrease font size
 
 Terminal
-	Ctrl-w  exit terminal mode
+  Ctrl-w  exit terminal mode
 
 Fugitive
-	:Glog
-	:cnext  next revision
-	:Gedit  return to working copy
-	:Gblame
+  :Glog
+  :cnext  next revision
+  :Gedit  return to working copy
+  :Gblame
 
 Startify
-	:SSave    save session
-	:SDelete  delete session
-
-vim-orgmode
-	yah  yank heading
-	dah  delete heading
-	yar  yank subtree
-	dar  delete subtree
-	Enter    insert new item below  (normal mode)
-	S-Enter  insert new item below  (insert mode)
-	\cl  create list below
-	\cc  toggle checkbox status
-	\cn  insert new checkbox below
-	\cN  insert new checkbox above
-	<<   demote  heading
-	>>   promote heading
-	<ar  demote  subtree
-	>ar  promote subtree
+  :SSave    save session
+  :SDelete  delete session
 
 Folds
-	zo   open fold
-	zc   close fold
-	zx   close all other folds
-	zR   open all folds
-	zM   close all folds
-	[z   jump to start
-	]z   jump to end
+  zo   open fold
+  zc   close fold
+  zx   close all other folds
+  zR   open all folds
+  zM   close all folds
+  [z   jump to start
+  ]z   jump to end
 
 Windows
-	<C-w>n  new horizontal split with empty buffer
+  <C-w>n  new horizontal split with empty buffer
 
-	<C-w>_  maximise height of current split
-	<C-w>|  maximise width of current split
-	<C-w>=  normalise all split sizes
+  <C-w>_  maximise height of current split
+  <C-w>|  maximise width of current split
+  <C-w>=  normalise all split sizes
 
-	<C-w>s  window horizontally
-	<C-w>v  window vertically
+  <C-w>s  window horizontally
+  <C-w>v  window vertically
 
-	<C-w>c  close window
-	<C-w>o  close all other windows
+  <C-w>c  close window
+  <C-w>o  close all other windows
 
-	<C-w>p  go to previous window
-	<C-w>w  go to next window
+  <C-w>p  go to previous window
+  <C-w>w  go to next window
 
-	<C-w>h  go to left window
-	<C-w>j  go to window below
-	<C-w>k  go to window above
-	<C-w>l  go to right window
+  <C-w>h  go to left window
+  <C-w>j  go to window below
+  <C-w>k  go to window above
+  <C-w>l  go to right window
 
-	<C-w>H  move window to the left
-	<C-w>J  move window to the bottom
-	<C-w>K  move window to the top
-	<C-w>L  move window to the right
+  <C-w>H  move window to the left
+  <C-w>J  move window to the bottom
+  <C-w>K  move window to the top
+  <C-w>L  move window to the right
 
 Tabs
-	<C-t>n  new tab
-	<C-t>c  close tab
-	<C-t>N  jump to tab number N
+  <C-t>n  new tab
+  <C-t>c  close tab
+  <C-t>N  jump to tab number N
