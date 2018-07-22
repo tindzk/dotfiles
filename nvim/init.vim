@@ -263,4 +263,5 @@
 	filetype plugin on
 	let g:vimwiki_list = [{'path': '~/Notes/', 'ext': '.txt'}]
 	autocmd FileType vimwiki set nonumber
+	nmap <leader>- <Plug>VimwikiRemoveHeaderLevel
 " }}}
