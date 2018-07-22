@@ -60,9 +60,11 @@ Terminal
 
 Fugitive
   :Glog
-  :cnext  next revision
-  :Gedit  return to working copy
+  :cnext         next revision
+  :Gedit         return to working copy
   :Gblame
+  :Gmove <path>  rename file, use `<C-r>%` to insert path
+  :Gwrite        add file to repository
 
 Startify
   :SSave    save session
