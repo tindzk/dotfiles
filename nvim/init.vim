@@ -3,11 +3,11 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cespare/vim-toml'
 	Plug 'cocopon/vaffle.vim'
+	Plug 'vimwiki/vimwiki'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'derekwyatt/vim-scala'
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'itchyny/lightline.vim'
-	Plug 'jceb/vim-orgmode'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
@@ -45,7 +45,6 @@
 
 	" Show line numbers
 	set number
-	autocmd FileType org set nonumber
 
 	" Do not create backup files
 	set nobackup
@@ -239,15 +238,6 @@
 	" Exit terminal with Ctrl-w
 	tnoremap <C-w> <C-\><C-n>
 " }}}
-" {{{ vim-orgmode
-	filetype plugin indent on
-
-	" Hide warning
-	command -nargs=* -range SpeedDatingFormat
-
-	" Indent body text
-	let g:org_indent=1
-" }}}
 " {{{ Lightline
 	" Configuration for vim-devicons
 	let g:lightline = {
@@ -267,4 +257,10 @@
 " }}}
 " {{{ CtrlP
 	nnoremap <C-b> :CtrlPBuffer<CR>
+" }}}
+" {{{ Vimwiki
+	set nocompatible
+	filetype plugin on
+	let g:vimwiki_list = [{'path': '~/Notes/', 'ext': '.txt'}]
+	autocmd FileType vimwiki set nonumber
 " }}}
