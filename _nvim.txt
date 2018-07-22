@@ -67,6 +67,8 @@ Folds
 	zx   close all other folds
 	zR   open all folds
 	zM   close all folds
+	[z   jump to start
+	]z   jump to end
 
 Windows
 	<C-w>n  new horizontal split with empty buffer
