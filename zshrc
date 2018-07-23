@@ -64,8 +64,8 @@ alias ga="$_git add"
 alias gr="$_git rebase"
 alias grc="$_git rebase --continue"
 
-alias grep="echo Run: rg"  # ripgrep
-alias find="echo Run: fd"
+#alias grep="echo Run: rg"  # ripgrep
+#alias find="echo Run: fd"
 
 alias p=mpv
 #alias ls=exa
