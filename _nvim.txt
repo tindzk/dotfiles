@@ -20,10 +20,11 @@ Vimwiki
   <C-Space>   toggle list item on/off
 
   Diary
-    \wi       open diary index file
-    \w\i      update current diary index
-    \w\w      open today's diary file
-    \w\t      open today’s diary file for wiki in new tab
+    \di       open diary index file
+    \du       update diary index
+    \do       open today's diary file
+    \dj       open previous day's diary file
+    \dk       open next day's diary file
 
 vim-multiple-cursors
   Example: fp<C-n><C-n><C-n>cname
