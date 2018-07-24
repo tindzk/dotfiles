@@ -220,19 +220,19 @@
 	map - <C-W>s<C-W><Down>
 " }}}
 " {{{ Tabs
-	nnoremap <C-T>n :tabnew<CR>
-	nnoremap <C-T>c :tabclose<CR>
-	nnoremap <C-T>l :tabnext<CR>
-	nnoremap <C-T>h :tabprevious<CR>
-	nnoremap <C-T>1 :tabn 1<CR>
-	nnoremap <C-T>2 :tabn 2<CR>
-	nnoremap <C-T>3 :tabn 3<CR>
-	nnoremap <C-T>4 :tabn 4<CR>
-	nnoremap <C-T>5 :tabn 5<CR>
-	nnoremap <C-T>6 :tabn 6<CR>
-	nnoremap <C-T>7 :tabn 7<CR>
-	nnoremap <C-T>8 :tabn 8<CR>
-	nnoremap <C-T>9 :tabn 9<CR>
+	nnoremap <C-t>c :tabnew<CR>
+	nnoremap <C-t>d :tabclose<CR>
+	nnoremap <C-t>j :tabprevious<CR>
+	nnoremap <C-t>k :tabnext<CR>
+	nnoremap <C-t>1 :tabn 1<CR>
+	nnoremap <C-t>2 :tabn 2<CR>
+	nnoremap <C-t>3 :tabn 3<CR>
+	nnoremap <C-t>4 :tabn 4<CR>
+	nnoremap <C-t>5 :tabn 5<CR>
+	nnoremap <C-t>6 :tabn 6<CR>
+	nnoremap <C-t>7 :tabn 7<CR>
+	nnoremap <C-t>8 :tabn 8<CR>
+	nnoremap <C-t>9 :tabn 9<CR>
 " }}}
 " {{{ Terminal
 	" Exit terminal with Ctrl-w

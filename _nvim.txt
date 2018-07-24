@@ -106,6 +106,8 @@ Windows
   <C-w>L  move window to the right
 
 Tabs
-  <C-t>n  new tab
-  <C-t>c  close tab
+  <C-t>c  new tab
+  <C-t>d  close tab
+  <C-t>j  previous tab
+  <C-t>k  next tab
   <C-t>N  jump to tab number N
