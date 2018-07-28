@@ -138,6 +138,5 @@ http python3 -m http.server'
 """
 
 source ~/dotfiles/auto-ls.zsh
-source ~/dotfiles/q.plugin.zsh
 source ~/dotfiles/zjump.zsh
 source ~/.profile
