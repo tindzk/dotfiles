@@ -25,7 +25,7 @@ function zjump {
       echo "usage: j [<query|command>]\n"
       echo "available commands:"
       echo "  -h, --help           print this help and exit"
-      echo "  -p, --purge          remove all no exsiting directories from history"
+      echo "  -p, --purge          remove all non-existing directories from history"
       shift;
       ;;
     '--purge'|'-p') # remove all not existing directories from history
