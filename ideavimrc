@@ -1,2 +1,6 @@
 nnoremap H :action Back<CR>
 nnoremap L :action Forward<CR>
+
+nnoremap / :action Find<CR>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
