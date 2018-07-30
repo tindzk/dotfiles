@@ -1,2 +1,2 @@
 nnoremap H :action Back<CR>
-nnoremap J :action Forward<CR>
+nnoremap L :action Forward<CR>
