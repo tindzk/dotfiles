@@ -61,6 +61,8 @@ alias gcl="$_git checkout --theirs"  # Use local file
 alias gcr="$_git checkout --ours"    # Use remote file
 alias gd="$_git diff"
 alias gl=tig
+alias gcp="$_git cherry-pick"
+alias gcpc="$_git cherry-pick --continue"
 alias gp="$_git push"
 alias gin="$_git submodule update --init --recursive"
 alias gup="$_git submodule update --init --remote --recursive"
@@ -114,10 +116,12 @@ gcl  git checkout --theirs  # Use local file
 gcr  git checkout --ours    # Use remote file
 gd   git diff
 gl   tig
+gcp  git cherry-pick
+gcpc git cherry-pick --continue
 gp   git push
 gin  git submodule update --init --recursive
 gup  git submodule update --init --remote --recursive
-gun  git reset HEAD^ --
+gundo  git reset HEAD^ --
 ga   git add
 gr   git rebase
 grc  git rebase --continue
