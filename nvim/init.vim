@@ -3,7 +3,6 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cespare/vim-toml'
 	Plug 'cocopon/vaffle.vim'
-	Plug 'vimwiki/vimwiki'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'derekwyatt/vim-scala'
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
@@ -11,6 +10,7 @@
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
+	Plug 'justinmk/vim-gtfo'
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
 	Plug 'mhinz/vim-startify'
@@ -23,6 +23,7 @@
 	Plug 'tpope/vim-fugitive'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'vimwiki/vimwiki'
 	call plug#end()
 " }}}
 " {{{ General
@@ -270,3 +271,7 @@
 	nmap <leader>dj <Plug>VimwikiDiaryPrevDay
 	nmap <leader>dk <Plug>VimwikiDiaryNextDay
 " }}}
+""" {{{ gtfo
+	let g:gtfo#terminals = { 'unix': 'termite -d' }
+""" }}}
+
