@@ -13,7 +13,6 @@
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
 	Plug 'mhinz/vim-startify'
-	Plug 'mpollmeier/vim-scalaConceal'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'othree/html5.vim'
 	Plug 'reedes/vim-wheel'
