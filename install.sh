@@ -25,3 +25,6 @@ ln -s ~/dotfiles/termite ~/.config/termite
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/tigrc ~/.tigrc
 ln -s ~/dotfiles/ideavimrc ~/.ideavimrc
+
+mkdir -p ~/.config/git/
+ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
