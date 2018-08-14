@@ -47,6 +47,10 @@
 [diff "pandoc"]
 	textconv=pandoc --to=markdown
 	prompt = false
+	binary = true
+[diff "odt"]
+	textconv = odt2txt
+	binary = true
 [alias]
 	wdiff = diff --word-diff=color --unified=1
 	wshow = show --word-diff=color --unified=1
