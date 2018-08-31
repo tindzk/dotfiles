@@ -306,3 +306,7 @@ endfun
 
 autocmd FileType mail set omnifunc=UserComplete
 " }}}
+" {{{ Clipboard
+  " Use system clipboard
+  set clipboard+=unnamedplus
+" }}}
