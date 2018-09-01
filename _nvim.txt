@@ -118,3 +118,6 @@ Tabs
   <C-t>j  previous tab
   <C-t>k  next tab
   <C-t>N  jump to tab number N
+
+Navigation
+  *  search for word under cursor
