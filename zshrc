@@ -64,8 +64,8 @@ alias gl=tig
 alias gcp="$_git cherry-pick"
 alias gcpc="$_git cherry-pick --continue"
 alias gp="$_git push"
-alias gin="$_git submodule update --init --recursive"
-alias gup="$_git submodule update --init --remote --recursive"
+alias gsl="$_git submodule update --init --recursive"
+alias gsr="$_git submodule update --init --remote --recursive"
 alias gundo="$_git reset HEAD^ --"
 alias ga="$_git add"
 alias gr="$_git rebase"
@@ -119,8 +119,10 @@ gl   tig
 gcp  git cherry-pick
 gcpc git cherry-pick --continue
 gp   git push
-gin  git submodule update --init --recursive
-gup  git submodule update --init --remote --recursive
+gsl  git submodule update --init --recursive           # Checkout latest local submodule
+                                                       # Usage: gsl           Checkout all submodules
+                                                       # Usage: gsl <module>  Checkout specific submodule
+gsr  git submodule update --init --remote --recursive  # Checkout latest remote submodule
 gundo  git reset HEAD^ --
 ga   git add
 gr   git rebase
