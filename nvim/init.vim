@@ -272,6 +272,7 @@
 	nmap <leader>do <Plug>VimwikiMakeDiaryNote
 	nmap <leader>dj <Plug>VimwikiDiaryPrevDay
 	nmap <leader>dk <Plug>VimwikiDiaryNextDay
+	let g:vimwiki_url_maxsave=0
 " }}}
 " {{{ gtfo
 	let g:gtfo#terminals = { 'unix': 'termite -d' }
