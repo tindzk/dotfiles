@@ -205,6 +205,9 @@
 	set linebreak
 	set showbreak=¶
 
+	" Disable automatic text wrapping
+	set formatoptions-=t
+
 	" Show ruler
 	set colorcolumn=+1
 " }}}
