@@ -19,6 +19,9 @@ ln -s ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 mkdir -p ~/.config/i3/
 ln -s ~/dotfiles/i3/config ~/.config/i3/config
 
+ln -s ~/dotfiles/bspwm ~/.config/bspwm
+ln -s ~/dotfiles/sxhkd ~/.config/sxhkd
+
 ln -s ~/dotfiles/xsession ~/.xsession
 
 ln -s ~/dotfiles/termite ~/.config/termite

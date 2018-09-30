@@ -36,8 +36,8 @@ font-1 = unifont:fontformat=truetype:size=5:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-3 = "DejaVu Sans:size=8;0"
 
-modules-left = i3
-# modules-center = xwindow
+modules-left = bspwm
+modules-center = xwindow
 # modules-right = disk cpu memory wired-network mpd clock
 modules-right = disk cpu memory battery wireless-network backlight clock
 
@@ -81,9 +81,8 @@ bar-empty = ─
 bar-empty-font = 1
 bar-empty-foreground = #44
 
-
-[module/i3]
-type = internal/i3
+[module/bspwm]
+type = internal/bspwm
 format = <label-state> <label-mode>
 pin-workspaces = true
 
@@ -105,10 +104,10 @@ label-focused-underline = #9f78e1
 label-focused-font = 1
 label-focused-padding = 4
 
-label-unfocused = %icon%  %name%
-label-unfocused-underline = #555555
+label-occupied = %icon%  %name%
+label-occupied-underline = #555555
 label-unfocused-font = 1
-label-unfocused-padding = 4
+label-occupied-padding = 4
 
 label-urgent = %icon%  %name%
 label-urgent-foreground = #000000
@@ -117,11 +116,15 @@ label-urgent-underline = #9b0a20
 label-urgent-font = 1
 label-urgent-padding = 4
 
-label-visible = %icon%  %name%
-label-visible-foreground = #55ffffff
-label-visible-font = 1
-label-visible-padding = 4
+label-empty = %icon%  %name%
+label-empty-foreground = #55ffffff
+label-empty-font = 1
+label-empty-padding = 4
 
+label-dimmed = %icon%  %name%
+label-dimmed-foreground = #55ffffff
+label-dimmed-font = 1
+label-dimmed-padding = 4
 
 [module/cpu]
 type = internal/cpu
@@ -276,7 +279,6 @@ animation-charging-framerate = 750
 [module/xwindow]
 type = internal/xwindow
 label-maxlen = 75
-label-foreground = #bbb
 
 [module/temperature]
 type = internal/temperature
