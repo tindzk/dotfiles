@@ -86,6 +86,7 @@ alias bloop="echo Run: b"
 alias b=$HOME/.bloop/bloop
 
 alias pmk="python -m venv venv"
+alias pmk2="virtualenv2 venv"
 alias pld="source venv/bin/activate"
 alias http="python3 -m http.server"
 
@@ -139,6 +140,7 @@ e    nvim
 eg   nvim-qt
 ez   nvim $HOME/.zshrc && source $HOME/.zshrc
 pmk  python -m venv venv
+pmk2 virtualenv2 venv
 pld  source venv/bin/activate
 http python3 -m http.server'
 """
