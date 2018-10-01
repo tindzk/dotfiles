@@ -15,3 +15,6 @@ export GDK_SCALE=2
 export QT_SCALE_FACTOR=2
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Required for IntelliJ in bspwm
+export _JAVA_AWT_WM_NONREPARENTING=1
