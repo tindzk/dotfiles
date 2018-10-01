@@ -39,7 +39,7 @@ font-3 = "DejaVu Sans:size=8;0"
 modules-left = bspwm
 modules-center = xwindow
 # modules-right = disk cpu memory wired-network mpd clock
-modules-right = disk cpu memory battery wireless-network backlight clock
+modules-right = disk cpu memory battery wireless-network backlight pulseaudio clock
 
 tray-detached = false
 tray-position = right
@@ -164,6 +164,21 @@ type     = internal/memory
 interval = 0.2
 format   = <label>
 label    =   %gb_used% / %gb_total%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume>
+
+label-muted-foreground = #666
+
+ramp-volume-0 =
+ramp-volume-1 =
+ramp-volume-2 =
+ramp-volume-3 =
+
+label-muted = 
+ramp-headphones-0 = 
 
 [module/wireless-network]
 type = internal/network
