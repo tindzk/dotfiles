@@ -46,7 +46,7 @@ tray-position = right
 tray-padding = 2
 tray-maxsize = 40
 
-; wm-restack = i3
+wm-restack = bspwm
 ; override-redirect = true
 
 [module/disk]
