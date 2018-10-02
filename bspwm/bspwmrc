@@ -17,7 +17,13 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
+bspc rule -a albert focus=on
+
 bspc rule -a Firefox desktop='^1'
 bspc rule -a nvim-qt desktop='^2'
+bspc rule -a jetbrains-idea-ce desktop='^3'
 bspc rule -a Chromium desktop='^3'
-bspc rule -a albert focus=on
+bspc rule -a Pidgin desktop='^5'
+bspc rule -a Transmission desktop='^6'
+bspc rule -a lisons desktop='^7'
+bspc rule -a thunar desktop='^8'
