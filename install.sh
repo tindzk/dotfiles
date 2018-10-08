@@ -29,5 +29,8 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/tigrc ~/.tigrc
 ln -s ~/dotfiles/ideavimrc ~/.ideavimrc
 
+rmdir ~/.config/ranger
+ln -s ~/dotfiles/ranger ~/.config/ranger
+
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
