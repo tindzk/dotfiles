@@ -1,5 +1,6 @@
 " {{{ Plugins
 	call plug#begin('~/.config/nvim/plugged')
+	Plug 'KeitaNakamura/neodark.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cespare/vim-toml'
 	Plug 'cocopon/vaffle.vim'
@@ -58,9 +59,21 @@
 	" colorscheme molokai
 	" colorscheme wombat
 
-	let g:oceanic_next_terminal_bold   = 1
-	let g:oceanic_next_terminal_italic = 1
-	colorscheme OceanicNext
+	" let g:oceanic_next_terminal_bold   = 1
+	" let g:oceanic_next_terminal_italic = 1
+	" colorscheme OceanicNext
+
+	let g:neodark#use_256color = 1
+	let g:neodark#terminal_transparent = 1
+	colorscheme neodark
+
+	if $TERM != ''
+		" Transparent background in TUI
+		au ColorScheme * hi Normal ctermbg=none guibg=none
+	endif
+
+	" Enable support for colours in TUI
+	set termguicolors
 
 	" Turn syntax highlighting on
 	syntax on
@@ -135,13 +148,6 @@
 " }}}
 " {{{ Rainbow
 	let g:rainbow_active = 1
-" }}}
-" {{{ TUI
-	" Enable support for colours in TUI
-	set termguicolors
-
-	" Use block cursor in normal mode
-	set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 " }}}
 " {{{ Search
 	" See also http://linuxcommando.blogspot.com/2008/06/smart-case-insensitive-incremental.html

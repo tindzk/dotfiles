@@ -10,7 +10,9 @@ height = 50
 
 dpi = 192
 
-background = #1c1c1c
+# background = #1c1c1c
+# Transparent background
+background = #00000000
 foreground = #eefafafa
 
 overline-size = 3
@@ -19,8 +21,8 @@ underline-size = 3
 underline-color = ${colors.accent}
 
 ;border-color = #ff0000
-border-top-size = 3
-border-top-color = #3d3d3d
+;border-top-size = 3
+;border-top-color = #3d3d3d
 ;border-bottom = 0
 ;border-bottom-color = #333333
 
