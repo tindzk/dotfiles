@@ -172,7 +172,7 @@
 	endfunction
 
 	" Open links in browser
-	map <C-o> :call Browser()<CR>
+	map <C-space> :call Browser()<CR>
 
 	" Search line in browser
 	map <C-g> :call BrowserSearch()<CR>
