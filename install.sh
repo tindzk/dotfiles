@@ -1,4 +1,6 @@
 #!/bin/sh
+xdg-settings set default-web-browser firefox.desktop
+
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/nvim ~/.config/nvim

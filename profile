@@ -1,6 +1,5 @@
 #!/bin/sh
 export EDITOR=nvim
-export BROWSER=firefox
 
 export IDEA_JDK=/usr/lib/jvm/intellij-jdk
 export JAVA_OPTS="-XX:InitialHeapSize=1024m -XX:MaxHeapSize=8192m"
