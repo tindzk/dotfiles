@@ -24,6 +24,13 @@
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vimwiki/vimwiki'
+	Plug 'reasonml-editor/vim-reason-plus'
+	Plug 'autozimu/LanguageClient-neovim', {
+		\ 'branch': 'next',
+		\ 'do': 'bash install.sh',
+		\ }
+	Plug 'junegunn/fzf'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	call plug#end()
 " }}}
 " {{{ General
@@ -319,4 +326,17 @@ autocmd FileType mail set omnifunc=UserComplete
 " {{{ Clipboard
   " Use system clipboard
   set clipboard+=unnamedplus
+" }}}
+" {{{ Language client
+	let g:LanguageClient_autoStart = 1
+	let g:LanguageClient_serverCommands = {
+		\ 'reason': ['/home/tim/bin/reason-language-server.exe'],
+		\ }
+	let g:deoplete#enable_at_startup = 1
+
+	nnoremap <silent> <A-r> :call LanguageClient#textDocument_rename()<CR>
+	nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<cr>
+	nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
+	nnoremap <silent> gf :call LanguageClient#textDocument_formatting()<cr>
+	nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 " }}}
