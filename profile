@@ -1,6 +1,8 @@
 #!/bin/sh
 export EDITOR=nvim
 
+export PATH=~/bin:$PATH
+
 export IDEA_JDK=/usr/lib/jvm/intellij-jdk
 export JAVA_OPTS="-XX:InitialHeapSize=1024m -XX:MaxHeapSize=8192m"
 

@@ -34,5 +34,9 @@ ln -s ~/dotfiles/ideavimrc ~/.ideavimrc
 rmdir ~/.config/ranger
 ln -s ~/dotfiles/ranger ~/.config/ranger
 
+# pgweb uses `open` instead of `xdg-open`
+mkdir ~/bin
+ln -s $(which xdg-open) ~/bin/open
+
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
