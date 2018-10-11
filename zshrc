@@ -33,19 +33,58 @@ colors
 bindkey -v
 
 function zle-line-init zle-keymap-select () {
-  # See https://github.com/AguirreIF/urxvt-patchs/blob/master/README.md
-  case $KEYMAP in
-    vicmd)      print -n -- "\033[2 q";;  # block cursor (normal mode)
-    viins|main) print -n -- "\033[6 q";;  # vertical cursor (insert mode)
-  esac
+	# See https://github.com/AguirreIF/urxvt-patchs/blob/master/README.md
+	case $KEYMAP in
+		vicmd)      print -n -- "\033[2 q";;  # block cursor (normal mode)
+		viins|main) print -n -- "\033[6 q";;  # vertical cursor (insert mode)
+	esac
 
-  # Prompt
-  PS1="%{$fg_bold[blue]%}${PWD/#$HOME/~} $%{$reset_color%} "
-  zle reset-prompt
+	# Prompt
+	PS1="%{$fg_bold[blue]%}${PWD/#$HOME/~} $%{$reset_color%} "
+	zle reset-prompt
 }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+# Set terminal window and tab/icon title
+#
+# See also http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss3.1
+#
+# From https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/termsupport.zsh
+function title {
+	emulate -L zsh
+	setopt prompt_subst
+
+	print -Pn "\e]1;$1:q\a" # set tab name
+
+	if [[ "$TERM" != "screen" ]]; then
+		print -Pn "\e]2;$2:q\a" # set window name
+	fi
+}
+
+# Runs before showing the prompt
+function omz_termsupport_precmd {
+	emulate -L zsh
+
+	# 15 char left truncated PWD
+	title "%15<..<%~%<<" "%n@%m: %~"
+}
+
+# Runs before executing the command
+function omz_termsupport_preexec {
+	emulate -L zsh
+	setopt extended_glob
+
+	# cmd name only, or if this is sudo/ssh/mosh, the next cmd
+	local CMD=${1[(wr)^(*=*|sudo|ssh|mosh|-*)]:gs/%/%%}
+	local LINE="${2:gs/%/%%}"
+
+	title '$CMD' '%100>...>$LINE%<<'
+}
+
+precmd_functions+=(omz_termsupport_precmd)
+preexec_functions+=(omz_termsupport_preexec)
 
 export _git=/usr/bin/git
 alias g=$_git
