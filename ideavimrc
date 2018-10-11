@@ -7,3 +7,4 @@ nnoremap N :action FindPrevious<CR>
 
 nnoremap gp :action GotoPreviousError<CR>
 nnoremap gn :action GotoNextError<CR>
+nnoremap gr :action FindUsages<CR>
