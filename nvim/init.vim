@@ -56,6 +56,9 @@
 
 	" Do not create backup files
 	set nobackup
+
+	" Show filename and path in window title
+	set title
 " }}}
 " {{{ Colours
 	" Select colour scheme
