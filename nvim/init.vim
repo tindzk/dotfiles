@@ -33,6 +33,7 @@
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
+	Plug 'tpope/vim-sleuth'
 	call plug#end()
 " }}}
 " {{{ General
@@ -210,12 +211,8 @@
 	autocmd FileType gitcommit set textwidth=68
 	autocmd FileType gitcommit set spell
 " }}}
-" {{{ Indention
+" {{{ Indentation
 	set tabstop=2
-	set shiftwidth=2
-	set softtabstop=2
-
-	autocmd FileType scala set expandtab
 " }}}
 " {{{ Line breaks
 	" Enable word wrapping
