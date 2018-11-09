@@ -121,3 +121,9 @@ Tabs
 
 Navigation
   *  search for word under cursor
+
+Diffs
+  :windo diffthis   begin diffing on all visible windows, executes :diffthis on each window
+  :diffoff!         end diff mode
+  :[range]SDChar    show character-based highlights
+  :[range]RDChar    reset character-based highlights

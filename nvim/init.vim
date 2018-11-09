@@ -34,6 +34,7 @@
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'tpope/vim-sleuth'
+	Plug 'rickhowe/diffchar.vim'
 	call plug#end()
 " }}}
 " {{{ General
