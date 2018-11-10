@@ -125,6 +125,11 @@ alias seed="$HOME/dev/seed/seed --tmpfs"
 alias bloop="echo Run: b"
 alias b=$HOME/.bloop/bloop
 
+alias yt="youtube-dl --all-subs"
+ytb() { youtube-dl --all-subs --batch-file=$1 }
+yts() { youtube-dl --write-auto-sub --sub-lang $1 $2 }
+ytp() { youtube-dl "https://www.youtube.com/playlist?list=$1" }
+
 alias pmk="python -m venv venv"
 alias pmk2="virtualenv2 venv"
 alias pld="source venv/bin/activate"
@@ -180,6 +185,10 @@ b    bloop
 e    nvim
 eg   nvim-qt
 ez   nvim $HOME/.zshrc && source $HOME/.zshrc
+yt   youtube-dl --all-subs
+ytb  youtube-dl --all-subs --batch-file=<file>
+yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
+ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
 pmk  python -m venv venv
 pmk2 virtualenv2 venv
 pld  source venv/bin/activate
