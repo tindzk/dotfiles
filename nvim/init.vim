@@ -31,6 +31,7 @@
 		\ }
 	Plug 'junegunn/fzf'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'romainl/vim-tinyMRU'
 	call plug#end()
 " }}}
 " {{{ General
