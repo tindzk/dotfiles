@@ -296,6 +296,7 @@
 	nmap <leader>do <Plug>VimwikiMakeDiaryNote
 	nmap <leader>dj <Plug>VimwikiDiaryPrevDay
 	nmap <leader>dk <Plug>VimwikiDiaryNextDay
+	nmap <Leader>wn <Plug>VimwikiNextLink
 	let g:vimwiki_url_maxsave=0
 " }}}
 " {{{ gtfo
