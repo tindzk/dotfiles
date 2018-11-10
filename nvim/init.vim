@@ -32,6 +32,7 @@
 	Plug 'junegunn/fzf'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'romainl/vim-tinyMRU'
+	Plug 'gcavallanti/vim-noscrollbar'
 	call plug#end()
 " }}}
 " {{{ General
@@ -264,8 +265,14 @@
 		\ 'component_function': {
 		\   'filetype': 'MyFiletype',
 		\   'fileformat': 'MyFileformat',
+		\   'percent': 'NoScrollbarForLightline'
 		\ }
 		\ }
+
+	" Instead of % show NoScrollbar horizontal scrollbar
+	function! NoScrollbarForLightline()
+		return noscrollbar#statusline()
+	endfunction
 
 	function! MyFiletype()
 		return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
