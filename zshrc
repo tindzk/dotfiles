@@ -99,6 +99,7 @@ alias gco="$_git checkout"
 alias gcl="$_git checkout --theirs"  # Use local file
 alias gcr="$_git checkout --ours"    # Use remote file
 alias gd="$_git diff"
+alias gdc="$_git diff --cached"
 alias gl=tig
 alias gcp="$_git cherry-pick"
 alias gcpc="$_git cherry-pick --continue"
@@ -110,6 +111,7 @@ alias gundo="$_git reset HEAD^ --"
 alias ga="$_git add"
 alias gr="$_git rebase"
 alias grc="$_git rebase --continue"
+alias gs="$_git show"
 
 alias grep="echo Run: rg"  # ripgrep
 alias find="echo Run: fd"
@@ -161,6 +163,7 @@ gco  git checkout
 gcl  git checkout --theirs  # Use local file
 gcr  git checkout --ours    # Use remote file
 gd   git diff
+gdc  git diff --cached
 gl   tig
 gcp  git cherry-pick
 gcpc git cherry-pick --continue
@@ -174,6 +177,7 @@ gundo  git reset HEAD^ --
 ga   git add
 gr   git rebase
 grc  git rebase --continue
+gs   git show
 grb  git show \$1:\$2 > \$2     # Restore file <path> from <branch>
                              # Usage: grb <branch> <path>
 p    mpv
