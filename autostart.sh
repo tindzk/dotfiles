@@ -5,6 +5,9 @@ xrandr --dpi 192 &
 $HOME/.config/polybar/launch.sh
 nitrogen --set-scaled --random $HOME/Wallpapers/ &
 albert &
+
+# See https://github.com/jonls/redshift/issues/636
+/usr/lib/geoclue-2.0/demos/agent &
 redshift &
 
 # lxqt-connman-applet &
