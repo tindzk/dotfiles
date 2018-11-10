@@ -24,7 +24,7 @@ bspc rule -a Firefox desktop='^1' follow=true
 bspc rule -a nvim-qt desktop='^2' follow=true
 bspc rule -a jetbrains-idea-ce desktop='^3'
 bspc rule -a Chromium desktop='^3'
-bspc rule -a mpv desktop='^4' follow=true border=off
+bspc rule -a mpv follow=true border=off
 bspc rule -a Pidgin desktop='^5'
 bspc rule -a Transmission desktop='^6'
 bspc rule -a lisons desktop='^7' follow=true
