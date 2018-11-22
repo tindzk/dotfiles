@@ -91,6 +91,7 @@ alias g=$_git
 alias git="echo Run: g"
 alias gs="$_git status"
 alias gsh="$_git show"
+alias gb="$_git branch"
 alias gf="$_git fetch"
 alias gc="$_git commit"
 alias gca="$_git commit --amend"
@@ -154,6 +155,7 @@ echo 'Aliases:
 g    git
 gs   git status
 gsh  git show
+gb   git branch
 gf   git fetch
 gc   git commit
 gca  git commit --amend
