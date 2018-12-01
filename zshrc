@@ -89,7 +89,7 @@ preexec_functions+=(omz_termsupport_preexec)
 export _git=/usr/bin/git
 alias g=$_git
 alias git="echo Run: g"
-alias gst="$_git status"
+alias gs="$_git status"
 alias gsh="$_git show"
 alias gf="$_git fetch"
 alias gc="$_git commit"
@@ -111,7 +111,6 @@ alias gundo="$_git reset HEAD^ --"
 alias ga="$_git add"
 alias gr="$_git rebase"
 alias grc="$_git rebase --continue"
-alias gs="$_git show"
 
 alias grep="echo Run: rg"  # ripgrep
 alias find="echo Run: fd"
@@ -153,7 +152,7 @@ alias '?'="""
 echo 'Aliases:
 .    source
 g    git
-gst  git status
+gs   git status
 gsh  git show
 gf   git fetch
 gc   git commit
@@ -177,7 +176,6 @@ gundo  git reset HEAD^ --
 ga   git add
 gr   git rebase
 grc  git rebase --continue
-gs   git show
 grb  git show \$1:\$2 > \$2     # Restore file <path> from <branch>
                              # Usage: grb <branch> <path>
 p    mpv
