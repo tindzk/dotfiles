@@ -31,6 +31,7 @@ colors
 
 # Vi mode
 bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 function zle-line-init zle-keymap-select () {
 	# See https://github.com/AguirreIF/urxvt-patchs/blob/master/README.md
