@@ -42,3 +42,6 @@ mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
 
 ln -s ~/dotfiles/idea.properties ~/.IdeaIC2018.3/config/idea.properties
+
+mkdir -p ~/.config/kitty/
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
