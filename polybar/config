@@ -38,8 +38,8 @@ font-1 = unifont:fontformat=truetype:size=5:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-3 = "DejaVu Sans:size=8;0"
 
-modules-left = bspwm
-modules-center = xwindow
+modules-left = bspwm xwindow
+# modules-center =
 # modules-right = disk cpu memory wired-network mpd clock
 modules-right = disk cpu memory battery wireless-network backlight pulseaudio clock
 
@@ -297,7 +297,7 @@ animation-charging-framerate = 750
 
 [module/xwindow]
 type = internal/xwindow
-label-maxlen = 75
+label-maxlen = 60
 
 [module/temperature]
 type = internal/temperature
