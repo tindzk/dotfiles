@@ -69,7 +69,7 @@ function omz_termsupport_precmd {
 	emulate -L zsh
 
 	# 15 char left truncated PWD
-	title "%15<..<%~%<<" "%n@%m: %~"
+	title "%15<..<%~%<<" "%~"
 }
 
 # Runs before executing the command
