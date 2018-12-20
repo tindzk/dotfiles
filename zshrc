@@ -31,6 +31,13 @@ colors
 
 # Vi mode
 bindkey -v
+
+# Auto-completion for kill command
+# Adapted from https://gist.github.com/fredw08/1999371
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:*:kill:*:processes' command 'ps xo pid,rss,cmd --sort rss | numfmt --header --from-unit=1024 --to=iec --field 2 | tail +1'
+
 bindkey "^R" history-incremental-search-backward
 
 function zle-line-init zle-keymap-select () {
