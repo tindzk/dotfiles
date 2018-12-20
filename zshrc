@@ -90,7 +90,7 @@ preexec_functions+=(omz_termsupport_preexec)
 export _git=/usr/bin/git
 alias g=$_git
 alias git="echo Run: g"
-alias gs="$_git status"
+alias gs="$_git status -sb"
 alias gsh="$_git show"
 alias gb="$_git branch"
 alias gf="$_git fetch"
@@ -155,7 +155,7 @@ alias '?'="""
 echo 'Aliases:
 .    source
 g    git
-gs   git status
+gs   git status -sb
 gsh  git show
 gb   git branch
 gf   git fetch
