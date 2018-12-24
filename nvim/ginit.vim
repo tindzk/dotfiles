@@ -4,8 +4,8 @@
 GuiTabline 0
 
 let g:Font         = 'Ubuntu Mono'
-let g:FontSize     = 5
-let g:FontSizeMin  = 4
+let g:FontSize     = 9
+let g:FontSizeMin  = 6
 let g:FontSizeIncr = 2
 
 call GuiFont(g:Font . ':h' . g:FontSize)

@@ -18,8 +18,8 @@ mkdir -p ~/.config/polybar/
 ln -s ~/dotfiles/polybar/config ~/.config/polybar/config
 ln -s ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 
-mkdir -p ~/.config/i3/
-ln -s ~/dotfiles/i3/config ~/.config/i3/config
+mkdir -p ~/.config/sway/
+ln -s ~/dotfiles/sway/config ~/.config/sway/config
 
 ln -s ~/dotfiles/bspwm ~/.config/bspwm
 ln -s ~/dotfiles/sxhkd ~/.config/sxhkd
@@ -45,3 +45,10 @@ ln -s ~/dotfiles/idea.properties ~/.IdeaIC2018.3/config/idea.properties
 
 mkdir -p ~/.config/kitty/
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+
+mkdir -p ~/.config/waybar/
+ln -s ~/dotfiles/waybar ~/.config/waybar/config
+
+sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
+sudo systemctl enable sway@7
+sudo systemctl start sway@7

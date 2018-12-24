@@ -1,0 +1,47 @@
+# From https://gist.github.com/agboom/eaec2697e3848cd626f25d428d8c30c6
+[Unit]
+Description=Sway compositor
+
+[Service]
+ExecStartPre=/usr/bin/chvt %I
+ExecStart=/usr/bin/dbus-launch --exit-with-session /usr/bin/sway
+TTYPath=/dev/tty%I
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+PAMName=login
+User=tim
+WorkingDirectory=/home/tim
+
+# Reset TERM which is set to linux because the neovim-qt configuration checks
+# whether it was started from the terminal
+Environment=TERM=
+
+Environment=XDG_CONFIG_HOME=/home/tim/.config
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+# Disable client-side Qt decorations
+# See https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
+Environment=QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# See https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE
+# Requires that qt5ct package is installed
+Environment=QT_QPA_PLATFORMTHEME=qt5ct
+
+Environment=KITTY_ENABLE_WAYLAND=1
+
+# Required for IntelliJ
+Environment=_JAVA_AWT_WM_NONREPARENTING=1
+
+Environment=QT_QPA_PLATFORM=wayland
+#Environment=GDK_BACKEND=wayland
+
+Restart=always
+RestartSec=2
+StandardInput=tty
+StandardError=journal
+StandardOutput=journal
+Nice=-5
+
+[Install]
+WantedBy=graphical.target
