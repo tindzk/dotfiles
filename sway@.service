@@ -13,6 +13,9 @@ PAMName=login
 User=tim
 WorkingDirectory=/home/tim
 
+# Workaround for https://github.com/swaywm/sway/issues/3007
+Environment=IDEA_JDK=/usr/lib/jvm/java-8-openjdk
+
 # Reset TERM which is set to linux because the neovim-qt configuration checks
 # whether it was started from the terminal
 Environment=TERM=

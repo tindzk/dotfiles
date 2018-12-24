@@ -50,5 +50,6 @@ mkdir -p ~/.config/waybar/
 ln -s ~/dotfiles/waybar ~/.config/waybar/config
 
 sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
+sudo systemctl daemon-reload
 sudo systemctl enable sway@7
-sudo systemctl start sway@7
+sudo systemctl restart sway@7
