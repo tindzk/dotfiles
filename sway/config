@@ -117,18 +117,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Lock screen
-bindsym $mod+ctrl+l exec swaylock
-
 # Run a program
 bindsym $mod+d exec bemenu-run
 
 # Start a terminal
 bindsym $mod+Return exec kitty
-
-# Lock screen
-# TODO XF86Lock is not mapped
-# bindsym XF86Lock exec slock
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -138,6 +131,13 @@ bindsym XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 # Screen brightness controls
 bindsym XF86MonBrightnessDown exec light -U 1
 bindsym XF86MonBrightnessUp   exec light -A 1
+
+# Lock screen
+bindsym $mod+x exec swaylock -c 000000
+
+# Lock screen
+# TODO XF86Lock is not mapped
+# bindsym XF86Lock exec slock
 
 # After 300 seconds of inactivity, lock screen
 # After 600 seconds, turn off all outputs (and turn them back on when you wiggle the mouse)
