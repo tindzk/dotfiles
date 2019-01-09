@@ -132,7 +132,6 @@ alias lt="exa --tree"
 alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
-alias seed="$HOME/dev/seed/seed --tmpfs"
 alias bloop="echo Run: b"
 alias b=$HOME/.bloop/bloop
 

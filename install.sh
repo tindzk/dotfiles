@@ -49,6 +49,8 @@ ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/waybar/
 ln -s ~/dotfiles/waybar ~/.config/waybar/config
 
+ln -s ~/dotfiles/seed.toml ~/.config/seed.toml
+
 sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
 sudo systemctl daemon-reload
 sudo systemctl enable sway@7
