@@ -4,7 +4,7 @@ Description=Sway compositor
 
 [Service]
 ExecStartPre=/usr/bin/chvt %I
-ExecStart=/usr/bin/dbus-launch --exit-with-session /usr/bin/sway
+ExecStart=/usr/bin/sway
 TTYPath=/dev/tty%I
 TTYReset=yes
 TTYVHangup=yes
@@ -20,8 +20,9 @@ Environment=IDEA_JDK=/usr/lib/jvm/java-8-openjdk
 # whether it was started from the terminal
 Environment=TERM=
 
-Environment=XDG_CONFIG_HOME=/home/tim/.config
 Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=XDG_DATA_HOME=/home/tim/.local/share
+Environment=XDG_CONFIG_HOME=/home/tim/.config
 
 # Disable client-side Qt decorations
 # See https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
