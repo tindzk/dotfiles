@@ -139,13 +139,13 @@ bindsym $mod+x exec swaylock -c 000000
 # TODO XF86Lock is not mapped
 # bindsym XF86Lock exec slock
 
-# After 300 seconds of inactivity, lock screen
-# After 600 seconds, turn off all outputs (and turn them back on when you wiggle the mouse)
+# After 400 seconds, turn off all outputs (and turn them back on when you wiggle the mouse)
+# After 500 seconds of inactivity, lock screen
 # Lock screen before system goes to sleep
 exec swayidle \
-    timeout 300 'swaylock -c 000000' \
-    timeout 600 'swaymsg "output * dpms off"' \
+    timeout 400 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
+    timeout 500 'swaylock -c 000000' \
     before-sleep 'swaylock -c 000000'
 
 exec waybar
