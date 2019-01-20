@@ -148,7 +148,6 @@ exec swayidle \
     timeout 500 'swaylock -c 000000' \
     before-sleep 'swaylock -c 000000'
 
-exec mako
 exec waybar
 exec redshift
 

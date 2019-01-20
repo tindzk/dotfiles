@@ -51,6 +51,8 @@ ln -s ~/dotfiles/waybar ~/.config/waybar/config
 
 ln -s ~/dotfiles/seed.toml ~/.config/seed.toml
 
+ln -s ~/dotfiles/dbus-1 ~/.local/share/dbus-1
+
 sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
 sudo systemctl daemon-reload
 sudo systemctl enable sway@7
