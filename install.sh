@@ -53,6 +53,8 @@ ln -s ~/dotfiles/seed.toml ~/.config/seed.toml
 
 ln -s ~/dotfiles/dbus-1 ~/.local/share/dbus-1
 
+ln -s ~/dotfiles/bin/chromium ~/bin/chromium
+
 sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
 sudo systemctl daemon-reload
 sudo systemctl enable sway@7

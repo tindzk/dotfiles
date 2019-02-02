@@ -13,6 +13,8 @@ PAMName=login
 User=tim
 WorkingDirectory=/home/tim
 
+Environment=PATH=/home/tim/bin:/usr/bin
+
 # Workaround for https://github.com/swaywm/sway/issues/3007
 Environment=IDEA_JDK=/usr/lib/jvm/java-8-openjdk
 
