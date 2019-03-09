@@ -2,6 +2,10 @@
 [Unit]
 Description=Sway compositor
 
+# See https://stackoverflow.com/a/39284869
+StartLimitBurst=5
+StartLimitIntervalSec=200
+
 [Service]
 ExecStartPre=/usr/bin/chvt %I
 ExecStart=/usr/bin/sway
@@ -18,7 +22,7 @@ Environment=PATH=/home/tim/bin:/usr/bin
 # Workaround for https://github.com/swaywm/sway/issues/3007
 Environment=IDEA_JDK=/usr/lib/jvm/java-8-openjdk
 
-# Reset TERM which is set to linux because the neovim-qt configuration checks
+# Reset TERM which is set to `linux` because the neovim-qt configuration checks
 # whether it was started from the terminal
 Environment=TERM=
 
