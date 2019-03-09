@@ -156,6 +156,10 @@ alias nvim-qt="echo 'Run: eg'"
 
 grb() { g show $1:$2 > $2 }
 
+pgweb() {
+  pgweb_linux_amd64 --user=postgres --db=$1
+}
+
 alias .=source
 alias '?'="""
 echo 'Aliases:
