@@ -47,7 +47,8 @@ mkdir -p ~/.config/kitty/
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 mkdir -p ~/.config/waybar/
-ln -s ~/dotfiles/waybar ~/.config/waybar/config
+ln -s ~/dotfiles/waybar/config ~/.config/waybar/config
+ln -s ~/dotfiles/waybar/style.css ~/.config/waybar/style.css
 
 ln -s ~/dotfiles/seed.toml ~/.config/seed.toml
 
