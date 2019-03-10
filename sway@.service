@@ -35,6 +35,8 @@ Environment=QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 # Requires that qt5ct package is installed
 Environment=QT_QPA_PLATFORMTHEME=qt5ct
 
+Environment=GTK_THEME=Arc:dark
+
 Environment=KITTY_ENABLE_WAYLAND=1
 
 # Required for IntelliJ
