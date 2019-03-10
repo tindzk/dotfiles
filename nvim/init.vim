@@ -35,6 +35,7 @@
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'tpope/vim-sleuth'
 	Plug 'rickhowe/diffchar.vim'
+	Plug 'ap/vim-css-color'
 	call plug#end()
 " }}}
 " {{{ General
