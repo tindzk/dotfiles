@@ -212,6 +212,7 @@ pld  source venv/bin/activate
 http python3 -m http.server'
 """
 
+source ~/dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/auto-ls.zsh
 source ~/dotfiles/zjump.zsh
 source ~/.profile
