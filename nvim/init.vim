@@ -36,6 +36,7 @@
 	Plug 'tpope/vim-sleuth'
 	Plug 'rickhowe/diffchar.vim'
 	Plug 'ap/vim-css-color'
+	Plug 'machakann/vim-sandwich'
 	call plug#end()
 " }}}
 " {{{ General
