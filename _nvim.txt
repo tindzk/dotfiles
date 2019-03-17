@@ -6,12 +6,6 @@ Whitespaces
   :StripWhitespace
   :retab  Convert tabs to spaces
 
-gtfo
-  gof  Go to the current file's directory in file manager
-  goF  Go to the current working directory in file manager (:pwd)
-  got  Go to the current file's directory in terminal
-  goT  Go to the current working directory in terminal (:pwd)
-
 Vimwiki
   \ww         Open wiki index file
   \wt         Open wiki index file in new tab

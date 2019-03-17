@@ -11,7 +11,6 @@
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'junegunn/fzf'
-	Plug 'justinmk/vim-gtfo'
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
 	Plug 'mhinz/vim-startify'
@@ -297,9 +296,6 @@
 	nmap <leader>dk <Plug>VimwikiDiaryNextDay
 	nmap <Leader>wn <Plug>VimwikiNextLink
 	let g:vimwiki_url_maxsave=0
-" }}}
-" {{{ gtfo
-	let g:gtfo#terminals = { 'unix': 'termite -d' }
 " }}}
 " {{{ Mails
 " Adapted from https://github.com/vim-scripts/Search-in-Addressbook/blob/master/plugin/address-search.vim
