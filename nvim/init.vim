@@ -4,13 +4,13 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cespare/vim-toml'
 	Plug 'cocopon/vaffle.vim'
-	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'derekwyatt/vim-scala'
 	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'itchyny/lightline.vim'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
+	Plug 'junegunn/fzf'
 	Plug 'justinmk/vim-gtfo'
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
@@ -29,7 +29,6 @@
 		\ 'branch': 'next',
 		\ 'do': 'bash install.sh',
 		\ }
-	Plug 'junegunn/fzf'
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
@@ -282,8 +281,8 @@
 		return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 	endfunction
 " }}}
-" {{{ CtrlP
-	nnoremap <C-b> :CtrlPBuffer<CR>
+" {{{ Fuzzy Path Matching
+	nnoremap <C-p> :<C-u>FZF<CR>
 " }}}
 " {{{ Vimwiki
 	set nocompatible

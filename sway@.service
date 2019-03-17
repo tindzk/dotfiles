@@ -27,6 +27,8 @@ Environment=XDG_RUNTIME_DIR=/run/user/1000
 Environment=XDG_DATA_HOME=/home/tim/.local/share
 Environment=XDG_CONFIG_HOME=/home/tim/.config
 
+Environment=FZF_DEFAULT_COMMAND="rg --files"
+
 # Disable client-side Qt decorations
 # See https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
 Environment=QT_WAYLAND_DISABLE_WINDOWDECORATION=1

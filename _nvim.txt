@@ -46,10 +46,11 @@ Browser
 Spell checking
   <C-s>
 
-CtrlP
-  <C-b> Buffer completions
-  <C-p> File completions
-  <C-f> Cycle between modes
+Fuzzy File Matching
+  <C-p>  File completions
+  <C-x>  Open selected file in horizontal split
+  <C-v>  Open selected file in vertical split
+  <C-t>  Open selected file in new tab
 
 vim-wheel  Screen-anchored cursor movement
   <C-j>
