@@ -31,11 +31,11 @@
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
-	Plug 'tpope/vim-sleuth'
 	Plug 'rickhowe/diffchar.vim'
 	Plug 'ap/vim-css-color'
 	Plug 'machakann/vim-sandwich'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'sgur/vim-editorconfig'
 	call plug#end()
 " }}}
 " {{{ General
@@ -50,11 +50,6 @@
 
 	" Incremental substitutions
 	set inccommand=split
-
-	" Use UTF-8 everywhere
-	set enc=utf-8
-	set fenc=utf-8
-	set termencoding=utf-8
 
 	" Show line numbers
 	set number
@@ -96,7 +91,7 @@
 	" Get rid of highlighted text after searching by pressing <F1>
 	map <F1> :noh<CR>
 
-	" Underline current line in insert mode.
+	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
 " }}}
@@ -208,17 +203,11 @@
 	" Toggle spell checking
 	inoremap <c-s> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
 	nnoremap <c-s>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-" }}}
-" {{{ Git
-	autocmd FileType gitcommit set textwidth=68
+
 	autocmd FileType gitcommit set spell
-" }}}
-" {{{ Indentation
-	set tabstop=2
 " }}}
 " {{{ Line breaks
 	" Enable word wrapping
-	set textwidth=80
 	set linebreak
 	set showbreak=¶
 

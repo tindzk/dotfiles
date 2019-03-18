@@ -56,6 +56,8 @@ ln -s ~/dotfiles/dbus-1 ~/.local/share/dbus-1
 
 ln -s ~/dotfiles/bin/chromium ~/bin/chromium
 
+ln -s ~/dotfiles/editorconfig ~/.editorconfig
+
 sudo cp ~/dotfiles/sway@.service /etc/systemd/system/sway@.service
 sudo systemctl daemon-reload
 sudo systemctl enable sway@7
