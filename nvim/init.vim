@@ -10,6 +10,7 @@
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'junegunn/fzf'
+	Plug 'junegunn/fzf.vim'
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
 	Plug 'mhinz/vim-startify'
