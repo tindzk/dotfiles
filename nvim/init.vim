@@ -23,12 +23,6 @@
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
 	Plug 'vimwiki/vimwiki'
-	Plug 'reasonml-editor/vim-reason-plus'
-	Plug 'autozimu/LanguageClient-neovim', {
-		\ 'branch': 'next',
-		\ 'do': 'bash install.sh',
-		\ }
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
@@ -36,6 +30,7 @@
 	Plug 'machakann/vim-sandwich'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
+	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 	call plug#end()
 " }}}
 " {{{ General
@@ -250,7 +245,12 @@
 " {{{ Lightline
 	" Configuration for vim-devicons
 	let g:lightline = {
+		\ 'active': {
+		\   'left': [ [ 'mode', 'paste' ],
+		\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+		\ },
 		\ 'component_function': {
+      		\   'cocstatus': 'coc#status',
 		\   'filetype': 'MyFiletype',
 		\   'fileformat': 'MyFileformat',
 		\   'percent': 'NoScrollbarForLightline'
@@ -324,19 +324,6 @@ autocmd FileType mail set omnifunc=UserComplete
   " Use system clipboard
   set clipboard+=unnamedplus
 " }}}
-" {{{ Language client
-	let g:LanguageClient_autoStart = 1
-	let g:LanguageClient_serverCommands = {
-		\ 'reason': ['/home/tim/bin/reason-language-server.exe'],
-		\ }
-	let g:deoplete#enable_at_startup = 1
-
-	nnoremap <silent> <A-r> :call LanguageClient#textDocument_rename()<CR>
-	nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<cr>
-	nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
-	nnoremap <silent> gf :call LanguageClient#textDocument_formatting()<cr>
-	nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
-" }}}
 " {{{ Defx
   " From https://github.com/kristijanhusak/neovim-config/blob/master/nvim/partials/defx.vim
   autocmd FileType defx call s:defx_mappings()
@@ -394,4 +381,106 @@ autocmd FileType mail set omnifunc=UserComplete
 
   " Jump to current file
   nnoremap <silent><Leader>cf :call execute(printf('Defx -search=%s %s', expand('%:p'), expand('%:p:h')))<CR>
+" }}}
+" {{{ Language client
+	" if hidden is not set, TextEdit might fail.
+	set hidden
+
+	" Better display for messages
+	set cmdheight=2
+
+	" Smaller updatetime for CursorHold & CursorHoldI
+	set updatetime=300
+
+	" don't give |ins-completion-menu| messages.
+	set shortmess+=c
+
+	" always show signcolumns
+	set signcolumn=yes
+
+	" Use tab for trigger completion with characters ahead and navigate.
+	" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+	inoremap <silent><expr> <TAB>
+	      \ pumvisible() ? "\<C-n>" :
+	      \ <SID>check_back_space() ? "\<TAB>" :
+	      \ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+	function! s:check_back_space() abort
+	  let col = col('.') - 1
+	  return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+
+	" Use <c-space> for trigger completion.
+	inoremap <silent><expr> <c-space> coc#refresh()
+
+	" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+	" Coc only does snippet and additional edit on confirm.
+	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+	" Use `[c` and `]c` for navigate diagnostics
+	nmap <silent> [c <Plug>(coc-diagnostic-prev)
+	nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gD <Plug>(coc-references)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-rename)
+	vmap <silent> gf <Plug>(coc-format-selected)
+	nmap <silent> gf <Plug>(coc-format-selected)
+
+	nnoremap <silent> gk :call <SID>show_documentation()<CR>
+
+	function! s:show_documentation()
+	  if &filetype == 'vim'
+	    execute 'h '.expand('<cword>')
+	  else
+	    call CocAction('doHover')
+	  endif
+	endfunction
+
+	" Highlight symbol under cursor on CursorHold
+	autocmd CursorHold * silent call CocActionAsync('highlight')
+
+	augroup mygroup
+	  autocmd!
+	  " Setup formatexpr specified filetype(s).
+	  autocmd FileType scala setl formatexpr=CocAction('formatSelected')
+	  " Update signature help on jump placeholder
+	  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+	augroup end
+
+	" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+	vmap <leader>a  <Plug>(coc-codeaction-selected)
+	nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+	" Remap for do codeAction of current line
+	" nmap <leader>ac  <Plug>(coc-codeaction)
+	" Fix autofix problem of current line
+	" nmap <leader>qf  <Plug>(coc-fix-current)
+
+	" Use `:Format` for format current buffer
+	command! -nargs=0 Format :call CocAction('format')
+
+	" Use `:Fold` for fold current buffer
+	command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+	" Using CocList
+	" Show all diagnostics
+	nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+	" Manage extensions
+	nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+	" Show commands
+	nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+	" Find symbol of current document
+	nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+	" Search workspace symbols
+	nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+	" Do default action for next item.
+	nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+	" Do default action for previous item.
+	nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+	" Resume latest coc list
+	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }}}

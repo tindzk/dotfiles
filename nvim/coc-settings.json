@@ -1,0 +1,10 @@
+{
+	"languageserver": {
+		"scala": {
+			"command": "metals-vim",
+			"args": [],
+			"filetypes": ["scala"],
+			"initializationOptions": {}
+		}
+	}
+}
