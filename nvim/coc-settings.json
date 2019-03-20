@@ -6,5 +6,6 @@
 			"filetypes": ["scala"],
 			"initializationOptions": {}
 		}
-	}
+	},
+	"suggest.timeout": 2500
 }
