@@ -37,6 +37,8 @@ ln -s ~/dotfiles/ranger ~/.config/ranger
 # pgweb uses `open` instead of `xdg-open`
 mkdir ~/bin
 ln -s $(which xdg-open) ~/bin/open
+ln -s ~/dotfiles/bin/chromium ~/bin/chromium
+ln -s ~/dotfiles/bin/lock ~/bin/lock
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
@@ -53,8 +55,6 @@ ln -s ~/dotfiles/waybar/style.css ~/.config/waybar/style.css
 ln -s ~/dotfiles/seed.toml ~/.config/seed.toml
 
 ln -s ~/dotfiles/dbus-1 ~/.local/share/dbus-1
-
-ln -s ~/dotfiles/bin/chromium ~/bin/chromium
 
 ln -s ~/dotfiles/editorconfig ~/.editorconfig
 

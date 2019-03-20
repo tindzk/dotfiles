@@ -133,7 +133,7 @@ bindsym XF86MonBrightnessDown exec light -U 1
 bindsym XF86MonBrightnessUp   exec light -A 1
 
 # Lock screen
-bindsym $mod+x exec swaylock -c 000000
+bindsym $mod+x exec lock
 
 # Lock screen
 # TODO XF86Lock is not mapped
@@ -145,8 +145,8 @@ bindsym $mod+x exec swaylock -c 000000
 exec swayidle \
     timeout 400 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
-    timeout 500 'swaylock -c 000000' \
-    before-sleep 'swaylock -c 000000'
+    timeout 500 lock \
+    before-sleep lock
 
 exec waybar
 exec redshift
