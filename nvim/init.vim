@@ -464,7 +464,7 @@ autocmd FileType mail set omnifunc=UserComplete
 	command! -nargs=0 Format :call CocAction('format')
 
 	" Use `:Fold` for fold current buffer
-	command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+	command! -nargs=? Fold   :call CocAction('fold', <f-args>)
 
 	" Using CocList
 	" Show all diagnostics
@@ -483,4 +483,6 @@ autocmd FileType mail set omnifunc=UserComplete
 	nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 	" Resume latest coc list
 	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+	" Show signature
+	nnoremap <silent> <space>p  :call CocActionAsync('showSignatureHelp')<CR>
 " }}}
