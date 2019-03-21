@@ -222,6 +222,9 @@
 
 	" Split window horizontally with -
 	map - <C-W>s<C-W><Down>
+
+	" Readjust splits when window is resized
+	autocmd VimResized * wincmd =
 " }}}
 " {{{ Tabs
 	nnoremap <C-t>c :tabnew<CR>
