@@ -406,13 +406,17 @@ autocmd FileType mail set omnifunc=UserComplete
 	      \ coc#refresh()
 	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+	" Show signature
+	nnoremap <silent> <expr> <c-i> CocAction('showSignatureHelp')
+	inoremap <silent> <expr> <c-i> CocAction('showSignatureHelp')
+
+	" Show type
+	nnoremap <silent> <expr> t CocAction('doHover')
+
 	function! s:check_back_space() abort
 	  let col = col('.') - 1
 	  return !col || getline('.')[col - 1]  =~# '\s'
 	endfunction
-
-	" Use <c-space> for trigger completion.
-	inoremap <silent><expr> <c-space> coc#refresh()
 
 	" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
 	" Coc only does snippet and additional edit on confirm.
@@ -429,16 +433,6 @@ autocmd FileType mail set omnifunc=UserComplete
 	nmap <silent> gr <Plug>(coc-rename)
 	vmap <silent> gf <Plug>(coc-format-selected)
 	nmap <silent> gf <Plug>(coc-format-selected)
-
-	nnoremap <silent> gk :call <SID>show_documentation()<CR>
-
-	function! s:show_documentation()
-	  if &filetype == 'vim'
-	    execute 'h '.expand('<cword>')
-	  else
-	    call CocAction('doHover')
-	  endif
-	endfunction
 
 	" Highlight symbol under cursor on CursorHold
 	autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -483,6 +477,4 @@ autocmd FileType mail set omnifunc=UserComplete
 	nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 	" Resume latest coc list
 	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-	" Show signature
-	nnoremap <silent> <space>p  :call CocActionAsync('showSignatureHelp')<CR>
 " }}}
