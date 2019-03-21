@@ -344,6 +344,7 @@ autocmd FileType mail set omnifunc=UserComplete
     nnoremap <silent><buffer><expr> c defx#do_action('copy')
     nnoremap <silent><buffer><expr> m defx#do_action('move')
     nnoremap <silent><buffer><expr> p defx#do_action('paste')
+    nnoremap <silent><buffer><expr> r defx#do_action('rename')
     " requires python-send2trash
     nnoremap <silent><buffer><expr> d defx#do_action('remove_trash')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
@@ -354,7 +355,6 @@ autocmd FileType mail set omnifunc=UserComplete
     nnoremap <silent><buffer><expr> yy defx#do_action('yank_path')
     nnoremap <silent><buffer><expr> q defx#do_action('quit')
     nnoremap <silent><buffer><expr> gh defx#do_action('cd', [getcwd()])
-    nnoremap <silent><buffer><expr> r defx#do_action('redraw')
 
     nnoremap <silent><buffer><expr> h
       \ defx#is_directory() ?
