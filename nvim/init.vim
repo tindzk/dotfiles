@@ -379,8 +379,8 @@ autocmd FileType mail set omnifunc=UserComplete
 	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 	" Show signature
-	nnoremap <silent> <expr> <c-i> CocAction('showSignatureHelp')
-	inoremap <silent> <expr> <c-i> CocAction('showSignatureHelp')
+	nnoremap <silent> <expr> <leader>i  CocAction('showSignatureHelp')
+	inoremap <silent> <expr> <leader>i  CocAction('showSignatureHelp')
 
 	" Show type
 	nnoremap <silent> <expr> t CocAction('doHover')
