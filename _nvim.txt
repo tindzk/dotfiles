@@ -6,26 +6,6 @@ Whitespaces
   :StripWhitespace
   :retab  Convert tabs to spaces
 
-Vimwiki
-  \ww         Open wiki index file
-  \wt         Open wiki index file in new tab
-  \wd         Delete current wiki file
-  \wr         Rename current wiki file
-  <Enter>     Follow/Create wiki link
-  <S-Enter>   Split and follow/create wiki link
-  <C-Enter>   Vertical split and follow/create wiki link
-  <Backspace> Go back to previous wiki link
-  <Tab>       Jump to next link
-  <S-Tab>     Jump to previous link
-  <C-Space>   toggle list item on/off
-
-  Diary
-    \di       open diary index file
-    \du       update diary index
-    \do       open today's diary file
-    \dj       open previous day's diary file
-    \dk       open next day's diary file
-
 vim-multiple-cursors
   Example: fp<C-n><C-n><C-n>cname
   See https://github.com/terryma/vim-multiple-cursors

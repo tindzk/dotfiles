@@ -22,7 +22,7 @@
 	Plug 'tpope/vim-fugitive'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
-	Plug 'vimwiki/vimwiki'
+	Plug 'ykrivopalov/nvim-md-utils'
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
@@ -275,20 +275,6 @@
 " }}}
 " {{{ Fuzzy Path Matching
 	nnoremap <C-p> :<C-u>FZF<CR>
-" }}}
-" {{{ Vimwiki
-	set nocompatible
-	filetype plugin on
-	let g:vimwiki_list = [{'path': '~/Notes/', 'ext': '.txt'}]
-	autocmd FileType vimwiki set nonumber
-	nmap <leader>- <Plug>VimwikiRemoveHeaderLevel
-	nmap <leader>di <Plug>VimwikiDiaryIndex
-	nmap <leader>du <Plug>VimwikiDiaryGenerateLinks
-	nmap <leader>do <Plug>VimwikiMakeDiaryNote
-	nmap <leader>dj <Plug>VimwikiDiaryPrevDay
-	nmap <leader>dk <Plug>VimwikiDiaryNextDay
-	nmap <Leader>wn <Plug>VimwikiNextLink
-	let g:vimwiki_url_maxsave=0
 " }}}
 " {{{ Mails
 " Adapted from https://github.com/vim-scripts/Search-in-Addressbook/blob/master/plugin/address-search.vim
