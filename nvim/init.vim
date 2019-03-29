@@ -31,6 +31,7 @@
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
 	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 	call plug#end()
 " }}}
 " {{{ General
@@ -451,4 +452,7 @@ autocmd FileType mail set omnifunc=UserComplete
 	nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 	" Resume latest coc list
 	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" }}}
+" {{{ Markdown
+	let g:mkdp_auto_close = 0
 " }}}
