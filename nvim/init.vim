@@ -13,7 +13,7 @@
 	Plug 'junegunn/fzf.vim'
 	Plug 'luochen1990/rainbow'
 	Plug 'mhartington/oceanic-next'
-	Plug 'mhinz/vim-startify'
+	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'othree/html5.vim'
 	Plug 'reedes/vim-wheel'
@@ -131,25 +131,8 @@
 	set lcs=tab:»-,trail:·,eol:¶
 	map <F12> :set list!<CR>
 " }}}
-" {{{ Startify
-	let g:startify_list_order = [
-		\ ['Bookmarks:'],
-		\ 'bookmarks',
-		\ ['Open recent files:'],
-		\ 'files',
-		\ ['Sessions:'],
-		\ 'sessions'
-		\ ]
-
-	let g:startify_bookmarks = [
-			\ { 'n': '~/Notes' },
-			\ { 'd': '~/dev' },
-			\ { 'l': '~/dotfiles' }
-			\ ]
-
-	let g:startify_session_dir         = '~/.nvim/session'
-	let g:startify_change_to_vcs_root  = 1
-	let g:startify_fortune_use_unicode = 1
+" {{{ Sessions
+	let g:session_dir = '~/.cache/nvim/sessions'
 " }}}
 " {{{ Rainbow
 	let g:rainbow_active = 1
