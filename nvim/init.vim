@@ -30,6 +30,7 @@
 	Plug 'machakann/vim-sandwich'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
+	Plug 'tomtom/tcomment_vim'
 	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 	call plug#end()
