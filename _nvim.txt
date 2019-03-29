@@ -68,6 +68,9 @@ vim-gitgutter
   \hu     Undo hunk, and <leader>hu
 
 Windows
+  :sp  <path>  open file in horizontal split
+  :vsp <path>  open file in vertical split
+
   <C-w>n  new horizontal split with empty buffer
 
   <C-w>_  maximise height of current split

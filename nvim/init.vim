@@ -201,6 +201,10 @@
 	autocmd BufRead *.vim set foldmethod=marker
 " }}}
 " {{{ Windows
+	" Open new split panes to right and bottom, which feels more natural
+	set splitbelow
+	set splitright
+
 	" Split window vertically with |
 	map <Bar> <C-W>v<C-W><Right>
 
