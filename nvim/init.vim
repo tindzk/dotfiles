@@ -220,8 +220,8 @@
 	" Split window vertically with |
 	map <Bar> <C-W>v<C-W><Right>
 
-	" Split window horizontally with -
-	map - <C-W>s<C-W><Down>
+	" Split window horizontally with _
+	map _ <C-W>s<C-W><Down>
 
 	" Readjust splits when window is resized
 	autocmd VimResized * wincmd =
