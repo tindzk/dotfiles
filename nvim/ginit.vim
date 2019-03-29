@@ -1,10 +1,7 @@
-" GuiFont ProFont:h8
-" GuiFont DejaVu Sans Mono:h6
-
 GuiTabline 0
 
 let g:Font         = 'Ubuntu Mono'
-let g:FontSize     = 9
+let g:FontSize     = 10
 let g:FontSizeMin  = 6
 let g:FontSizeIncr = 2
 
