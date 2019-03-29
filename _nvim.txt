@@ -61,6 +61,12 @@ Folds
   [z   jump to start
   ]z   jump to end
 
+vim-gitgutter
+  [c, ]c  Jump between hunks
+  \hp     Preview hunk
+  \hs     Stage hunk
+  \hu     Undo hunk, and <leader>hu
+
 Windows
   <C-w>n  new horizontal split with empty buffer
 
