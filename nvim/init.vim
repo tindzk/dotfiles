@@ -243,6 +243,7 @@
 		\ 'component_function': {
       		\   'cocstatus': 'coc#status',
 		\   'filetype': 'MyFiletype',
+		\   'filename': 'MyFilename',
 		\   'fileformat': 'MyFileformat',
 		\   'percent': 'NoScrollbarForLightline'
 		\ }
@@ -255,6 +256,10 @@
 
 	function! MyFiletype()
 		return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+	endfunction
+
+	function! MyFilename()
+		return fnamemodify(expand("%"), ":~:.")
 	endfunction
 
 	function! MyFileformat()
