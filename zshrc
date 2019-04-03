@@ -130,7 +130,6 @@ alias lt="exa --tree"
 alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
-alias bloop="echo Run: b"
 alias b=$HOME/.bloop/bloop
 
 alias yt="youtube-dl --all-subs"
@@ -210,7 +209,7 @@ pld  source venv/bin/activate
 http python3 -m http.server'
 """
 
-source ~/dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/fzf/key-bindings.zsh
 source ~/dotfiles/auto-ls.zsh
 source ~/dotfiles/zjump.zsh
 source ~/.profile
