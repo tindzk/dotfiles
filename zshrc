@@ -46,11 +46,9 @@ function zle-line-init zle-keymap-select () {
 		vicmd)      print -n -- "\033[2 q";;  # block cursor (normal mode)
 		viins|main) print -n -- "\033[6 q";;  # vertical cursor (insert mode)
 	esac
-
-	# Prompt
-	PS1="%{$fg_bold[blue]%}${PWD/#$HOME/~} $%{$reset_color%} "
-	zle reset-prompt
 }
+
+PROMPT="%{$fg_bold[blue]%}%~ $%{$reset_color%} "
 
 zle -N zle-line-init
 zle -N zle-keymap-select
