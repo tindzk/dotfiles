@@ -1,19 +1,15 @@
 " {{{ Plugins
 	call plug#begin('~/.config/nvim/plugged')
-	Plug 'KeitaNakamura/neodark.vim'
+
 	Plug 'airblade/vim-gitgutter'
-	Plug 'cespare/vim-toml'
-	Plug 'derekwyatt/vim-scala'
 	Plug 'itchyny/lightline.vim'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'luochen1990/rainbow'
-	Plug 'mhartington/oceanic-next'
 	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'othree/html5.vim'
 	Plug 'reedes/vim-wheel'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'terryma/vim-multiple-cursors'
@@ -21,15 +17,28 @@
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
-	Plug 'ap/vim-css-color'
 	Plug 'machakann/vim-sandwich'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'
 	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 	Plug 'godlygeek/tabular'
+
+	" Colour schemes
+	Plug 'KeitaNakamura/neodark.vim'
+	Plug 'mhartington/oceanic-next'
+	Plug 'morhetz/gruvbox'
+	Plug 'jonathanfilip/vim-lucius'
+	Plug 'vim-scripts/bclear'
+
+	" Language support
+	Plug 'cespare/vim-toml'
+	Plug 'othree/html5.vim'
+	Plug 'derekwyatt/vim-scala'
+	Plug 'ap/vim-css-color'
 	Plug 'plasticboy/vim-markdown'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+
 	call plug#end()
 " }}}
 " {{{ General
@@ -56,25 +65,23 @@
 " }}}
 " {{{ Colours
 	" Select colour scheme
-	" colorscheme asmanian_blood
-	" colorscheme bclear
-	" colorscheme lucius
-	" colorscheme vanzan_color
-	" colorscheme molokai
-	" colorscheme wombat
 
 	" let g:oceanic_next_terminal_bold   = 1
 	" let g:oceanic_next_terminal_italic = 1
 	" colorscheme OceanicNext
 
-	let g:neodark#use_256color = 1
-	let g:neodark#terminal_transparent = 1
-	colorscheme neodark
+	" let g:neodark#use_256color = 1
+	" let g:neodark#terminal_transparent = 1
+	" colorscheme neodark
 
-	if $TERM != ''
-		" Transparent background in TUI
-		au ColorScheme * hi Normal ctermbg=none guibg=none
-	endif
+	" colorscheme bclear
+	" colorscheme lucius
+	colorscheme gruvbox
+
+"	if $TERM != ''
+"		" Transparent background in TUI
+"		au ColorScheme * hi Normal ctermbg=none guibg=none
+"	endif
 
 	" Enable support for colours in TUI
 	set termguicolors
