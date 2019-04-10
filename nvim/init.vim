@@ -62,6 +62,18 @@
 
 	" Show filename and path in window title
 	set title
+
+	" Display completion matches using pop-up menu
+	set wildoptions=pum
+
+	" Set transparency for pop-up menus
+	set pumblend=20
+
+	" Swap arrow keys in pop-up menu
+	cnoremap <expr> <Up>    pumvisible() ? "\<C-p>"  : "\<Up>"
+	cnoremap <expr> <Down>  pumvisible() ? "\<C-n>"  : "\<Down>"
+	cnoremap <expr> <Left>  pumvisible() ? "\<Up>"   : "\<Left>"
+	cnoremap <expr> <Right> pumvisible() ? "\<Down>" : "\<Right>"
 " }}}
 " {{{ Colours
 	" Select colour scheme
