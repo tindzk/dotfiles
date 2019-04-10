@@ -10,8 +10,11 @@ vim-multiple-cursors
   Example: fp<C-n><C-n><C-n>cname
   See https://github.com/terryma/vim-multiple-cursors
 
-Easy Align
-  :EasyAlign
+Tabular
+  :Tab/=     Align assignments
+  :Tab/:     Align colon assignments
+  :Tab/:\zs  Align colon assignments without stacking of colons
+  :Tab/|     Align pipe-delimited table
 
 Browser
   C-o  open link in browser
@@ -21,6 +24,7 @@ Spell checking
   <C-s>
 
 Fuzzy File Matching
+  :History  Search in history
   <C-p>  File completions
   <C-x>  Open selected file in horizontal split
   <C-v>  Open selected file in vertical split
@@ -48,9 +52,9 @@ Fugitive
   :Gmove <path>  rename file, use `<C-r>%` to insert path
   :Gw, :Gwrite   add file to repository
 
-Startify
-  :SSave    save session
-  :SDelete  delete session
+Session
+  :SessionSave    save session
+  :SessionRemove  delete session
 
 Folds
   zo   open fold
@@ -111,3 +115,9 @@ Diffs
   :diffoff!         end diff mode
   :[range]SDChar    show character-based highlights
   :[range]RDChar    reset character-based highlights
+
+Markdown
+  :Toc     show table of contents
+  <Enter>  follow link
+  ]]       go to next header
+  [[       go to previous header

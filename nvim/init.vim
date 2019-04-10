@@ -4,11 +4,9 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'cespare/vim-toml'
 	Plug 'derekwyatt/vim-scala'
-	Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown'] }
 	Plug 'itchyny/lightline.vim'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
-	Plug 'junegunn/vim-easy-align'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'luochen1990/rainbow'
@@ -20,9 +18,6 @@
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-fugitive'
-	Plug 'vim-pandoc/vim-pandoc'
-	Plug 'vim-pandoc/vim-pandoc-syntax'
-	Plug 'ykrivopalov/nvim-md-utils'
 	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
@@ -33,6 +28,8 @@
 	Plug 'tomtom/tcomment_vim'
 	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+	Plug 'godlygeek/tabular'
+	Plug 'plasticboy/vim-markdown'
 	call plug#end()
 " }}}
 " {{{ General
@@ -242,7 +239,7 @@
 		\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
 		\ },
 		\ 'component_function': {
-      		\   'cocstatus': 'coc#status',
+		\   'cocstatus': 'coc#status',
 		\   'filetype': 'MyFiletype',
 		\   'filename': 'MyFilename',
 		\   'fileformat': 'MyFileformat',
@@ -464,5 +461,17 @@ autocmd FileType mail set omnifunc=UserComplete
 	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }}}
 " {{{ Markdown
+	" Enable concealing of links and formatted text (bold, italic etc.)
+	set conceallevel=2
+
+	let g:vim_markdown_math = 1
+	let g:vim_markdown_toml_frontmatter = 1
+	let g:vim_markdown_new_list_item_indent = 0
+	let g:vim_markdown_edit_url_in = 'vsplit'
+	let g:vim_markdown_toc_autofit = 1
+	let g:vim_markdown_follow_anchor = 1
+
+	autocmd FileType markdown nmap <buffer> <enter> <Plug>Markdown_EditUrlUnderCursor
+
 	let g:mkdp_auto_close = 0
 " }}}
