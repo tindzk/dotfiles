@@ -12,12 +12,9 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'reedes/vim-wheel'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-fugitive'
-	Plug 'romainl/vim-tinyMRU'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
-	Plug 'machakann/vim-sandwich'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'

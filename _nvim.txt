@@ -6,10 +6,6 @@ Whitespaces
   :StripWhitespace
   :retab  Convert tabs to spaces
 
-vim-multiple-cursors
-  Example: fp<C-n><C-n><C-n>cname
-  See https://github.com/terryma/vim-multiple-cursors
-
 Tabular
   :Tab/=     Align assignments
   :Tab/:     Align colon assignments
