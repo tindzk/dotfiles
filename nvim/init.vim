@@ -98,8 +98,8 @@
 	" Turn syntax highlighting on
 	syntax on
 
-	" Get rid of highlighted text after searching by pressing <F1>
-	map <F1> :noh<CR>
+	" Clear search highlights by pressing <Escape>
+	map <ESC> :noh<CR>
 
 	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
