@@ -12,7 +12,7 @@
         }
     },
     "sway/workspaces": {
-        "disable-scroll": false,
+        "disable-scroll": true,
         "all-outputs": false,
         "format": "{name} {icon}",
         "format-icons": {
