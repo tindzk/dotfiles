@@ -124,9 +124,12 @@ bindsym $mod+d exec bemenu-run
 bindsym $mod+Return exec kitty
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym F1 exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # Screen brightness controls
 bindsym XF86MonBrightnessDown exec light -U 1
@@ -156,3 +159,6 @@ output  DP-1 bg ~/Wallpapers/C27ADE8D23.jpg fill
 
 output eDP-1 scale 2
 output eDP-1 bg ~/Wallpapers/1IK5W8T7GQ.jpg fill
+
+input * xkb_layout  annepro
+input * xkb_variant annepro

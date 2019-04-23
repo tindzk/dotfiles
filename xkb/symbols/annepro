@@ -1,0 +1,14 @@
+default  partial alphanumeric_keys modifier_keys
+xkb_symbols "annepro" {
+	name[Group1]= "Anne Pro";
+	include "us"
+
+	key <ESC>  {[ grave, asciitilde ]};
+	key <RALT> {[ ISO_Level3_Latch, Alt, Alt ]};
+	key <CAPS> {[ Escape ]};
+	key <BKSP> {[ BackSpace, Delete, Delete ]};
+	key <AC06> {[ h, H, Left ]};
+	key <AC07> {[ j, J, Down ]};
+	key <AC08> {[ k, K, Up ]};
+	key <AC09> {[ l, L, Right ]};
+};

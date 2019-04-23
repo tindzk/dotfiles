@@ -11,6 +11,9 @@ ln -s ~/dotfiles/inputrc ~/.inputrc
 # ln -s ~/dotfiles/screenrc ~/.screenrc
 ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 
+mkdir -p ~/.xkb/symbols/
+ln -s ~/dotfiles/xkb/symbols/annepro ~/.xkb/symbols/annepro
+
 mkdir -p ~/.config/zathura/
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
 
