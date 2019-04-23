@@ -104,7 +104,11 @@ Tabs
   <C-t>N  jump to tab number N
 
 Navigation
-  *  search for word under cursor
+  *         search for word under cursor
+  sxy       jump to character sequence "xy"
+  s<Enter>  repeat last search
+  ;         repeat last motion, e.g. move to next match
+  ``        go back to starting point
 
 Diffs
   :windo diffthis   begin diffing on all visible windows, executes :diffthis on each window

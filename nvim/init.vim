@@ -20,6 +20,7 @@
 	Plug 'tomtom/tcomment_vim'
 	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 	Plug 'godlygeek/tabular'
+	Plug 'justinmk/vim-sneak'
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
