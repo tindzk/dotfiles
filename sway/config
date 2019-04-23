@@ -152,7 +152,7 @@ exec waybar
 exec redshift
 
 output  DP-1 scale 1
-output  DP-1 bg ~/Wallpapers/1YS2TXCCMN.jpg fill
+output  DP-1 bg ~/Wallpapers/C27ADE8D23.jpg fill
 
 output eDP-1 scale 2
-output eDP-1 bg ~/Wallpapers/9ED76457E9.jpg fill
+output eDP-1 bg ~/Wallpapers/1IK5W8T7GQ.jpg fill
