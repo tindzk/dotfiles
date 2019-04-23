@@ -94,7 +94,6 @@ preexec_functions+=(omz_termsupport_preexec)
 
 export _git=/usr/bin/git
 alias g=$_git
-alias git="echo Run: g"
 alias gs="$_git status -sb"
 alias gsh="$_git show"
 alias gb="$_git branch"
@@ -120,9 +119,6 @@ alias ga="$_git add"
 alias gr="$_git rebase"
 alias grc="$_git rebase --continue"
 
-alias grep="echo Run: rg"  # ripgrep
-alias find="echo Run: fd"
-
 alias p=mpv
 alias ls=exa
 alias ll="exa --long --git"
@@ -143,13 +139,8 @@ alias pld="source venv/bin/activate"
 alias http="python3 -m http.server"
 
 alias e=/usr/bin/nvim
-alias cd="echo redundant"
 alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/nvim-qt
-alias vi="echo 'Run: e|eg'"
-alias vim="echo 'Run: e|eg'"
-alias nvim="echo 'Run: e|eg'"
-alias nvim-qt="echo 'Run: eg'"
 
 grb() { g show $1:$2 > $2 }
 
