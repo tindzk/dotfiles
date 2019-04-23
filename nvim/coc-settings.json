@@ -2,10 +2,8 @@
 	"languageserver": {
 		"scala": {
 			"command": "metals-vim",
-			"args": [],
-			"filetypes": ["scala"],
-			"initializationOptions": {}
+			"rootPatterns": ["build.sbt"],
+			"filetypes": ["scala", "sbt"]
 		}
-	},
-	"suggest.timeout": 2500
+	}
 }
