@@ -25,7 +25,7 @@
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
 	Plug 'mhartington/oceanic-next'
-	Plug 'morhetz/gruvbox'
+	Plug 'lifepillar/vim-gruvbox8'
 	Plug 'jonathanfilip/vim-lucius'
 	Plug 'vim-scripts/bclear'
 
@@ -86,7 +86,9 @@
 
 	" colorscheme bclear
 	" colorscheme lucius
-	colorscheme gruvbox
+
+	let g:gruvbox_italic = 1
+	colorscheme gruvbox8
 
 "	if $TERM != ''
 "		" Transparent background in TUI
