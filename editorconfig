@@ -12,11 +12,11 @@ indent_style = space
 [Makefile]
 indent_style = tab
 
-[{package.json,.travis.yml}]
+[package.json]
 indent_style = space
 indent_size = 2
 
-[*.toml]
+[*.{yml,toml}]
 indent_style = space
 indent_size = 2
 
