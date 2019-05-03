@@ -131,6 +131,7 @@ bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 # Lock screen
 bindsym $mod+x exec i3lock
 
+exec nitrogen --restore
 exec setxkbmap -layout annepro
 exec redshift
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
