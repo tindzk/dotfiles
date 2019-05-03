@@ -12,7 +12,10 @@ ln -s ~/dotfiles/inputrc ~/.inputrc
 ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 
 mkdir -p ~/.xkb/symbols/
+# Sway
 ln -s ~/dotfiles/xkb/symbols/annepro ~/.xkb/symbols/annepro
+# i3
+ln -s ~/dotfiles/xkb/symbols/annepro /usr/share/X11/xkb/symbols/annepro
 
 mkdir -p ~/.config/zathura/
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
