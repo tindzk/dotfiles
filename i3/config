@@ -133,7 +133,4 @@ bindsym $mod+x exec i3lock
 
 exec setxkbmap -layout annepro
 exec redshift
-
-bar {
-        status_command i3status
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

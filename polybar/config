@@ -1,14 +1,12 @@
 [colors]
 accent = #fba922
 
-[bar/example]
+[bar/desktop]
 enable-ipc = true
 bottom = true
 ;dock = true
 width = 100%
-height = 50
-
-dpi = 192
+height = 22
 
 # background = #1c1c1c
 # Transparent background
@@ -38,17 +36,15 @@ font-1 = unifont:fontformat=truetype:size=5:antialias=false;0
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-3 = "DejaVu Sans:size=8;0"
 
-modules-left = bspwm xwindow
-# modules-center =
-# modules-right = disk cpu memory wired-network mpd clock
-modules-right = disk cpu memory battery wireless-network backlight pulseaudio clock
+modules-left = i3 xwindow
+modules-right = disk cpu memory wired-network pulseaudio clock
 
 tray-detached = false
 tray-position = right
 tray-padding = 2
 tray-maxsize = 40
 
-wm-restack = bspwm
+wm-restack = i3
 ; override-redirect = true
 
 [module/disk]
@@ -61,30 +57,8 @@ mount-1 = /home
 label-mounted =   %mountpoint%%{F-}: %percentage_used%%
 label-unmounted =   %mountpoint% not mounted
 
-[module/backlight]
-type = internal/backlight
-card = intel_backlight
-format = <ramp> <label>
-
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-
-bar-width = 12
-bar-indicator = |
-bar-indicator-font = 1
-bar-indicator-foreground = #bbffffff
-bar-fill = ─
-bar-fill-font = 1
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 1
-bar-empty-foreground = #44
-
-[module/bspwm]
-type = internal/bspwm
+[module/i3]
+type = internal/i3
 format = <label-state> <label-mode>
 pin-workspaces = true
 
@@ -106,29 +80,24 @@ label-focused-background = #3f3f3f
 ;label-focused-underline = #${colors.accent}
 label-focused-underline = #9f78e1
 label-focused-font = 1
-label-focused-padding = 4
+label-focused-padding = 2
 
-label-occupied = %icon%  %name%
-label-occupied-underline = #555555
+label-unfocused = %icon%  %name%
+label-unfocused-underline = #555555
 label-unfocused-font = 1
-label-occupied-padding = 4
+label-unfocused-padding = 2
+
+label-visible = %icon%  %name%
+label-visible-foreground = #55ffffff
+label-visible-font = 1
+label-visible-padding = 2
 
 label-urgent = %icon%  %name%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-underline = #9b0a20
 label-urgent-font = 1
-label-urgent-padding = 4
-
-label-empty = %icon%  %name%
-label-empty-foreground = #55ffffff
-label-empty-font = 1
-label-empty-padding = 4
-
-label-dimmed = %icon%  %name%
-label-dimmed-foreground = #55ffffff
-label-dimmed-font = 1
-label-dimmed-padding = 4
+label-urgent-padding = 2
 
 [module/cpu]
 type = internal/cpu
@@ -265,35 +234,6 @@ ramp-volume-1             = 
 ramp-volume-2             = 
 format-volume-padding     = 2
 mapping                   = true
-
-[module/battery]
-type                         = internal/battery
-battery                      = BAT1
-adapter                      = AC
-full-at                      = 97
-poll-interval                = 30
-
-format-charging              = <animation-charging> <label-charging>
-
-format-discharging           = <ramp-capacity> <label-discharging>
-label-discharging            = %percentage%% (%time%)
-
-format-full-prefix           = " "
-
-format-padding               = 2
-
-ramp-capacity-0              = 
-ramp-capacity-1              = 
-ramp-capacity-2              = 
-ramp-capacity-3              = 
-ramp-capacity-4              = 
-
-animation-charging-0         = 
-animation-charging-1         = 
-animation-charging-2         = 
-animation-charging-3         = 
-animation-charging-4         = 
-animation-charging-framerate = 750
 
 [module/xwindow]
 type = internal/xwindow
