@@ -1,5 +1,6 @@
 Editing
   <C-x><C-o>  trigger completion
+  <C-R>"      paste default register
 
 Whitespaces
   F12  Show trailing whitepace characters (e.g. spaces, tabs)
