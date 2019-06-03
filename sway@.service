@@ -40,6 +40,8 @@ Environment=QT_QPA_PLATFORMTHEME=qt5ct
 Environment=GTK_THEME=Arc:dark
 
 Environment=KITTY_ENABLE_WAYLAND=1
+Environment=MOZ_ENABLE_WAYLAND=1
+Environment=MOZ_USE_XINPUT2=1
 
 # Required for IntelliJ
 Environment=_JAVA_AWT_WM_NONREPARENTING=1
