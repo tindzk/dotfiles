@@ -152,6 +152,7 @@
 " }}}
 " {{{ Sessions
 	let g:session_dir = '~/.cache/nvim/sessions'
+	cnoreabbrev So SessionOpen
 " }}}
 " {{{ Rainbow
 	let g:rainbow_active = 1
