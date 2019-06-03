@@ -129,6 +129,7 @@ alias instructor=$HOME/dev/instructor/instructor
 alias b=$HOME/.bloop/bloop
 
 alias yt="youtube-dl --all-subs"
+alias yta="youtube-dl -f bestaudio"
 ytb() { youtube-dl --all-subs --batch-file=$1 }
 yts() { youtube-dl --write-auto-sub --sub-lang $1 $2 }
 ytp() { youtube-dl "https://www.youtube.com/playlist?list=$1" }
@@ -191,6 +192,7 @@ e    nvim
 eg   nvim-qt
 ez   nvim $HOME/.zshrc && source $HOME/.zshrc
 yt   youtube-dl --all-subs
+yta  youtube-dl -f bestaudio
 ytb  youtube-dl --all-subs --batch-file=<file>
 yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
 ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
