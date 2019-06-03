@@ -671,3 +671,9 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'"
 " }}}
+" {{{ Language support
+	" From http://vim.1045645.n5.nabble.com/set-iminsert-why-global-not-local-td5729890.html
+	inoremap <silent> <expr> <S-Tab> &keymap == ""
+		\ ? '<C-o>:setlocal keymap=ru<CR>'
+		\ : '<C-o>:setlocal keymap=<CR>'
+" }}}
