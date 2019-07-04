@@ -69,7 +69,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable sway@7
 sudo systemctl restart sway@7
 
-cp postgresql.service /usr/lib/systemd/system/postgresql.service
+sudo cp postgresql.service /usr/lib/systemd/system/postgresql.service
 sudo systemctl daemon-reload
 sudo systemctl enable postgresql
 sudo systemctl restart postgresql
