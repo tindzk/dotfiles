@@ -482,9 +482,6 @@ autocmd FileType mail set omnifunc=UserComplete
 	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }}}
 " {{{ Markdown
-	" Enable concealing of links and formatted text (bold, italic etc.)
-	set conceallevel=2
-
 	let g:vim_markdown_math = 1
 	let g:vim_markdown_toml_frontmatter = 1
 	let g:vim_markdown_new_list_item_indent = 0
