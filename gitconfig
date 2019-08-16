@@ -6,7 +6,7 @@
 	ci = commit -v
 	co = checkout
 	df = diff
-	lg = log --stat
+	lg = log --stat --date=auto:human
 	rb = svn rebase
 	rlog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"%
 	st = status -a
