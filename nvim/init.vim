@@ -489,6 +489,9 @@ autocmd FileType mail set omnifunc=UserComplete
 	let g:vim_markdown_toc_autofit = 1
 	let g:vim_markdown_follow_anchor = 1
 
+	" See https://github.com/plasticboy/vim-markdown/issues/414
+	let g:vim_markdown_folding_disabled = 1
+
 	autocmd FileType markdown nmap <buffer> <enter> <Plug>Markdown_EditUrlUnderCursor
 
 	let g:mkdp_auto_close = 0
