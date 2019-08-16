@@ -1,2 +1,9 @@
+[cli]
+level   = "debug"
+unicode = true
+
 [build]
 tmpfs = true
+
+[resolution]
+optionalArtefacts = true
