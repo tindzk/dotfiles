@@ -18,7 +18,7 @@
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'
-	Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
