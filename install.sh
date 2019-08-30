@@ -74,3 +74,5 @@ sudo cp postgresql.service /usr/lib/systemd/system/postgresql.service
 sudo systemctl daemon-reload
 sudo systemctl enable postgresql
 sudo systemctl restart postgresql
+
+sudo cp logind.conf /etc/systemd/logind.conf
