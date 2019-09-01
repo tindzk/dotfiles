@@ -29,6 +29,14 @@ OOMScoreAdjust=-200
 PrivateTmp=true
 ProtectHome=false
 ProtectSystem=full
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+PrivateDevices=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+RestrictRealtime=true
+SystemCallArchitectures=native
 NoNewPrivileges=true
 
 [Install]
