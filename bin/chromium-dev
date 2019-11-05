@@ -1,0 +1,2 @@
+#!/bin/sh
+chromium --disable-web-security -–allow-file-access-from-files --user-data-dir=/dev/shm/chromium-dev $@
