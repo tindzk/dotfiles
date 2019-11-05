@@ -1,0 +1,3 @@
+#!/bin/sh
+nmcli d disconnect wlp1s0
+nmcli d connect wlp1s0
