@@ -1,6 +1,7 @@
 [cli]
-level   = "debug"
-unicode = true
+level    = "debug"
+unicode  = true
+progress = true
 
 [build]
 tmpfs = true
