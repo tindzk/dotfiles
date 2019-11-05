@@ -22,6 +22,7 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
+	Plug 'glacambre/firenvim', { 'do': function('firenvim#install') }
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
@@ -676,4 +677,8 @@ let g:closetag_close_shortcut = '<leader>>'"
 	inoremap <silent> <expr> <S-Tab> &keymap == ""
 		\ ? '<C-o>:setlocal keymap=ru<CR>'
 		\ : '<C-o>:setlocal keymap=<CR>'
+" }}}
+" {{{ firenvim
+	au BufEnter github.com_*.txt set filetype=markdown
+	au BufEnter pi_*.txt set filetype=markdown
 " }}}
