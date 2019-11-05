@@ -10,6 +10,9 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+q kill
 
+# switch workspaces
+bindsym $mod+comma    workspace prev_on_output
+bindsym $mod+period   workspace next_on_output
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
