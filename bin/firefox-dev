@@ -1,0 +1,13 @@
+#!/bin/sh
+mkdir /dev/shm/firefox-dev || true
+firefox -CreateProfile "firefox-dev /dev/shm/firefox-dev"
+
+ffExtensionPath='/dev/shm/firefox-dev/extensions/'
+mkdir -p $ffExtensionPath || true
+cd $ffExtensionPath
+wget https://addons.mozilla.org/firefox/downloads/file/1148493/cors_everywhere-18.11.13.2043-fx.xpi
+mv cors_everywhere-18.11.13.2043-fx.xpi 'cors-everywhere@spenibus.xpi'
+
+#echo 'user_pref("browser.cache.disk.enable", false);' > /dev/shm/firefox-dev/user.js
+
+firefox -P firefox-dev --devtools $@

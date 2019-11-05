@@ -45,6 +45,7 @@ mkdir ~/bin
 ln -s $(which xdg-open) ~/bin/open
 ln -s ~/dotfiles/bin/chromium ~/bin/chromium
 ln -s ~/dotfiles/bin/chromium-dev ~/bin/chromium-dev
+ln -s ~/dotfiles/bin/firefox-dev ~/bin/firefox-dev
 ln -s ~/dotfiles/bin/lock ~/bin/lock
 ln -s ~/dotfiles/bin/matlab ~/bin/matlab
 ln -s ~/dotfiles/bin/reconnect ~/bin/reconnect
