@@ -47,6 +47,7 @@ ln -s ~/dotfiles/bin/chromium ~/bin/chromium
 ln -s ~/dotfiles/bin/lock ~/bin/lock
 ln -s ~/dotfiles/bin/matlab ~/bin/matlab
 ln -s ~/dotfiles/bin/reconnect ~/bin/reconnect
+ln -s ~/dotfiles/bin/skype ~/bin/skype
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
