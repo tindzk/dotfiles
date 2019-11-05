@@ -13,6 +13,9 @@ bindsym $mod+q kill
 # switch workspaces
 bindsym $mod+comma    workspace prev_on_output
 bindsym $mod+period   workspace next_on_output
+bindsym $mod+o        exec ~/dotfiles/sway/open-workspace.py
+bindsym $mod+shift+o  exec ~/dotfiles/sway/open-workspace.py move
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
