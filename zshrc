@@ -146,7 +146,7 @@ alias eg=/usr/bin/nvim-qt
 grb() { g show $1:$2 > $2 }
 
 pgweb() {
-  pgweb_linux_amd64 --user=postgres --db=$1
+  pgweb_linux_amd64 --user=postgres --listen=8085 --db=$1
 }
 
 alias .=source
