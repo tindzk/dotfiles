@@ -45,6 +45,7 @@ mkdir ~/bin
 ln -s $(which xdg-open) ~/bin/open
 ln -s ~/dotfiles/bin/chromium ~/bin/chromium
 ln -s ~/dotfiles/bin/lock ~/bin/lock
+ln -s ~/dotfiles/bin/matlab ~/bin/matlab
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
