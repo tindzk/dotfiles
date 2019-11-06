@@ -1,3 +1,7 @@
 #webrtcIndicator {
   display: none;
 }
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
