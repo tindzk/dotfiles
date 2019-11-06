@@ -106,7 +106,7 @@ alias gcl="$_git checkout --theirs"  # Use local file
 alias gcr="$_git checkout --ours"    # Use remote file
 alias gd="$_git diff"
 alias gdc="$_git diff --cached"
-alias gl=tig
+alias gl="smerge ."
 alias gcp="$_git cherry-pick"
 alias gcpc="$_git cherry-pick --continue"
 alias gp="$_git push"
@@ -166,7 +166,7 @@ gcl  git checkout --theirs  # Use local file
 gcr  git checkout --ours    # Use remote file
 gd   git diff
 gdc  git diff --cached
-gl   tig
+gl   smerge
 gcp  git cherry-pick
 gcpc git cherry-pick --continue
 gp   git push

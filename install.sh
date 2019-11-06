@@ -50,6 +50,7 @@ ln -s ~/dotfiles/bin/lock ~/bin/lock
 ln -s ~/dotfiles/bin/matlab ~/bin/matlab
 ln -s ~/dotfiles/bin/reconnect ~/bin/reconnect
 ln -s ~/dotfiles/bin/skype ~/bin/skype
+ln -s /opt/sublime_merge/sublime_merge ~/bin/smerge
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes

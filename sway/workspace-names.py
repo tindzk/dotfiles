@@ -23,7 +23,8 @@ appMapping = {
         "firefox": "",
         "org.octave.Octave": "",
         "jetbrains-idea-ce": "",
-        "pcmanfm-qt": ""
+        "pcmanfm-qt": "",
+        "smerge": ""
 }
 
 def change_glyph(i3, change, containerId):

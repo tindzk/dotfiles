@@ -12,7 +12,6 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'reedes/vim-wheel'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'tpope/vim-fugitive'
 	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
