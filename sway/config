@@ -72,7 +72,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+r restart
 
 # Application launcher
-bindsym $mod+d exec bemenu-run
+bindsym $mod+d exec gtkmenu
 
 # Start terminal
 bindsym $mod+Return exec kitty
