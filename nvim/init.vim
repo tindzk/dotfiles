@@ -10,7 +10,6 @@
 	Plug 'luochen1990/rainbow'
 	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'reedes/vim-wheel'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'rickhowe/diffchar.vim'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
