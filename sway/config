@@ -1,52 +1,50 @@
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles
 font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# kill focused window
-bindsym $mod+q kill
-
-# switch workspaces
+# Switch workspaces
 bindsym $mod+comma    workspace prev_on_output
 bindsym $mod+period   workspace next_on_output
+bindsym $mod+Tab      workspace back_and_forth
 bindsym $mod+o        exec ~/dotfiles/sway/open-workspace.py
 bindsym $mod+shift+o  exec ~/dotfiles/sway/open-workspace.py move
 bindsym $mod+semicolon  focus output left
 bindsym $mod+apostrophe focus output left
 
-# change focus
+# Change focus of windows
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# move focused window
+# Move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-bindsym $mod+Tab workspace back_and_forth
+# Kill focused window
+bindsym $mod+q kill
 
-# enter fullscreen mode for the focused container
+# Enter fullscreen mode
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# toggle tiling/floating mode
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# change focus between tiling/floating windows
 bindsym $mod+space focus mode_toggle
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
 bindsym $mod+3 workspace number 3
@@ -58,7 +56,7 @@ bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
 bindsym $mod+Shift+3 move container to workspace number 3
@@ -70,13 +68,13 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-# restart sway in place preserving active session
+# Restart in place, preserving active session
 bindsym $mod+Shift+r restart
 
-# Run a program
+# Application launcher
 bindsym $mod+d exec bemenu-run
 
-# Start a terminal
+# Start terminal
 bindsym $mod+Return exec kitty
 
 # Pulse Audio controls
@@ -93,10 +91,6 @@ bindsym XF86MonBrightnessUp   exec light -A 1
 
 # Lock screen
 bindsym $mod+x exec lock
-
-# Lock screen
-# TODO XF86Lock is not mapped
-# bindsym XF86Lock exec slock
 
 # After 400 seconds, turn off all outputs (and turn them back on when you wiggle the mouse)
 # After 500 seconds of inactivity, lock screen
