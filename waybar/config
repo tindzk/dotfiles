@@ -27,11 +27,11 @@
 		"on-click": "firefox https://calendar.google.com/"
     },
     "cpu": {
-        "format": "  {usage:2}%",
+        "format": " {usage:2}%",
         "on-click": "kitty htop"
     },
     "memory": {
-        "format": "  {used:0.0f}G",
+        "format": " {used:0.0f}G",
         "on-click": "kitty htop"
     },
     "battery": {
@@ -40,17 +40,17 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity:2}%",
+        "format": "{icon} {capacity:2}%",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "⚠  Disconnected"
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": "⚠ Disconnected"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
