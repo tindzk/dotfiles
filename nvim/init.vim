@@ -12,7 +12,6 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'rickhowe/diffchar.vim'
-	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -296,64 +295,6 @@
 		  \   },
 		  \   'cache_enabled': 1,
 		  \ }
-" }}}
-" {{{ Defx
-  " From https://github.com/kristijanhusak/neovim-config/blob/master/nvim/partials/defx.vim
-  autocmd FileType defx call s:defx_mappings()
-
-  function! s:defx_mappings() abort
-    nnoremap <silent><buffer><expr> o defx#do_action('drop')
-    nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
-    nnoremap <silent><buffer><expr> <2-LeftMouse> defx#do_action('drop')
-    nnoremap <silent><buffer><expr> s defx#do_action('open', 'botright vsplit')
-    nnoremap <silent><buffer><expr> R defx#do_action('redraw')
-    nnoremap <silent><buffer><expr> <Backspace> defx#do_action('cd', ['..'])
-    nnoremap <silent><buffer><expr> u defx#do_action('cd', ['..'])
-    nnoremap <silent><buffer><expr> nf defx#do_action('new_file')
-    nnoremap <silent><buffer><expr> nd defx#do_action('new_directory')
-    nnoremap <silent><buffer><expr> c defx#do_action('copy')
-    nnoremap <silent><buffer><expr> m defx#do_action('move')
-    nnoremap <silent><buffer><expr> p defx#do_action('paste')
-    nnoremap <silent><buffer><expr> r defx#do_action('rename')
-    " requires python-send2trash
-    nnoremap <silent><buffer><expr> d defx#do_action('remove_trash')
-    nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
-    nnoremap <silent><buffer><expr> H defx#do_action('toggle_ignored_files')
-    nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
-    nnoremap <silent><buffer><expr> j line('.') == line('$') ? 'gg' : 'j'
-    nnoremap <silent><buffer><expr> k line('.') == 1 ? 'G' : 'k'
-    nnoremap <silent><buffer><expr> yy defx#do_action('yank_path')
-    nnoremap <silent><buffer><expr> q defx#do_action('quit')
-    nnoremap <silent><buffer><expr> gh defx#do_action('cd', [getcwd()])
-
-    nnoremap <silent><buffer><expr> h
-      \ defx#is_directory() ?
-      \ defx#do_action('close_tree') : 1
-    nnoremap <silent><buffer><expr> l
-      \ defx#is_directory() ?
-      \ defx#do_action('open_tree') . 'j' : defx#do_action('drop')
-    nnoremap <silent><buffer><expr> L
-      \ defx#is_directory() ?
-      \ defx#do_action('open_tree_recursive') . 'j' : defx#do_action('drop')
-
-    hi link Defx_mark_root Directory
-    hi link Defx_mark_directory Directory
-  endfunction
-
-  call defx#custom#option('_', {
-	\ 'winwidth': 25,
-	\ 'split': 'vertical',
-	\ 'direction': 'leftabove',
-	\ 'show_ignored_files': 0,
-	\ 'buffer_name': '',
-	\ 'resume': 1
-  \ })
-
-  " Open file panel
-  nnoremap <silent><Leader>f :call execute('Defx -toggle=1')<CR>
-
-  " Jump to current file
-  nnoremap <silent><Leader>cf :call execute(printf('Defx -search=%s %s', expand('%:p'), expand('%:p:h')))<CR>
 " }}}
 " {{{ Language client
 	" if hidden is not set, TextEdit might fail.
