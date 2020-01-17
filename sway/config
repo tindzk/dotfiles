@@ -171,3 +171,6 @@ output eDP-1 bg ~/Wallpapers/1IK5W8T7GQ.jpg fill
 input * xkb_layout  annepro,de
 input * xkb_variant annepro
 input * xkb_options grp:alt_shift_toggle
+
+# Make Octave figures floating to avoid rescaling of axes
+for_window [title="Figure.*"] floating enable
