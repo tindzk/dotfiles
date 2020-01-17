@@ -68,6 +68,11 @@
 	cnoremap <expr> <Down>  pumvisible() ? "\<C-n>"  : "\<Down>"
 	cnoremap <expr> <Left>  pumvisible() ? "\<Up>"   : "\<Left>"
 	cnoremap <expr> <Right> pumvisible() ? "\<Down>" : "\<Right>"
+
+	" Save files with Ctrl-s
+	noremap  <silent> <C-S> :update<CR>
+	vnoremap <silent> <C-S> <C-C>:update<CR>
+	inoremap <silent> <C-S> <C-O>:update<CR>
 " }}}
 " {{{ Colours
 	" Select colour scheme
