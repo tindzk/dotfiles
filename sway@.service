@@ -49,6 +49,11 @@ Environment=_JAVA_AWT_WM_NONREPARENTING=1
 Environment=QT_QPA_PLATFORM=wayland
 Environment=GDK_BACKEND=wayland
 
+# For Waybar
+Environment=LC_TIME=en_US.UTF-8
+# For qalc
+Environment=LC_NUMERIC=en_US.UTF-8
+
 Restart=always
 RestartSec=2
 StandardInput=tty
