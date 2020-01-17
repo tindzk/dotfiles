@@ -3,7 +3,6 @@ set adjust-open 			width
 set statusbar-basename      true
 set window-title-home-tilde true
 set selection-clipboard     clipboard
-set smooth-scroll 			true
 
 set recolor               true
 set recolor-keephue       true
