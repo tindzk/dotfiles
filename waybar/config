@@ -44,13 +44,11 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "  {essid} ({signalStrength}%)",
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  {ipaddr}",
         "format-disconnected": "⚠  Disconnected"
     },
     "pulseaudio": {
-        //"scroll-step": 1,
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
