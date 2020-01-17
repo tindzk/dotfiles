@@ -159,6 +159,7 @@ exec swayidle \
 
 exec waybar
 exec redshift
+exec blueman-applet
 exec ~/dotfiles/sway/workspace-names.py
 
 output  DP-1 scale 1 position 1920,0
