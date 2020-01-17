@@ -38,11 +38,6 @@ window#waybar {
 
 #battery:not(.charging) {
     color: #818a8d;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #battery.critical:not(.charging) {
