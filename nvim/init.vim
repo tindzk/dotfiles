@@ -32,6 +32,7 @@
 	Plug 'derekwyatt/vim-scala'
 	Plug 'ap/vim-css-color'
 	Plug 'plasticboy/vim-markdown'
+	Plug 'chrisbra/csv.vim'
 
 	call plug#end()
 " }}}
