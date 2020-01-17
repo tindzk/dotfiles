@@ -134,9 +134,18 @@ ytb() { youtube-dl --all-subs --batch-file=$1 }
 yts() { youtube-dl --write-auto-sub --sub-lang $1 $2 }
 ytp() { youtube-dl "https://www.youtube.com/playlist?list=$1" }
 
-alias pmk="python -m venv venv"
-alias pmk2="virtualenv2 venv"
-alias pld="source venv/bin/activate"
+# Create and load virtual Python environment
+function penv {
+  [ ! -d "venv/" ] && python -m venv venv
+  source venv/bin/activate
+}
+
+# Create and load virtual Python 2 environment
+function penv2 {
+  [ ! -d "venv/" ] && virtualenv2 venv
+  source venv/bin/activate
+}
+
 alias http="python3 -m http.server"
 
 alias e=/usr/bin/nvim
@@ -196,8 +205,8 @@ yta  youtube-dl -f bestaudio
 ytb  youtube-dl --all-subs --batch-file=<file>
 yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
 ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
-pmk  python -m venv venv
-pmk2 virtualenv2 venv
+penv  python -m venv venv; venv/bin/activate
+penv2 virtualenv2 venv; venv/bin/activate
 pld  source venv/bin/activate
 http python3 -m http.server'
 """
