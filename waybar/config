@@ -27,7 +27,8 @@
 		"on-click": "firefox https://calendar.google.com/"
     },
     "cpu": {
-        "format": "  {usage:2}%"
+        "format": "  {usage:2}%",
+        "on-click": "kitty htop"
     },
     "memory": {
         "format": "  {:2}%"
