@@ -11,8 +11,11 @@ set recolor-lightcolor    "#1f1f1f"
 # set recolor-darkcolor  "#93A1A1"
 # set recolor-lightcolor "#002B36"
 
-map c recolor
+# invert colours
+map i recolor
+
 map . navigate next
 map , navigate previous
+
 map C-u navigate half-up
 map C-d navigate half-down
