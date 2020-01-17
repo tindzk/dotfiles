@@ -163,10 +163,10 @@ exec blueman-applet
 exec ~/dotfiles/sway/workspace-names.py
 
 output  DP-1 scale 1 position 1920,0
-output  DP-1 bg ~/Wallpapers/C27ADE8D23.jpg fill
+output  DP-1 bg ~/Wallpapers/DOW3NMLQB3.jpg fill
 
 output eDP-1 scale 2 position 0,0
-output eDP-1 bg ~/Wallpapers/1IK5W8T7GQ.jpg fill
+output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
 
 input * xkb_layout  annepro,de
 input * xkb_variant annepro
