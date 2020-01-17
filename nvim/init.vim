@@ -101,7 +101,7 @@
 	syntax on
 
 	" Clear search highlights by pressing <Escape>
-	map <ESC> :noh<CR>
+	map <Esc> :noh<CR>
 
 	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
@@ -197,8 +197,8 @@
 	set nospell
 
 	" Toggle spell checking
-	inoremap <c-s> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-	nnoremap <c-s>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	inoremap <c-c> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	nnoremap <c-c>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
 
 	autocmd FileType gitcommit set spell
 " }}}
