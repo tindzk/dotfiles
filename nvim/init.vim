@@ -12,7 +12,6 @@
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'reedes/vim-wheel'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'gcavallanti/vim-noscrollbar'
 	Plug 'rickhowe/diffchar.vim'
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'sgur/vim-editorconfig'
@@ -262,15 +261,9 @@
 		\   'cocstatus': 'coc#status',
 		\   'filetype': 'MyFiletype',
 		\   'filename': 'MyFilename',
-		\   'fileformat': 'MyFileformat',
-		\   'percent': 'NoScrollbarForLightline'
+		\   'fileformat': 'MyFileformat'
 		\ }
 		\ }
-
-	" Instead of % show NoScrollbar horizontal scrollbar
-	function! NoScrollbarForLightline()
-		return noscrollbar#statusline()
-	endfunction
 
 	function! MyFiletype()
 		return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
