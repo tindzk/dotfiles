@@ -24,7 +24,7 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
-[*.{scala,sbt,hs}]
+[*.{scala,sbt,hs,m}]
 indent_style = space
 indent_size = 2
 max_line_length = 80
