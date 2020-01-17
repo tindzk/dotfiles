@@ -34,7 +34,6 @@
 	Plug 'derekwyatt/vim-scala'
 	Plug 'ap/vim-css-color'
 	Plug 'plasticboy/vim-markdown'
-	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 
 	call plug#end()
 " }}}
@@ -467,8 +466,6 @@
 	let g:vim_markdown_folding_disabled = 1
 
 	autocmd FileType markdown nmap <buffer> <enter> <Plug>Markdown_EditUrlUnderCursor
-
-	let g:mkdp_auto_close = 0
 " }}}
 " {{{ Basic syntax completion
 	function! InsertClosing(closing)
