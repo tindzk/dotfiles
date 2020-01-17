@@ -141,8 +141,11 @@ exec swayidle \
 
 exec waybar
 exec redshift
-exec blueman-applet
 exec ~/dotfiles/sway/workspace-names.py
+
+# See https://www.reddit.com/r/i3wm/comments/drmc4p/change_audio_sink_to_bluetooth_headset_when_it_is/
+exec pacmd load-module module-switch-on-connect
+exec blueman-applet
 
 output  DP-1 scale 1 position 1920,0
 output  DP-1 bg ~/Wallpapers/DOW3NMLQB3.jpg fill
