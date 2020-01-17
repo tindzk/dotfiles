@@ -280,39 +280,6 @@
 " {{{ Fuzzy Path Matching
 	nnoremap <C-p> :<C-u>FZF<CR>
 " }}}
-" {{{ Mails
-" Adapted from https://github.com/vim-scripts/Search-in-Addressbook/blob/master/plugin/address-search.vim
-fun! CompleteEmails(findstart, base)
-	if a:findstart
-		let line = getline('.')
-		let start = col('.') - 1
-		while start > 0 && line[start - 1] =~ '[^:,]'
-			let start -= 1
-		endwhile
-		return start + 1
-	else
-		let res = []
-		for m in split(system('khard email --remove-first-line --parsable ' . shellescape(a:base)), '\n')
-			let parts = split(m, '\t')
-			if parts[1] == ' '
-				call add(res, parts[0])
-			else
-				call add(res, parts[1] . ' <' . parts[0] . '>')
-			endif
-		endfor
-		return res
-	endif
-endfun
-
-fun! UserComplete(findstart, base)
-	let line = getline(line('.'))
-	if line =~ '^\(To\|Cc\|Bcc\|From\|Reply-To\):'
-		return CompleteEmails(a:findstart, a:base)
-	endif
-endfun
-
-autocmd FileType mail set omnifunc=UserComplete
-" }}}
 " {{{ Clipboard
 	" Use system clipboard
 	set clipboard+=unnamedplus
