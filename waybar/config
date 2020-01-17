@@ -31,7 +31,8 @@
         "on-click": "kitty htop"
     },
     "memory": {
-        "format": "  {:2}%"
+        "format": "  {used:0.0f}G",
+        "on-click": "kitty htop"
     },
     "battery": {
         "states": {
