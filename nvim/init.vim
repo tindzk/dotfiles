@@ -74,6 +74,11 @@
 	noremap  <silent> <C-S> :update<CR>
 	vnoremap <silent> <C-S> <C-C>:update<CR>
 	inoremap <silent> <C-S> <C-O>:update<CR>
+
+	" Change current working directory
+	noremap  <silent> <leader>cd :lcd%:p:h<CR>
+	vnoremap <silent> <leader>cd <C-C>:lcd%:p:h<CR>
+	inoremap <silent> <leader>cd <C-O>:lcd%:p:h<CR>
 " }}}
 " {{{ Colours
 	" Select colour scheme
