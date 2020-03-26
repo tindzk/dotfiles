@@ -1,8 +1,14 @@
 set guioptions  			svh
 set adjust-open 			width
 set statusbar-basename      true
-set window-title-home-tilde true
+set window-title-basename   true
 set selection-clipboard     clipboard
+set page-padding            1
+set statusbar-h-padding     0
+set statusbar-v-padding     0
+
+# Search while typing
+set incremental-search true
 
 set recolor-keephue       true
 set recolor-darkcolor     "#dcdccc"
@@ -16,6 +22,14 @@ map i recolor
 
 map . navigate next
 map , navigate previous
+
+map = adjust_window width
+
+map r reload
+map R rotate
+
+# Go to quickmark x by typing `x as in Vim
+map ` mark_evaluate
 
 map C-u navigate half-up
 map C-d navigate half-down
