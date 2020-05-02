@@ -4,3 +4,5 @@
 
 nvim/plugged/
 nvim/.netrwhist
+
+/seed-credentials.toml

@@ -1,3 +1,5 @@
+import = ["seed-credentials.toml"]
+
 [cli]
 level    = "debug"
 unicode  = true
@@ -8,3 +10,4 @@ tmpfs = true
 
 [resolution]
 optionalArtefacts = true
+silent = false
