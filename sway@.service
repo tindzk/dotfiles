@@ -23,6 +23,7 @@ Environment=PATH=/home/tim/bin:/usr/bin
 # whether it was started from the terminal
 Environment=TERM=
 
+Environment=XDG_CURRENT_DESKTOP=sway
 Environment=XDG_RUNTIME_DIR=/run/user/1000
 Environment=XDG_DATA_HOME=/home/tim/.local/share
 Environment=XDG_CONFIG_HOME=/home/tim/.config
