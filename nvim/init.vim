@@ -26,11 +26,12 @@
 	Plug 'jonathanfilip/vim-lucius'
 	Plug 'vim-scripts/bclear'
 
+	Plug 'norcalli/nvim-colorizer.lua'
+
 	" Language support
 	Plug 'cespare/vim-toml'
 	Plug 'othree/html5.vim'
 	Plug 'derekwyatt/vim-scala'
-	Plug 'ap/vim-css-color'
 	Plug 'plasticboy/vim-markdown'
 	Plug 'chrisbra/csv.vim'
 
@@ -114,6 +115,9 @@
 	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
 	autocmd InsertLeave * se nocul
+
+	" Highlight CSS colours
+	lua require'colorizer'.setup()
 " }}}
 " {{{ Distraction-free writing
 	" Also change font and restore default when leaving
