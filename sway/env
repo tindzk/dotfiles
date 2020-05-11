@@ -1,0 +1,36 @@
+PATH=/home/tim/bin:/usr/bin
+
+# Reset TERM which is set to `linux` because the neovim-qt configuration checks
+# whether it was started from the terminal
+TERM=
+
+XDG_CURRENT_DESKTOP=sway
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_DATA_HOME=/home/tim/.local/share
+XDG_CONFIG_HOME=/home/tim/.config
+
+FZF_DEFAULT_COMMAND="rg --files"
+
+# Disable client-side Qt decorations
+# See https://github.com/swaywm/sway/wiki#disabling-client-side-qt-decorations
+QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# See https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE
+# Requires that qt5ct package is installed
+QT_QPA_PLATFORMTHEME=qt5ct
+
+KITTY_ENABLE_WAYLAND=1
+MOZ_ENABLE_WAYLAND=1
+MOZ_USE_XINPUT2=1
+
+# Required for IntelliJ
+_JAVA_AWT_WM_NONREPARENTING=1
+
+QT_QPA_PLATFORM=wayland
+GDK_BACKEND=wayland
+
+# For Waybar
+LC_TIME=en_US.UTF-8
+
+# For qalc
+LC_NUMERIC=en_US.UTF-8

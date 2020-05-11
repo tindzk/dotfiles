@@ -4,6 +4,8 @@ xdg-settings set default-web-browser firefox.desktop
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/profile ~/.profile
+rm ~/.config/nvim/.netrwhist
+rmdir ~/.config/nvim
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/mpv ~/.config/mpv
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
@@ -39,8 +41,8 @@ mkdir -p ~/.config/polybar/
 ln -s ~/dotfiles/polybar/config ~/.config/polybar/config
 ln -s ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 
-mkdir -p ~/.config/sway/
-ln -s ~/dotfiles/sway/config ~/.config/sway/config
+rmdir ~/.config/sway/
+ln -s ~/dotfiles/sway ~/.config/sway
 
 ln -s ~/dotfiles/bspwm ~/.config/bspwm
 ln -s ~/dotfiles/sxhkd ~/.config/sxhkd

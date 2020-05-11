@@ -12,6 +12,10 @@
 	Plug 'tomtom/tcomment_vim'
 	Plug 'godlygeek/tabular'
 	Plug 'alvan/vim-closetag'
+	Plug 'vimwiki/vimwiki'
+	Plug 'michal-h21/vim-zettel'
+	Plug 'kyazdani42/nvim-tree.lua'
+	Plug 'sbdchd/neoformat'
 	Plug 'tpope/vim-eunuch'
 
 	" Colour schemes

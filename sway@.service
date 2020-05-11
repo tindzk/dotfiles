@@ -1,16 +1,21 @@
 # From https://gist.github.com/agboom/eaec2697e3848cd626f25d428d8c30c6
 [Unit]
-Description=Sway compositor
+Description=Sway
+Documentation=man:sway(5)
 
 # See https://stackoverflow.com/a/39284869
 StartLimitBurst=5
 StartLimitIntervalSec=200
 
+# TODO needed?
+After=systemd-user-sessions.service
+
 [Service]
-ExecStartPre=/usr/bin/chvt %I
+Type=simple
+#EnvironmentFile=/home/tim/.config/sway/env
 ExecStart=/usr/bin/sway
 TTYPath=/dev/tty%I
-TTYReset=yes
+#TTYReset=yes
 TTYVHangup=yes
 TTYVTDisallocate=yes
 PAMName=login
@@ -55,10 +60,11 @@ Environment=LC_NUMERIC=en_US.UTF-8
 
 Restart=always
 RestartSec=2
+TimeoutStopSec=10
 StandardInput=tty
 StandardError=journal
 StandardOutput=journal
-Nice=-5
+#Nice=-5
 
 [Install]
 WantedBy=graphical.target

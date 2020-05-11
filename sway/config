@@ -122,12 +122,8 @@ bindsym $mod+d     exec dmenu_run
 bindsym XF86Search exec dmenu_run
 
 # Start terminal
-bindsym $mod+Return exec wezterm
-
-# WirePlumber controls
-bindsym XF86AudioMute        exec wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle
-bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+#bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec termite
 
 # Player controls
 bindsym XF86AudioPlay exec playerctl --player="mpv,%any" play-pause
@@ -135,12 +131,8 @@ bindsym XF86AudioStop exec playerctl --player="mpv,%any" stop
 bindsym XF86AudioNext exec playerctl --player="mpv,%any" next
 bindsym XF86AudioPrev exec playerctl --player="mpv,%any" previous
 
-# Screen brightness controls
-bindsym XF86MonBrightnessDown exec light -U 1
-bindsym XF86MonBrightnessUp   exec light -A 1
-
 # Lock screen
-bindsym $mod+x exec lock
+# bindsym $mod+x exec lock
 
 # After 400 seconds, turn off internal output (and turn them back on when you wiggle the mouse)
 # Lock screen before system goes to sleep
