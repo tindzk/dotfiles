@@ -8,7 +8,9 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 #font = Droid Sans Mono 8
-font = Iosevka Term Medium 12
+#font = Iosevka Term Medium 8
+#font = Source Code Pro 8
+font = JetBrains Mono 8
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -53,7 +55,7 @@ cursor          = #f5f4f1
 
 # background      = #272822
 # Transparent background
-background = rgba(63, 63, 63, 0.8)
+#background = rgba(63, 63, 63, 0.8)
 
 # 16 color space
 

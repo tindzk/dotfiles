@@ -3,7 +3,7 @@
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "pulseaudio", "clock"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "tray", "clock", "idle_inhibitor"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -42,6 +42,13 @@
         },
         "format": "{icon} {capacity:2}%",
         "format-icons": ["", "", "", "", ""]
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C"
     },
     "network": {
         "format-wifi": " {essid}",

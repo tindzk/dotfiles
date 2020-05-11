@@ -45,10 +45,10 @@
 	follow = true
 [commit]
 	verbose = true
-[diff "pandoc"]
-	textconv=pandoc --to=markdown
-	prompt = false
-	binary = true
+#[diff "pandoc"]
+#	textconv=pandoc --to=markdown
+#	prompt = false
+#	binary = true
 [diff "odt"]
 	textconv = odt2txt
 	binary = true

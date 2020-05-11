@@ -75,7 +75,8 @@ bindsym $mod+Shift+r reload
 bindsym $mod+d exec gtkmenu
 
 # Start terminal
-bindsym $mod+Return exec kitty
+#bindsym $mod+Return exec kitty
+bindsym $mod+Return exec termite
 
 # Pulse Audio controls
 bindsym F1 exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
@@ -85,35 +86,29 @@ bindsym XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-# Screen brightness controls
-bindsym XF86MonBrightnessDown exec light -U 1
-bindsym XF86MonBrightnessUp   exec light -A 1
-
 # Lock screen
-bindsym $mod+x exec lock
+# bindsym $mod+x exec lock
 
 # After 400 seconds, turn off all outputs (and turn them back on when you wiggle the mouse)
 # After 500 seconds of inactivity, lock screen
 # Lock screen before system goes to sleep
 exec swayidle \
     timeout 400 'swaymsg "output * dpms off"' \
-       resume 'swaymsg "output * dpms on"' \
-    timeout 500 lock \
-    before-sleep lock
+       resume 'swaymsg "output * dpms on"'
+
+# \
+#    timeout 500 lock \
+#    before-sleep lock
 
 exec waybar
 exec redshift
 exec ~/dotfiles/sway/workspace-names.py
 
-# See https://www.reddit.com/r/i3wm/comments/drmc4p/change_audio_sink_to_bluetooth_headset_when_it_is/
-exec pacmd load-module module-switch-on-connect
-exec blueman-applet
+#output  DP-1 scale 1 position 1920,0
+output HDMI-A-1 bg ~/wallpapers/0OUQ6N7YT6.jpg fill
 
-output  DP-1 scale 1 position 1920,0
-output  DP-1 bg ~/Wallpapers/DOW3NMLQB3.jpg fill
-
-output eDP-1 scale 2 position 0,0
-output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
+#output eDP-1 scale 2 position 0,0
+#output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
 
 input * xkb_layout  annepro,de
 input * xkb_variant annepro
