@@ -80,6 +80,10 @@
 	" Edit nvim configuration
 	nnoremap <silent> <leader>vi :tabnew ~/dotfiles/nvim/init.vim<cr>
 
+	" Jump back and fourth between buffers
+	nnoremap H <C-o><CR>
+	nnoremap L <C-i><CR>
+
 	" Detect file changes
 	" From https://github.com/neovim/neovim/issues/1936
 	set autoread
