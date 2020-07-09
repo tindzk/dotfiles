@@ -68,8 +68,8 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-# Restart in place, preserving active session
-bindsym $mod+Shift+r restart
+# Reload configuration, preserving active session
+bindsym $mod+Shift+r reload
 
 # Application launcher
 bindsym $mod+d exec gtkmenu
