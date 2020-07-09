@@ -404,6 +404,31 @@ let g:closetag_close_shortcut = '<leader>>'"
 
 	set tabline=%!TabLine()
 " }}}
+" {{{ Octave
+	let s:octaveJob    = -1
+	let s:octaveWindow = -1
+
+	" Adapted from https://gist.github.com/ram535/b1b7af6cd7769ec0481eb2eed549ea23
+	function! RunOctave(name)
+		if win_gotoid(s:octaveWindow)
+			bd! Octave
+		end
+		" Create new named window
+		new octave
+		" Move window to new tab
+		wincmd T
+		"vertical resize 80
+		let s:octaveJob    = termopen('octave ' . a:name, { 'detach': 1 })
+		let s:octaveWindow = win_getid()
+		" Rename the buffer
+		silent file Octave
+		" Go to next tab
+		execute "normal 1gt"
+	endfunction
+
+	autocmd FileType matlab nnoremap <silent> <F8> :w<cr>:call RunOctave(expand('%'))<cr>
+	autocmd FileType matlab inoremap <silent> <F8> <esc>:w<cr>:call RunOctave(expand('%'))<cr>
+" }}}
 " {{{ Vimwiki
 	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
 	let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
