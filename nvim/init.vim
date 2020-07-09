@@ -19,6 +19,7 @@
 	Plug 'alvan/vim-closetag'
     Plug 'vimwiki/vimwiki'
     Plug 'michal-h21/vim-zettel'
+	Plug 'kyazdani42/nvim-tree.lua'
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
@@ -369,6 +370,36 @@ let g:closetag_close_shortcut = '<leader>>'"
 	inoremap <silent> <expr> <S-Tab> &keymap == ""
 		\ ? '<C-o>:setlocal keymap=ru<CR>'
 		\ : '<C-o>:setlocal keymap=<CR>'
+" }}}
+" {{{ File tree
+	let g:lua_tree_ignore = [ '.git', 'node_modules', '.cache', '.idea', '.clangd' ]
+	let g:lua_tree_follow = 1 " Bind BufEnter to the LuaTreeFindFile command
+	let g:lua_tree_show_icons = {
+		\ 'git': 1,
+		\ 'folders': 0,
+		\ 'files': 0,
+		\}
+	"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+	"1 by default, notice that if 'files' is 1, it will only display
+	"if web-devicons is installed and on your runtimepath
+
+	" You can edit keybindings be defining this variable
+	" You don't have to define all keys.
+	" NOTE: the 'edit' key will wrap/unwrap a folder and open a file
+	let g:lua_tree_bindings = {
+		\ 'edit':        '<CR>',
+		\ 'edit_vsplit': '<C-v>',
+		\ 'edit_split':  '<C-x>',
+		\ 'edit_tab':    '<C-t>',
+		\ 'cd':          '.',
+		\ 'create':      'a',
+		\ 'remove':      'd',
+		\ 'rename':      'r'
+		\ }
+
+	nnoremap <silent> tt :LuaTreeToggle<CR>
+	nnoremap <silent> tr :LuaTreeRefresh<CR>
+	nnoremap <silent> tn :LuaTreeFindFile<CR>
 " }}}
 " {{{ Vimwiki
 	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
