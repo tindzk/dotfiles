@@ -152,6 +152,8 @@ alias e=/usr/bin/nvim
 alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/nvim-qt
 
+alias ncdu="dua i"
+
 grb() { g show $1:$2 > $2 }
 
 pgweb() {
@@ -207,8 +209,9 @@ yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
 ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
 penv  python -m venv venv; venv/bin/activate
 penv2 virtualenv2 venv; venv/bin/activate
-pld  source venv/bin/activate
-http python3 -m http.server'
+pld   source venv/bin/activate
+http  python3 -m http.server'
+ncdu  dua i
 """
 
 source /usr/share/fzf/key-bindings.zsh
