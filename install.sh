@@ -84,3 +84,7 @@ sudo systemctl restart postgresql
 sudo cp logind.conf /etc/systemd/logind.conf
 sudo cp 90-backlight.rules /etc/udev/rules.d/90-backlight.rules
 cp userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
+
+mkdir -p ~/.config/octave
+cp ~/dotfiles/octave/qt-settings ~/.config/octave/qt-settings
+ln -s ~/dotfiles/octaverc ~/.octaverc
