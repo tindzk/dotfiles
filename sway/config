@@ -121,3 +121,6 @@ input * xkb_options grp:alt_shift_toggle
 
 # Make Octave figures floating to avoid rescaling of axes
 for_window [title="Figure.*"] floating enable
+
+# Arrange all windows as tabs by default
+workspace_layout tabbed
