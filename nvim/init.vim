@@ -2,7 +2,6 @@
 	call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'airblade/vim-gitgutter'
-	Plug 'itchyny/lightline.vim'
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'junegunn/fzf'
@@ -270,33 +269,6 @@
 	" Exit terminal with Ctrl-w
 	tnoremap <silent> <C-w> <C-\><C-n>
 " }}}
-" {{{ Lightline
-	" Configuration for vim-devicons
-	let g:lightline = {
-		\ 'active': {
-		\   'left': [ [ 'mode', 'paste' ],
-		\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-		\ },
-		\ 'component_function': {
-		\   'cocstatus': 'coc#status',
-		\   'filetype': 'MyFiletype',
-		\   'filename': 'MyFilename',
-		\   'fileformat': 'MyFileformat'
-		\ }
-		\ }
-
-	function! MyFiletype()
-		return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-	endfunction
-
-	function! MyFilename()
-		return fnamemodify(expand("%"), ":~:.")
-	endfunction
-
-	function! MyFileformat()
-		return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-	endfunction
-" }}}
 " {{{ Fuzzy Path Matching
 	nnoremap <silent> <C-p> :<C-u>FZF<CR>
 " }}}
@@ -407,6 +379,29 @@ let g:closetag_close_shortcut = '<leader>>'"
 	nnoremap <silent> tt :LuaTreeToggle<CR>
 	nnoremap <silent> tr :LuaTreeRefresh<CR>
 	nnoremap <silent> tn :LuaTreeFindFile<CR>
+" }}}
+" {{{ Status line
+	" From https://github.com/haorenW1025/dotfiles/blob/master/nvim/config/status-line.vim
+	function! InactiveLine()
+		return luaeval("require'status-line'.inActiveLine()")
+	endfunction
+
+	function! ActiveLine()
+		return luaeval("require'status-line'.activeLine()")
+	endfunction
+
+	" Change status line automatically
+	augroup Statusline
+	  autocmd!
+	  autocmd WinEnter,BufEnter * setlocal statusline=%!ActiveLine()
+	  autocmd WinLeave,BufLeave * setlocal statusline=%!InactiveLine()
+	augroup END
+
+	function! TabLine()
+		return luaeval("require'status-line'.TabLine()")
+	endfunction
+
+	set tabline=%!TabLine()
 " }}}
 " {{{ Vimwiki
 	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
