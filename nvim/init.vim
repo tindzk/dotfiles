@@ -35,6 +35,7 @@
 	Plug 'derekwyatt/vim-scala'
 	Plug 'plasticboy/vim-markdown'
 	Plug 'chrisbra/csv.vim'
+	Plug 'sbdchd/neoformat'
 
 	call plug#end()
 " }}}
