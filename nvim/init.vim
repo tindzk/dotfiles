@@ -19,6 +19,7 @@
     Plug 'vimwiki/vimwiki'
     Plug 'michal-h21/vim-zettel'
 	Plug 'kyazdani42/nvim-tree.lua'
+	Plug 'sbdchd/neoformat'
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
@@ -35,7 +36,7 @@
 	Plug 'derekwyatt/vim-scala'
 	Plug 'plasticboy/vim-markdown'
 	Plug 'chrisbra/csv.vim'
-	Plug 'sbdchd/neoformat'
+	Plug 'lervag/vimtex'
 
 	call plug#end()
 " }}}
