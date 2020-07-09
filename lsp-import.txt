@@ -1,0 +1,51 @@
+	Plug 'neovim/nvim-lsp'
+	Plug 'haorenW1025/completion-nvim'
+
+" {{{ Language client
+	" TODO
+	"set hidden
+	"set cmdheight=2
+	"set updatetime=300
+	"set signcolumn=yes
+
+	lua require'nvim_lsp'.clangd.setup{on_attach=require'completion'.on_attach}
+	lua require'nvim_lsp'.metals.setup{on_attach=require'completion'.on_attach}
+	lua require'nvim_lsp'.pyls.setup{on_attach=require'completion'.on_attach}
+
+	nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+	nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+	nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+	nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+	nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+	nnoremap <silent> <leader>D <cmd>lua vim.lsp.buf.type_definition()<CR>
+	nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+	nnoremap <silent> g0 <cmd>lua vim.lsp.buf.document_symbol()<CR>
+	autocmd Filetype scala,python,c,cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+	" Use <Tab> and <S-Tab> to navigate through popup menu
+	inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+	" Set completeopt to have a better completion experience
+	set completeopt=menuone,noinsert,noselect
+
+	" Avoid showing message extra message when using completion
+	set shortmess+=c
+" }}}
+
+
+" Run tests on start and after saving
+autocmd BufRead *.c      lua require'testdiag'.runTests()
+autocmd BufWritePost *.c lua require'testdiag'.runTests()
+
+" Show left/right values at current line
+autocmd CursorMoved  *.c lua require'testdiag'.showResult()
+autocmd CursorMovedI *.c lua require'testdiag'.showResult()
+
+
+
+in status-line.lua:
+
+  -- TODO Do not repeat DirSeparator
+  statusline = statusline.."%#DirSeparator#"..left_separator.."%#Directory#"..require('testdiag').buildStatus().." %#DirSeparator#"..right_separator
+  statusline = statusline..blank
