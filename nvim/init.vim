@@ -17,6 +17,8 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
+    Plug 'vimwiki/vimwiki'
+    Plug 'michal-h21/vim-zettel'
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
@@ -319,8 +321,6 @@
 
 	" See https://github.com/plasticboy/vim-markdown/issues/414
 	let g:vim_markdown_folding_disabled = 1
-
-	autocmd FileType markdown nmap <buffer> <enter> <Plug>Markdown_EditUrlUnderCursor
 " }}}
 " {{{ vim-closetag
 " filenames like *.xml, *.html, *.xhtml, ...
@@ -369,4 +369,13 @@ let g:closetag_close_shortcut = '<leader>>'"
 	inoremap <silent> <expr> <S-Tab> &keymap == ""
 		\ ? '<C-o>:setlocal keymap=ru<CR>'
 		\ : '<C-o>:setlocal keymap=<CR>'
+" }}}
+" {{{ Vimwiki
+	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
+	let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
+	let g:zettel_options = [{"front_matter" : {"tags" : ""}}, {"front_matter" : {"tags" : ""}}]
+
+	autocmd FileType vimwiki nmap <buffer> <leader>zo :ZettelOpen<CR>
+	autocmd FileType vimwiki nmap <buffer> <leader>zn :ZettelNew<CR>
+	autocmd FileType vimwiki nmap <buffer> <leader>zs :ZettelSearch<CR>
 " }}}
