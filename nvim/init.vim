@@ -77,6 +77,9 @@
 	vnoremap <silent> <leader>cd <C-C>:lcd%:p:h<CR>
 	inoremap <silent> <leader>cd <C-O>:lcd%:p:h<CR>
 
+	" Edit nvim configuration
+	nnoremap <silent> <leader>vi :tabnew ~/dotfiles/nvim/init.vim<cr>
+
 	" Detect file changes
 	" From https://github.com/neovim/neovim/issues/1936
 	set autoread
