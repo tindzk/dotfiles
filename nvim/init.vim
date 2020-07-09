@@ -110,7 +110,7 @@
 	syntax on
 
 	" Clear search highlights by pressing <Escape>
-	map <Esc> :noh<CR>
+	map <silent> <Esc> :noh<CR>
 
 	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
@@ -209,8 +209,8 @@
 	set nospell
 
 	" Toggle spell checking
-	inoremap <c-c> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-	nnoremap <c-c>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	inoremap <silent> <c-c> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	nnoremap <silent> <c-c>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
 
 	autocmd FileType gitcommit set spell
 " }}}
@@ -244,23 +244,23 @@
 	autocmd VimResized * wincmd =
 " }}}
 " {{{ Tabs
-	nnoremap <C-t>c :tabnew<CR>
-	nnoremap <C-t>d :tabclose<CR>
-	nnoremap <C-t>j :tabprevious<CR>
-	nnoremap <C-t>k :tabnext<CR>
-	nnoremap <C-t>1 :tabn 1<CR>
-	nnoremap <C-t>2 :tabn 2<CR>
-	nnoremap <C-t>3 :tabn 3<CR>
-	nnoremap <C-t>4 :tabn 4<CR>
-	nnoremap <C-t>5 :tabn 5<CR>
-	nnoremap <C-t>6 :tabn 6<CR>
-	nnoremap <C-t>7 :tabn 7<CR>
-	nnoremap <C-t>8 :tabn 8<CR>
-	nnoremap <C-t>9 :tabn 9<CR>
+	nnoremap <silent> <C-t>c :tabnew<CR>
+	nnoremap <silent> <C-t>d :tabclose<CR>
+	nnoremap <silent> <C-t>j :tabprevious<CR>
+	nnoremap <silent> <C-t>k :tabnext<CR>
+	nnoremap <silent> <C-t>1 :tabn 1<CR>
+	nnoremap <silent> <C-t>2 :tabn 2<CR>
+	nnoremap <silent> <C-t>3 :tabn 3<CR>
+	nnoremap <silent> <C-t>4 :tabn 4<CR>
+	nnoremap <silent> <C-t>5 :tabn 5<CR>
+	nnoremap <silent> <C-t>6 :tabn 6<CR>
+	nnoremap <silent> <C-t>7 :tabn 7<CR>
+	nnoremap <silent> <C-t>8 :tabn 8<CR>
+	nnoremap <silent> <C-t>9 :tabn 9<CR>
 " }}}
 " {{{ Terminal
 	" Exit terminal with Ctrl-w
-	tnoremap <C-w> <C-\><C-n>
+	tnoremap <silent> <C-w> <C-\><C-n>
 " }}}
 " {{{ Lightline
 	" Configuration for vim-devicons
@@ -290,7 +290,7 @@
 	endfunction
 " }}}
 " {{{ Fuzzy Path Matching
-	nnoremap <C-p> :<C-u>FZF<CR>
+	nnoremap <silent> <C-p> :<C-u>FZF<CR>
 " }}}
 " {{{ Clipboard
 	" Use system clipboard
