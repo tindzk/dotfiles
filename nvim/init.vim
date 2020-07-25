@@ -277,21 +277,6 @@
 " {{{ Clipboard
 	" Use system clipboard
 	set clipboard+=unnamedplus
-
-	" Workaround for https://github.com/neovim/neovim/issues/10223
-	" From https://github.com/NicholasAsimov/dotfiles/commit/c69b0f513208c9555f139b57d872632a317203bf
-	let g:clipboard = {
-		  \   'name': 'wayland-strip-carriage',
-		  \   'copy': {
-		  \      '+': 'wl-copy --foreground --type text/plain',
-		  \      '*': 'wl-copy --foreground --type text/plain --primary',
-		  \    },
-		  \   'paste': {
-		  \      '+': {-> systemlist('wl-paste | tr -d "\r"')},
-		  \      '*': {-> systemlist('wl-paste --primary | tr -d "\r"')},
-		  \   },
-		  \   'cache_enabled': 1,
-		  \ }
 " }}}
 " {{{ Markdown
 	let g:vim_markdown_math = 1
