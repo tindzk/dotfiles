@@ -212,16 +212,16 @@
 " }}}
 " {{{ Spell checking
 	" Specify the dictionaries for use in spell checking
-	set spelllang=en,de,pl,fr,uk,ru
+	"set spelllang=en,de,pl,fr,uk,ru
 
 	" Keep spell checking disabled by default
 	set nospell
 
 	" Toggle spell checking
-	inoremap <silent> <c-c> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
-	nnoremap <silent> <c-c>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	"inoremap <silent> <c-c> <C-o>:set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
+	"nnoremap <silent> <c-c>      :set spell! <bar> echo "Spell check: " . (&spell ? "On" : "Off")<CR>
 
-	autocmd FileType gitcommit set spell
+	"autocmd FileType gitcommit set spell
 " }}}
 " {{{ Line breaks
 	" Enable word wrapping
