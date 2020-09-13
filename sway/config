@@ -3,6 +3,36 @@ set $mod Mod4
 # Font for window titles
 font pango:DejaVu Sans Mono 8
 
+# Borders
+smart_borders             on
+smart_gaps                on
+hide_edge_borders         both
+titlebar_border_thickness 1
+
+# Colours
+set $bg-color            #404552
+
+set $focused-bg-color    #FFFFFF
+set $active-bg-color     #FFFFFF
+set $inactive-bg-color   #FFFFFF
+set $urgent-bg-color     #FFFFFF
+
+set $focused-border-color    #404552
+set $active-border-color     #000000
+set $inactive-border-color   #9da3ad
+set $urgent-border-color     #E53935
+
+set $text-color          #000000
+set $inactive-text-color #808080
+
+set $indicator           #00ff00
+
+# class                 border                  background         text                 indicator
+client.focused          $focused-border-color   $focused-bg-color  $text-color          $indicator
+client.unfocused        $inactive-border-color  $inactive-bg-color $inactive-text-color $indicator
+client.focused_inactive $inactive-border-color  $focused-bg-color  $inactive-text-color $indicator
+client.urgent           $urgent-border-color    $urgent-bg-color   $text-color          $indicator
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
