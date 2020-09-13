@@ -135,10 +135,6 @@ exec waybar
 exec redshift
 exec ~/dotfiles/sway/workspace-names.py
 
-# See https://www.reddit.com/r/i3wm/comments/drmc4p/change_audio_sink_to_bluetooth_headset_when_it_is/
-exec pacmd load-module module-switch-on-connect
-exec blueman-applet
-
 # E Ink monitor
 output DP-1 res 2200x1650 scale 1.4
 output DP-1 bg #FFFFFF solid_color
