@@ -128,3 +128,7 @@ for_window [class="morphologica"] floating enable
 
 # Arrange all windows as tabs by default
 workspace_layout tabbed
+
+input "1739:32652:SYNA2B31:00_06CB:7F8C_Touchpad" {
+	tap enabled
+}
