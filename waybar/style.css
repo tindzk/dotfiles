@@ -9,20 +9,19 @@
 }
 
 window#waybar {
-    background: rgba(31, 36, 47, 0.87);
+    background: #FFFFFF;
     border-bottom: 1px solid rgba(24, 29, 42, 0.93);
-    color: #cfd6e6;
+    color: #000000;
 }
 
 #workspaces button {
     padding: 0 6px;
     background: transparent;
-    color: white;
+    color: #000000;
 }
 
 #workspaces button.focused {
-    background: #5C6773;
-    border-bottom: 1px solid white;
+    border: 1px solid #5C6773;
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #mode {
