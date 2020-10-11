@@ -1,2 +1,2 @@
 #!/bin/sh
-swaylock -c 000000
+swaylock -c FFFFFF
