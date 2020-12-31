@@ -3,7 +3,7 @@
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "pulseaudio", "backlight", "clock"],
+    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "custom/media", "pulseaudio", "backlight", "clock"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -11,9 +11,19 @@
             "deactivated": ""
         }
     },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["", ""]
+    },
+    "custom/media": {
+        "return-type": "json",
+        "max-length": 35,
+        "escape": true,
+        "exec": "$HOME/dotfiles/waybar/mediaplayer.py 2> /dev/null",
+		"on-click": "playerctl --player=mpv,%any play-pause"
     },
     "sway/workspaces": {
         "disable-scroll": true,
