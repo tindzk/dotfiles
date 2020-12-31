@@ -48,6 +48,9 @@ client.urgent           $urgent-border-color    $urgent-bg-color   $text-color  
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Restrict focus left/right to current monitor
+focus_wrapping workspace
+
 # Switch workspaces
 bindsym $mod+comma    workspace prev_on_output
 bindsym $mod+period   workspace next_on_output
