@@ -30,6 +30,7 @@ appMapping = {
 def change_glyph(i3, change, containerId):
     if not change == 'rename':  # avoid looping
         con = i3.get_tree().find_focused()
+        if con is None: return
         if not con.type == 'workspace':  # avoid renaming new empty workspaces on 'binding' event
             if not change == 'new':
                 ws_num = con.workspace().num
@@ -46,7 +47,6 @@ def change_glyph(i3, change, containerId):
                     icon = appMapping[app] if app in appMapping else ''
                     ws_name = "%s:%s" % (ws_num, icon)
                     i3.command('rename workspace number %s to "%s"' % (ws_num, ws_name))
-
         else:
             # Give the (empty) workspace a generic name: "number: glyph" (like "1: ")
             ws_num = con.workspace().num
