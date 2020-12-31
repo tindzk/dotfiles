@@ -135,12 +135,10 @@ bindsym XF86MonBrightnessUp   exec light -A 1
 bindsym $mod+x exec lock
 
 # After 400 seconds, turn off internal output (and turn them back on when you wiggle the mouse)
-# After 500 seconds of inactivity, lock screen
 # Lock screen before system goes to sleep
 exec swayidle \
     timeout 400 'swaymsg "output eDP-1 dpms off"' \
        resume 'swaymsg "output eDP-1 dpms on"' \
-    timeout 500 lock \
     before-sleep lock
 
 exec waybar
