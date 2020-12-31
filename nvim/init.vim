@@ -430,3 +430,31 @@ let g:closetag_close_shortcut = '<leader>>'"
 	autocmd FileType matlab nnoremap <silent> <F8> :w<cr>:call RunOctave(expand('%'))<cr>
 	autocmd FileType matlab inoremap <silent> <F8> <esc>:w<cr>:call RunOctave(expand('%'))<cr>
 " }}}
+" {{{ Font settings
+	let g:Font         = 'Ubuntu\ Mono'
+	let g:FontSize     = 16
+	let g:FontSizeMin  = 12
+	let g:FontSizeIncr = 2
+
+	function! FontChange()
+		let g:guifont = g:Font . ':h' . g:FontSize
+		execute 'set' 'guifont=' . g:guifont
+	endfunction
+
+	call FontChange()
+
+	function! FontSizeDecr()
+		if g:FontSize > g:FontSizeMin
+			let g:FontSize = g:FontSize - g:FontSizeIncr
+			call FontChange()
+		endif
+	endfunction
+
+	function! FontSizeIncr()
+		let g:FontSize = g:FontSize + g:FontSizeIncr
+		call FontChange()
+	endfunction
+
+	map <C-=> :call FontSizeIncr()<CR>
+	map <C--> :call FontSizeDecr()<CR>
+" }}}
