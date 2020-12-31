@@ -108,9 +108,6 @@ bindsym $mod+d exec gtkmenu
 bindsym $mod+Return exec kitty
 
 # Pulse Audio controls
-bindsym F1 exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
-bindsym F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
