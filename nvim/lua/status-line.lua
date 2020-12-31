@@ -6,7 +6,9 @@ local M = {}
 
 -- Different colors for mode
 local purple = '#B48EAD'
+local light_blue = '#81a1c1'
 local blue = '#81A1C1'
+local dark_blue = '#4a7096'
 local yellow = '#EBCB8B'
 local green = '#A3BE8C'
 local red = '#BF616A'
@@ -74,15 +76,16 @@ api.nvim_command('hi DirSeparator guifg='..dir_bg)
 
 -- FileType Color
 local filetype_bg = 'None'
-local filetype_fg = blue
+local filetype_fg = dark_blue
 local filetype_gui = 'bold'
 api.nvim_command('hi Filetype guibg='..filetype_bg..' guifg='..filetype_fg..' gui='..filetype_gui)
 
 -- row and column Color
-local line_bg = 'None'
+local line_bg = light_blue
 local line_fg = white_fg
 local line_gui = 'bold'
 api.nvim_command('hi Line guibg='..line_bg..' guifg='..line_fg..' gui='..line_gui)
+api.nvim_command('hi LineSeparator guifg='..line_bg)
 
 -- Redraw different colors for different mode
 local RedrawColors = function(mode)
@@ -151,12 +154,12 @@ function M.activeLine()
   -- Component: row and col
   local line = api.nvim_call_function('line', {"."})
   local column = api.nvim_call_function('col', {"."})
-  statusline = statusline.."%#Line# " .. line .. ":" .. column
+  statusline = statusline.."%#LineSeparator#"..left_separator.."%#Line# " .. line .. ":" .. column.." %#LineSeparator#"..right_separator
 
   return statusline
 end
 
-local InactiveLine_bg = '#1c1c1c'
+local InactiveLine_bg = '#DCDCDC'
 local InactiveLine_fg = white_fg
 api.nvim_command('hi InActive guibg='..InactiveLine_bg..' guifg='..InactiveLine_fg)
 
@@ -187,7 +190,7 @@ local getTabLabel = function(n)
   return file_name
 end
 
-api.nvim_command('hi TabLineSel gui=Bold guibg=#BF616A guifg=#292929')
+api.nvim_command('hi TabLineSel gui=Bold guibg=#BF616A guifg=' .. white_fg)
 api.nvim_command('hi TabLineSelSeparator gui=bold guifg=#BF616A')
 api.nvim_command('hi TabLine guibg=#4d4d4d guifg=#c7c7c7 gui=None')
 api.nvim_command('hi TabLineSeparator guifg=#4d4d4d')
