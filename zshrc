@@ -150,7 +150,7 @@ alias http="python3 -m http.server"
 
 alias e=/usr/bin/nvim
 alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
-alias eg=/usr/bin/nvim-qt
+alias eg=/usr/bin/neovide
 
 alias ncdu="dua i"
 
@@ -200,7 +200,7 @@ lt   exa --tree
 loc  tokei -f --sort=lines
 b    bloop
 e    nvim
-eg   nvim-qt
+eg   neovide
 ez   nvim $HOME/.zshrc && source $HOME/.zshrc
 yt   youtube-dl --all-subs
 yta  youtube-dl -f bestaudio
