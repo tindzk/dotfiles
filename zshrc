@@ -152,8 +152,6 @@ alias e=/usr/bin/nvim
 alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/neovide
 
-alias ncdu="dua i"
-
 grb() { g show $1:$2 > $2 }
 
 pgweb() {
@@ -211,7 +209,6 @@ penv  python -m venv venv; venv/bin/activate
 penv2 virtualenv2 venv; venv/bin/activate
 pld   source venv/bin/activate
 http  python3 -m http.server'
-ncdu  dua i
 """
 
 source /usr/share/fzf/key-bindings.zsh
