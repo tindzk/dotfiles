@@ -144,7 +144,7 @@ exec swayidle \
     before-sleep lock
 
 exec waybar
-exec redshift
+exec gammstep
 exec ~/dotfiles/sway/workspace-names.py
 
 # E Ink monitor
