@@ -11,20 +11,21 @@ Based on wsdnames-i3ipc by Piotr Miller, licenced under GPLv3
 
 from i3ipc import Connection, Event
 
-# truncate workspace name to this value
-max_length = 30
-
 # Create the Connection object that can be used to send commands and subscribe to events.
 i3 = Connection()
 
 appMapping = {
         "nvim-qt": "",
+        "neovide": "",
         "kitty": "",
         "firefox": "",
         "org.octave.Octave": "",
         "jetbrains-idea-ce": "",
-        "pcmanfm-qt": "",
-        "smerge": ""
+        "nemo": "",
+        "smerge": "",
+        "sublime_merge": "",
+        "org.pwmt.zathura": "",
+        "com.github.johnfactotum.Foliate": ""
 }
 
 def change_glyph(i3, change, containerId):
