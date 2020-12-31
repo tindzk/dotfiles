@@ -3,13 +3,17 @@
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "pulseaudio", "clock"],
+    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "pulseaudio", "backlight", "clock"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
         }
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""]
     },
     "sway/workspaces": {
         "disable-scroll": true,
