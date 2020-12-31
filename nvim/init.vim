@@ -18,6 +18,7 @@
 	Plug 'alvan/vim-closetag'
 	Plug 'kyazdani42/nvim-tree.lua'
 	Plug 'sbdchd/neoformat'
+	Plug 'tpope/vim-eunuch'
 
 	" Colour schemes
 	Plug 'KeitaNakamura/neodark.vim'
