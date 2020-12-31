@@ -278,20 +278,22 @@
 	" Use system clipboard
 	set clipboard+=unnamedplus
 
-	" Workaround for https://github.com/neovim/neovim/issues/10223
-	" From https://github.com/NicholasAsimov/dotfiles/commit/c69b0f513208c9555f139b57d872632a317203bf
-	let g:clipboard = {
-		  \   'name': 'wayland-strip-carriage',
-		  \   'copy': {
-		  \      '+': 'wl-copy --foreground --type text/plain',
-		  \      '*': 'wl-copy --foreground --type text/plain --primary',
-		  \    },
-		  \   'paste': {
-		  \      '+': {-> systemlist('wl-paste | tr -d "\r"')},
-		  \      '*': {-> systemlist('wl-paste --primary | tr -d "\r"')},
-		  \   },
-		  \   'cache_enabled': 1,
-		  \ }
+	" Workaround from https://github.com/neovim/neovim/issues/10223
+	if exists('$WAYLAND_DISPLAY')
+		" clipboard on wayland with newline fix
+		let g:clipboard = {
+			\   'name': 'WL-Clipboard with ^M Trim',
+			\   'copy': {
+			\      '+': 'wl-copy --foreground --type text/plain',
+			\      '*': 'wl-copy --foreground --type text/plain --primary',
+			\    },
+			\   'paste': {
+			\      '+': {-> systemlist('wl-paste --no-newline --type "text/plain;charset=utf-8" 2>/dev/null | sed -e "s/\r$//"', '', 1)},
+			\      '*': {-> systemlist('wl-paste --no-newline --type "text/plain;charset=utf-8" --primary 2>/dev/null | sed -e "s/\r$//"', '', 1)},
+			\   },
+			\   'cache_enabled': 1,
+			\ }
+	endif
 " }}}
 " {{{ Markdown
 	let g:vim_markdown_math = 1
