@@ -1,6 +1,6 @@
 default  partial alphanumeric_keys modifier_keys
-xkb_symbols "annepro" {
-	name[Group1]= "Anne Pro";
+xkb_symbols "us-custom" {
+	name[Group1]= "US (custom)";
 	include "us"
 
 	key <ESC>  {[ grave, asciitilde ]};
