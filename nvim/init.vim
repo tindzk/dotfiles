@@ -100,8 +100,8 @@
 	" let g:neodark#terminal_transparent = 1
 	" colorscheme neodark
 
-	" colorscheme bclear
-	colorscheme lucius
+	colorscheme bclear
+	" colorscheme lucius
 
 	"let g:gruvbox_italic = 1
 	"colorscheme gruvbox8
