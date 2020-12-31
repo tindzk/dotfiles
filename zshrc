@@ -126,7 +126,7 @@ alias lt="exa --tree"
 alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
-alias b=$HOME/.bloop/bloop
+alias b=bloop
 
 alias yt="youtube-dl --all-subs"
 alias yta="youtube-dl -f bestaudio"
