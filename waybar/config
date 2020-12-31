@@ -23,8 +23,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %d}",
-		"on-click": "firefox https://calendar.google.com/"
+        "format": "{:%a %d, %H:%M}",
+		"on-click": "firefox https://calendar.google.com/",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
         "format": " {usage:2}%",
