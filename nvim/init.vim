@@ -119,7 +119,7 @@
 	syntax on
 
 	" Clear search highlights by pressing <Escape>
-	map <silent> <Esc> :noh<CR>
+	nnoremap <silent> <Esc> :noh<CR>
 
 	" Underline current line in insert mode
 	autocmd InsertEnter * se cul
