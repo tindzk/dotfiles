@@ -16,8 +16,6 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
-    Plug 'vimwiki/vimwiki'
-    Plug 'michal-h21/vim-zettel'
 	Plug 'kyazdani42/nvim-tree.lua'
 	Plug 'sbdchd/neoformat'
 
@@ -431,13 +429,4 @@ let g:closetag_close_shortcut = '<leader>>'"
 
 	autocmd FileType matlab nnoremap <silent> <F8> :w<cr>:call RunOctave(expand('%'))<cr>
 	autocmd FileType matlab inoremap <silent> <F8> <esc>:w<cr>:call RunOctave(expand('%'))<cr>
-" }}}
-" {{{ Vimwiki
-	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
-	let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
-	let g:zettel_options = [{"front_matter" : {"tags" : ""}}, {"front_matter" : {"tags" : ""}}]
-
-	autocmd FileType vimwiki nmap <buffer> <leader>zo :ZettelOpen<CR>
-	autocmd FileType vimwiki nmap <buffer> <leader>zn :ZettelNew<CR>
-	autocmd FileType vimwiki nmap <buffer> <leader>zs :ZettelSearch<CR>
 " }}}
