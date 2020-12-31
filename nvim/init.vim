@@ -16,7 +16,7 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
-	Plug 'kyazdani42/nvim-tree.lua'
+	Plug 'mcchrish/nnn.vim'
 	Plug 'sbdchd/neoformat'
 	Plug 'tpope/vim-eunuch'
 
@@ -353,35 +353,14 @@ let g:closetag_close_shortcut = '<leader>>'"
 		\ ? '<C-o>:setlocal keymap=ru<CR>'
 		\ : '<C-o>:setlocal keymap=<CR>'
 " }}}
-" {{{ File tree
-	let g:lua_tree_ignore = [ '.git', 'node_modules', '.cache', '.idea', '.clangd' ]
-	let g:lua_tree_follow = 1 " Bind BufEnter to the LuaTreeFindFile command
-	let g:lua_tree_show_icons = {
-		\ 'git': 1,
-		\ 'folders': 0,
-		\ 'files': 0,
-		\}
-	"If 0, do not show the icons for one of 'git' 'folder' and 'files'
-	"1 by default, notice that if 'files' is 1, it will only display
-	"if web-devicons is installed and on your runtimepath
+" {{{ nnn
+	" Floating window (neovim latest and vim with patch 8.2.191)
+	let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Debug' } }
 
-	" You can edit keybindings be defining this variable
-	" You don't have to define all keys.
-	" NOTE: the 'edit' key will wrap/unwrap a folder and open a file
-	let g:lua_tree_bindings = {
-		\ 'edit':        '<CR>',
-		\ 'edit_vsplit': '<C-v>',
-		\ 'edit_split':  '<C-x>',
-		\ 'edit_tab':    '<C-t>',
-		\ 'cd':          '.',
-		\ 'create':      'a',
-		\ 'remove':      'd',
-		\ 'rename':      'r'
-		\ }
-
-	nnoremap <silent> tt :LuaTreeToggle<CR>
-	nnoremap <silent> tr :LuaTreeRefresh<CR>
-	nnoremap <silent> tn :LuaTreeFindFile<CR>
+	let g:nnn#action = {
+		  \ '<c-t>': 'tab split',
+		  \ '<c-x>': 'split',
+		  \ '<c-v>': 'vsplit' }
 " }}}
 " {{{ Status line
 	" From https://github.com/haorenW1025/dotfiles/blob/master/nvim/config/status-line.vim
