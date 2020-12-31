@@ -435,3 +435,6 @@ let g:closetag_close_shortcut = '<leader>>'"
 	map <C-=> :call FontSizeIncr()<CR>
 	map <C--> :call FontSizeDecr()<CR>
 " }}}
+" {{{ vimtex
+	let g:tex_flavor = 'latex'
+" }}}
