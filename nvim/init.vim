@@ -52,9 +52,6 @@
 	" Incremental substitutions
 	set inccommand=split
 
-	" Show line numbers
-	set number
-
 	" Do not create backup files
 	set nobackup
 
