@@ -14,8 +14,10 @@ ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 mkdir -p ~/.xkb/symbols/
 # Sway
 ln -s ~/dotfiles/xkb/symbols/us-custom ~/.xkb/symbols/us-custom
+ln -s ~/dotfiles/xkb/symbols/ua-custom ~/.xkb/symbols/ua-custom
 # i3
 ln -s ~/dotfiles/xkb/symbols/us-custom /usr/share/X11/xkb/symbols/us-custom
+ln -s ~/dotfiles/xkb/symbols/ua-custom /usr/share/X11/xkb/symbols/ua-custom
 
 mkdir -p ~/.config/zathura/
 ln -s ~/dotfiles/zathurarc ~/.config/zathura/zathurarc
