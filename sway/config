@@ -154,6 +154,8 @@ exec ~/dotfiles/sway/workspace-names.py
 # E Ink monitor
 output DP-1 res 2200x1650 scale 1.4
 output DP-1 bg #FFFFFF solid_color
+# Place monitor always to the left; needed when toggling eDP-1
+output DP-1 position 0 0
 
 # Laptop screen
 output eDP-1 scale 2

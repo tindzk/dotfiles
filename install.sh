@@ -57,6 +57,7 @@ ln -s ~/dotfiles/bin/matlab ~/bin/matlab
 ln -s ~/dotfiles/bin/reconnect ~/bin/reconnect
 ln -s ~/dotfiles/bin/skype ~/bin/skype
 ln -s /opt/sublime_merge/sublime_merge ~/bin/smerge
+ln -s ~/dotfiles/bin/output ~/bin/output
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
