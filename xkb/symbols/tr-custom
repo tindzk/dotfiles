@@ -1,0 +1,25 @@
+default  partial alphanumeric_keys modifier_keys
+xkb_symbols "tr-custom" {
+	name[Group1]= "TR (custom)";
+	include "us"
+
+	key <ESC>  {[ grave, asciitilde ]};
+	key <CAPS> {[ Escape ]};
+
+	// See https://metebalci.com/blog/efficient-multi-language-typing-on-linux/
+	key <LatI> { [ i,           I,
+	               idotless,    Iabovedot      ] };
+	key <LatO> { [ o,           O,
+	               odiaeresis,  Odiaeresis     ] };
+	key <LatU> { [ u,           U,
+	               udiaeresis,  Udiaeresis     ] };
+	key <LatS> { [ s,           S,
+	               scedilla,    Scedilla       ] };
+	key <LatG> { [ g,           G,
+	               gbreve,      Gbreve         ] };
+	key <LatC> { [ c,           C,
+	               ccedilla,    Ccedilla       ] };
+
+	key <RALT> { type[Group1] = "ONE_LEVEL", symbols[Group1] = [ ISO_Level3_Shift ] };
+	modifier_map Mod5 { ISO_Level3_Shift };
+};
