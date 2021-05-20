@@ -159,7 +159,7 @@ output DP-1 bg #FFFFFF solid_color
 output eDP-1 scale 2
 output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
 
-input * xkb_layout  us-custom,ua-custom,de,tr-custom
+input * xkb_layout  us-custom,ua-custom,de-custom,tr-custom
 input * xkb_variant us-custom
 input * xkb_options grp:alt_shift_toggle
 

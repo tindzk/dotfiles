@@ -15,10 +15,12 @@ mkdir -p ~/.xkb/symbols/
 # Sway
 ln -s ~/dotfiles/xkb/symbols/us-custom ~/.xkb/symbols/us-custom
 ln -s ~/dotfiles/xkb/symbols/ua-custom ~/.xkb/symbols/ua-custom
+ln -s ~/dotfiles/xkb/symbols/de-custom ~/.xkb/symbols/de-custom
 ln -s ~/dotfiles/xkb/symbols/tr-custom ~/.xkb/symbols/tr-custom
 # i3
 sudo ln -s ~/dotfiles/xkb/symbols/us-custom /usr/share/X11/xkb/symbols/us-custom
 sudo ln -s ~/dotfiles/xkb/symbols/ua-custom /usr/share/X11/xkb/symbols/ua-custom
+sudo ln -s ~/dotfiles/xkb/symbols/de-custom /usr/share/X11/xkb/symbols/de-custom
 sudo ln -s ~/dotfiles/xkb/symbols/tr-custom /usr/share/X11/xkb/symbols/tr-custom
 
 mkdir -p ~/.config/zathura/
