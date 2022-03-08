@@ -136,7 +136,7 @@ ytp() { youtube-dl "https://www.youtube.com/playlist?list=$1" }
 
 # Create and load virtual Python environment
 function penv {
-  [ ! -d "venv/" ] && python -m venv venv
+  [ ! -d "venv/" ] && python3 -m venv venv
   source venv/bin/activate
 }
 
