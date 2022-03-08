@@ -215,3 +215,4 @@ source /usr/share/fzf/key-bindings.zsh
 source ~/dotfiles/auto-ls.zsh
 source ~/dotfiles/zjump.zsh
 source ~/.profile
+source ~/dotfiles/viper-env.plugin.zsh
