@@ -1,0 +1,13 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[scala]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[gcloud]
+disabled = true

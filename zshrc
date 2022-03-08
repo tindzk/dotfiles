@@ -48,8 +48,6 @@ function zle-line-init zle-keymap-select () {
 	esac
 }
 
-PROMPT="%{$fg_bold[blue]%}%~ $%{$reset_color%} "
-
 zle -N zle-line-init
 zle -N zle-keymap-select
 
@@ -222,4 +220,6 @@ source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
 
 alias cd=z
+
+eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

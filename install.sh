@@ -2,6 +2,7 @@
 xdg-settings set default-web-browser firefox.desktop
 
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/profile ~/.profile
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/mpv ~/.config/mpv
