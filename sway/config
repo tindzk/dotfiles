@@ -148,7 +148,7 @@ exec swayidle \
     before-sleep lock
 
 exec waybar
-exec gammstep
+exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
 exec ~/dotfiles/sway/workspace-names.py
 
 # E Ink monitor
