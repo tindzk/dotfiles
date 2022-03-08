@@ -97,16 +97,17 @@
 	" let g:neodark#terminal_transparent = 1
 	" colorscheme neodark
 
-	colorscheme bclear
-	" colorscheme lucius
+	" colorscheme bclear
 
-	"let g:gruvbox_italic = 1
-	"colorscheme gruvbox8
+	" let g:gruvbox_italic = 1
+	" colorscheme gruvbox8
 
-"	if $TERM != ''
-"		" Transparent background in TUI
-"		au ColorScheme * hi Normal ctermbg=none guibg=none
-"	endif
+	colorscheme lucius
+
+	" if $TERM != ''
+	" 	" Transparent background in TUI
+	" 	au ColorScheme * hi Normal ctermbg=none guibg=none
+	" endif
 
 	" Enable support for colours in TUI
 	set termguicolors
