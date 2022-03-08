@@ -10,6 +10,8 @@
 	rb = svn rebase
 	rlog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"%
 	st = status -a
+[status]
+	submoduleSummary = true
 [color]
 	diff = auto
 	status = auto
