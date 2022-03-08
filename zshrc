@@ -160,6 +160,9 @@ pgweb() {
   pgweb_linux_amd64 --user=postgres --listen=8085 --db=$1
 }
 
+
+alias pubip=curl ifconfig.co/json
+
 alias .=source
 alias '?'="""
 echo 'Aliases:
