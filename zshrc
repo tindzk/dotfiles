@@ -159,6 +159,11 @@ pgweb() {
 }
 
 
+function gitzip {
+	# From https://gist.github.com/LeonardoCardoso/6c083b90a8c327d8c82f#gistcomment-3305458
+	git archive --prefix ${PWD##*/}/ HEAD -o ../${PWD##*/}-$(date "+%Y-%m-%d-%H-%M-%S").zip
+}
+
 alias pubip=curl ifconfig.co/json
 
 alias .=source
