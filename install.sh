@@ -84,11 +84,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable sway@7
 sudo systemctl restart sway@7
 
-sudo cp postgresql.service /usr/lib/systemd/system/postgresql.service
-sudo systemctl daemon-reload
-sudo systemctl enable postgresql
-sudo systemctl restart postgresql
-
 sudo cp logind.conf /etc/systemd/logind.conf
 sudo cp 90-backlight.rules /etc/udev/rules.d/90-backlight.rules
 cp userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
