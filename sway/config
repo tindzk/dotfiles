@@ -164,10 +164,7 @@ output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
 input * xkb_layout  us-custom,ua-custom,de-custom,tr-custom
 input * xkb_variant us-custom
 
-bindsym F1 input * xkb_switch_layout 0
-bindsym F2 input * xkb_switch_layout 1
-bindsym F3 input * xkb_switch_layout 2
-bindsym F4 input * xkb_switch_layout 3
+bindsym $mod+slash exec ~/dotfiles/sway/keyboard-select.py
 
 # Make Octave figures floating to avoid rescaling of axes
 for_window [title="Figure.*"] floating enable
