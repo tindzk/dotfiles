@@ -16,7 +16,6 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
-	Plug 'mcchrish/nnn.vim'
 	Plug 'sbdchd/neoformat'
 	Plug 'tpope/vim-eunuch'
 
@@ -349,15 +348,6 @@ let g:closetag_close_shortcut = '<leader>>'"
 	inoremap <silent> <expr> <S-Tab> &keymap == ""
 		\ ? '<C-o>:setlocal keymap=ru<CR>'
 		\ : '<C-o>:setlocal keymap=<CR>'
-" }}}
-" {{{ nnn
-	" Floating window (neovim latest and vim with patch 8.2.191)
-	let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Debug' } }
-
-	let g:nnn#action = {
-		  \ '<c-t>': 'tab split',
-		  \ '<c-x>': 'split',
-		  \ '<c-v>': 'vsplit' }
 " }}}
 " {{{ Status line
 	" From https://github.com/haorenW1025/dotfiles/blob/master/nvim/config/status-line.vim
