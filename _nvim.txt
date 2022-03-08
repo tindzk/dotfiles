@@ -123,3 +123,6 @@ nvim-tree
   <C-v>  open file in a vertical split
   <C-x>  open file in a horizontal split
   <C-t>  open file in a new tab
+
+
+:retab  Fix indentation
