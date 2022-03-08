@@ -120,7 +120,7 @@ bindsym $mod+Shift+r reload
 bindsym $mod+d exec gtkmenu
 
 # Start terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec foot
 
 # Pulse Audio controls
 bindsym XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
