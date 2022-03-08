@@ -215,6 +215,8 @@ http  python3 -m http.server'
 
 source /usr/share/fzf/key-bindings.zsh
 source ~/dotfiles/auto-ls.zsh
-source ~/dotfiles/zjump.zsh
 source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
+
+alias cd=z
+eval "$(zoxide init zsh)"
