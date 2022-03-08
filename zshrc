@@ -1,7 +1,7 @@
 # History
 HISTFILE=~/.histfile
 HISTSIZE=10000
-SAVEHIST=1000
+SAVEHIST=10000
 
 # Enter directories without `cd` command
 setopt autocd
