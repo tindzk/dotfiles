@@ -110,6 +110,8 @@ alias gl="smerge ."
 alias gcp="$_git cherry-pick"
 alias gcpc="$_git cherry-pick --continue"
 alias gp="$_git push"
+# From https://stackoverflow.com/a/56236629/13300239
+function gps() { $_git submodule foreach --recursive 'git push' }
 function gpo() { $_git push --set-upstream $(git remote | head -n1) $($_git rev-parse --abbrev-ref HEAD) }
 alias gpf="$_git push --force-with-lease"
 alias gsl="$_git submodule update --init --recursive"
