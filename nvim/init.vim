@@ -35,6 +35,7 @@
 	Plug 'plasticboy/vim-markdown'
 	Plug 'chrisbra/csv.vim'
 	Plug 'lervag/vimtex'
+	Plug 'rust-lang/rust.vim'
 
 	call plug#end()
 " }}}
