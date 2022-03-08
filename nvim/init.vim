@@ -249,10 +249,10 @@
 	autocmd VimResized * wincmd =
 " }}}
 " {{{ Tabs
-	nnoremap <silent> <C-t>c :tabnew<CR>
+	nnoremap <silent> <C-t>n :tabnew<CR>
 	nnoremap <silent> <C-t>d :tabclose<CR>
-	nnoremap <silent> <C-t>j :tabprevious<CR>
-	nnoremap <silent> <C-t>k :tabnext<CR>
+	nnoremap <silent> <C-t>h :tabprevious<CR>
+	nnoremap <silent> <C-t>l :tabnext<CR>
 	nnoremap <silent> <C-t>1 :tabn 1<CR>
 	nnoremap <silent> <C-t>2 :tabn 2<CR>
 	nnoremap <silent> <C-t>3 :tabn 3<CR>
