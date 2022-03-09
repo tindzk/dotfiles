@@ -152,10 +152,8 @@ exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
 exec ~/dotfiles/sway/workspace-names.py
 
 # E Ink monitor
-output DP-1 res 2200x1650 scale 1.4
-output DP-1 bg #FFFFFF solid_color
-# Place monitor always to the left; needed when toggling eDP-1
-output DP-1 position 0 0
+output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
+output "Unknown Paperlike H D 0x00000000" bg #FFFFFF solid_color
 
 # Laptop screen
 output eDP-1 scale 2
