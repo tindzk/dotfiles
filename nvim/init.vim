@@ -8,7 +8,6 @@
 	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'rickhowe/diffchar.vim'
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'
 	Plug 'godlygeek/tabular'
