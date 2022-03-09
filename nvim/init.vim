@@ -4,6 +4,7 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
+	Plug 'nanotee/zoxide.vim'
 	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'ryanoasis/vim-devicons'

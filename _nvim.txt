@@ -124,5 +124,5 @@ nvim-tree
   <C-x>  open file in a horizontal split
   <C-t>  open file in a new tab
 
-
-:retab  Fix indentation
+zoxide
+  :Z {query}	cd to the highest ranked directory matching query
