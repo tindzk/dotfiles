@@ -4,7 +4,6 @@
 	Plug 'airblade/vim-gitgutter'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
-	Plug 'luochen1990/rainbow'
 	Plug 'lambdalisue/session.vim'
 	Plug 'ntpeters/vim-better-whitespace'
 	Plug 'ryanoasis/vim-devicons'
@@ -135,9 +134,6 @@
 " {{{ Sessions
 	let g:session_dir = '~/.cache/nvim/sessions'
 	cnoreabbrev So SessionOpen
-" }}}
-" {{{ Rainbow
-	let g:rainbow_active = 1
 " }}}
 " {{{ Search
 	" See also http://linuxcommando.blogspot.com/2008/06/smart-case-insensitive-incremental.html
