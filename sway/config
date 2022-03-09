@@ -10,6 +10,9 @@ titlebar_border_thickness  0
 titlebar_padding           2
 default_border             pixel 1
 
+# Windows
+popup_during_fullscreen smart
+
 # Colours
 set $bg-color            #404552
 
