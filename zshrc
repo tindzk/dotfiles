@@ -229,6 +229,7 @@ source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
 
 alias cd=z
+alias pw="pwgen -s 20"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
