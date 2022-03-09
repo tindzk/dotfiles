@@ -1,2 +1,17 @@
 #!/bin/sh
-swaylock -c FFFFFF
+#
+# From https://www.reddit.com/r/swaywm/comments/gd7976/swayidle_in_lock_script_can_i_temporarily_disable/
+#
+
+swaymsg input '*' xkb_switch_layout 0
+
+con_ids=`swaymsg -t get_tree | jq -r '..|try select(.fullscreen_mode == 1)|.id'`
+for con_id in $con_ids; do
+    swaymsg "[con_id=$con_id]" inhibit_idle none
+done
+
+swaylock -c 000000
+
+for con_id in $con_ids; do
+    swaymsg "[con_id=$con_id]" inhibit_idle fullscreen
+done
