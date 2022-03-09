@@ -4,10 +4,11 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 8
 
 # Borders
-smart_borders             on
-smart_gaps                on
-hide_edge_borders         both
-titlebar_border_thickness 1
+smart_borders              on
+smart_gaps                 on
+titlebar_border_thickness  0
+titlebar_padding           2
+default_border             pixel 1
 
 # Colours
 set $bg-color            #404552
