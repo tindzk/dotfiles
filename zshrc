@@ -148,8 +148,8 @@ function penv2 {
 
 alias http="python3 -m http.server"
 
-alias e=/usr/bin/nvim
-alias ez="/usr/bin/nvim $HOME/.zshrc && source $HOME/.zshrc"
+alias e=nvim
+alias ez="nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/neovide
 
 grb() { g show $1:$2 > $2 }
@@ -242,7 +242,12 @@ pld   source venv/bin/activate
 http  python3 -m http.server'
 """
 
-source /usr/share/fzf/key-bindings.zsh
+if [[ -f "/usr/share/fzf/key-bindings.zsh" ]]; then
+	source /usr/share/fzf/key-bindings.zsh
+else
+	source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+fi
+
 source ~/dotfiles/auto-ls.zsh
 source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
