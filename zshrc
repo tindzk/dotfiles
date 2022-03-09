@@ -173,6 +173,10 @@ function changeDns() {
 	done
 }
 
+function rec() {
+	time=$(date --iso-8601=minutes)
+	ffmpeg -f pulse -i alsa_input.usb-Generic_Realtek_Audio_USB_201701110001-00.analog-stereo -filter:a volume=15dB ~/recordings/$time.ogg
+}
 
 function killZombies() {
 	kill -HUP `ps -A -ostat,ppid | grep -e '^[Zz]' | awk '{print $2}'`
