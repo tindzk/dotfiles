@@ -13,7 +13,6 @@
 	Plug 'godlygeek/tabular'
 	Plug 'justinmk/vim-sneak'
 	Plug 'alvan/vim-closetag'
-	Plug 'sbdchd/neoformat'
 	Plug 'tpope/vim-eunuch'
 
 	" Colour schemes
