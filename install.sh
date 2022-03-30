@@ -91,3 +91,6 @@ cp userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
 mkdir -p ~/.config/octave
 cp ~/dotfiles/octave/qt-settings ~/.config/octave/qt-settings
 ln -s ~/dotfiles/octaverc ~/.octaverc
+
+mkdir -p ~/.cargo
+ln -s ~/dotfiles/cargo/config ~/.cargo/config
