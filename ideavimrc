@@ -1,5 +1,6 @@
-nnoremap H :action Back<CR>
-nnoremap L :action Forward<CR>
+# See https://youtrack.jetbrains.com/issue/VIM-1639
+nmap H <Action>(Back)
+nmap L <Action>(Forward)
 
 nnoremap / :action Find<CR>
 nnoremap n :action FindNext<CR>
