@@ -66,3 +66,5 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
+[pull]
+	twohead = ort
