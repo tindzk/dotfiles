@@ -257,3 +257,7 @@ alias pw="pwgen -s 20"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
+fi
