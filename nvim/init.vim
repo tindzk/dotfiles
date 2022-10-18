@@ -11,7 +11,7 @@
 	Plug 'sgur/vim-editorconfig'
 	Plug 'tomtom/tcomment_vim'
 	Plug 'godlygeek/tabular'
-	Plug 'justinmk/vim-sneak'
+	Plug 'ggandor/leap.nvim'
 	Plug 'alvan/vim-closetag'
 	Plug 'tpope/vim-eunuch'
 
@@ -81,6 +81,9 @@
 	" From https://github.com/neovim/neovim/issues/1936
 	set autoread
 	au FocusGained * :checktime
+
+	" Add Leap motions
+	lua require('leap').add_default_mappings()
 " }}}
 " {{{ Colours
 	" Select colour scheme
