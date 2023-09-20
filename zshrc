@@ -151,6 +151,7 @@ alias http="python3 -m http.server"
 alias e=nvim
 alias ez="nvim $HOME/.zshrc && source $HOME/.zshrc"
 alias eg=/usr/bin/neovide
+alias ncdu=br
 
 grb() { g show $1:$2 > $2 }
 
@@ -251,6 +252,7 @@ fi
 source ~/dotfiles/auto-ls.zsh
 source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
+source ~/.config/broot/launcher/bash/br
 
 alias cd=z
 alias pw="pwgen -s 20"
