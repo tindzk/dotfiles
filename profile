@@ -7,4 +7,5 @@ export JAVA_OPTS="-XX:InitialHeapSize=64m -XX:MaxHeapSize=512m"
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export JAVA_HOME=`/usr/libexec/java_home -v 11`
 	export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+	export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
 fi
