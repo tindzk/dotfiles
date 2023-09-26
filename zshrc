@@ -140,7 +140,7 @@ function penv {
   source venv/bin/activate
 }
 
-alias http="python3 -m http.server"
+alias httpd=miniserve
 
 alias e=hx
 alias nvim=hx
@@ -232,7 +232,7 @@ yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
 ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
 penv  python -m venv venv; venv/bin/activate
 pld   source venv/bin/activate
-http  python3 -m http.server'
+httpd miniserve
 """
 
 if [[ -f "/usr/share/fzf/key-bindings.zsh" ]]; then
