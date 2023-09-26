@@ -140,12 +140,6 @@ function penv {
   source venv/bin/activate
 }
 
-# Create and load virtual Python 2 environment
-function penv2 {
-  [ ! -d "venv/" ] && virtualenv2 venv
-  source venv/bin/activate
-}
-
 alias http="python3 -m http.server"
 
 alias e=hx
@@ -237,7 +231,6 @@ ytb  youtube-dl --all-subs --batch-file=<file>
 yts  youtube-dl --write-auto-sub --sub-lang <lang> <url>
 ytp  youtube-dl https://www.youtube.com/playlist?list=<id>
 penv  python -m venv venv; venv/bin/activate
-penv2 virtualenv2 venv; venv/bin/activate
 pld   source venv/bin/activate
 http  python3 -m http.server'
 """
