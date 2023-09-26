@@ -188,7 +188,7 @@ function gitzip {
 	git archive --prefix ${PWD##*/}/ HEAD -o ../${PWD##*/}-$(date "+%Y-%m-%d-%H-%M-%S").zip
 }
 
-alias pubip=curl ifconfig.co/json
+alias pubip="curl ifconfig.co/json | jq"
 
 alias .=source
 alias '?'="""
