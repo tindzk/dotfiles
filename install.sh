@@ -11,6 +11,7 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/inputrc ~/.inputrc
 # ln -s ~/dotfiles/screenrc ~/.screenrc
 ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
+ln -s ~/dotfiles/helix ~/.config/helix
 
 mkdir -p ~/.xkb/symbols/
 # Sway

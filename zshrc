@@ -148,9 +148,9 @@ function penv2 {
 
 alias http="python3 -m http.server"
 
-alias e=nvim
-alias ez="nvim $HOME/.zshrc && source $HOME/.zshrc"
-alias eg=/usr/bin/neovide
+alias e=hx
+alias nvim=hx
+alias edit-zshrc="hx $HOME/.zshrc && source $HOME/.zshrc"
 alias ncdu=br
 
 grb() { g show $1:$2 > $2 }
@@ -229,9 +229,8 @@ ll   eza --long --git
 lt   eza --tree
 loc  tokei -f --sort=lines
 b    bloop
-e    nvim
-eg   neovide
-ez   nvim $HOME/.zshrc && source $HOME/.zshrc
+e           hx
+edit-zshrc  hx $HOME/.zshrc && source $HOME/.zshrc
 yt   youtube-dl --all-subs
 yta  youtube-dl -f bestaudio
 ytb  youtube-dl --all-subs --batch-file=<file>
