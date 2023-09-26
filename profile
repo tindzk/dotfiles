@@ -9,4 +9,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	export JAVA_HOME=`/usr/libexec/java_home -v 11`
 	export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 	export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
+
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+	[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \
+		. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 fi
