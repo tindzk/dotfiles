@@ -13,6 +13,10 @@ ln -s ~/dotfiles/inputrc ~/.inputrc
 ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 ln -s ~/dotfiles/helix ~/.config/helix
 
+rm ~/.config/rio/config.toml
+mkdir ~/dotfiles/rio
+ln -s ~/dotfiles/rio/config.toml ~/.config/rio/config.toml
+
 mkdir -p ~/.xkb/symbols/
 # Sway
 ln -s ~/dotfiles/xkb/symbols/us-custom ~/.xkb/symbols/us-custom

@@ -1,0 +1,6 @@
+[navigation]
+mode = "NativeTab"
+
+#[adaptive-theme]
+#light = "belafonte-day"
+#dark = "belafonte-night"
