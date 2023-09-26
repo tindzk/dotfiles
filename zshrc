@@ -120,9 +120,9 @@ alias gr="$_git rebase"
 alias grc="$_git rebase --continue"
 
 alias p=mpv
-alias ls=exa
-alias ll="exa --long --git"
-alias lt="exa --tree"
+alias ls=eza
+alias ll="eza --long --git"
+alias lt="eza --tree"
 alias loc="tokei -f --sort=lines"
 
 alias instructor=$HOME/dev/instructor/instructor
@@ -224,9 +224,9 @@ grc  git rebase --continue
 grb  git show \$1:\$2 > \$2     # Restore file <path> from <branch>
                              # Usage: grb <branch> <path>
 p    mpv
-ls   exa
-ll   exa --long --git
-lt   exa --tree
+ls   eza
+ll   eza --long --git
+lt   eza --tree
 loc  tokei -f --sort=lines
 b    bloop
 e    nvim
