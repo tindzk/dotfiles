@@ -84,6 +84,10 @@
 
 	" Add Leap motions
 	lua require('leap').add_default_mappings()
+
+	" See https://neovim.io/news/2022/04
+	let g:do_filetype_lua = 1
+	let g:did_load_filetypes = 0
 " }}}
 " {{{ Colours
 	" Select colour scheme
