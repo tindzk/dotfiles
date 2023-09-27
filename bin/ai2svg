@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+ai=$1
+svg=$(echo "$ai" | sed 's/.ai/.svg/')
+inkscape "$ai" --export-area-drawing --export-margin 20 "--export-plain-svg=$svg"
