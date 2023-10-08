@@ -6,6 +6,8 @@ nnoremap / :action Find<CR>
 nnoremap n :action FindNext<CR>
 nnoremap N :action FindPrevious<CR>
 
+nnoremap gt :action GotoTypeDeclaration<CR>
+
 nnoremap gp :action GotoPreviousError<CR>
 nnoremap gn :action GotoNextError<CR>
 nnoremap gr :action FindUsages<CR>
