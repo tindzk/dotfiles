@@ -30,8 +30,6 @@
     prompt = false
 [difftool "difftastic"]
     cmd = difft "$LOCAL" "$REMOTE"
-[pager]
-    difftool = true
 [merge]
 	tool = vimdiff
 [mergetool]
