@@ -14,7 +14,7 @@ ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 ln -s ~/dotfiles/helix ~/.config/helix
 
 rm ~/.config/rio/config.toml
-mkdir ~/dotfiles/rio
+mkdir ~/.config/rio/
 ln -s ~/dotfiles/rio/config.toml ~/.config/rio/config.toml
 
 mkdir -p ~/.xkb/symbols/
