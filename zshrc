@@ -241,7 +241,6 @@ fi
 source ~/dotfiles/auto-ls.zsh
 source ~/.profile
 source ~/dotfiles/viper-env.plugin.zsh
-source ~/.config/broot/launcher/bash/br
 
 alias cd=z
 alias pw=motus
