@@ -23,3 +23,6 @@ set ideajoin
 
 set visualbell
 set noerrorbells
+
+" See https://stackoverflow.com/a/77897061/13300239
+set clipboard+=unnamedplus
