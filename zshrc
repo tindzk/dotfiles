@@ -142,12 +142,7 @@ function penv {
 
 alias httpd=miniserve
 
-alias e=hx
-alias vi=hx
-alias vim=hx
-alias nvim=hx
-alias edit-zshrc="hx $HOME/.zshrc && source $HOME/.zshrc"
-alias ncdu=br
+alias edit-zshrc="nvim $HOME/.zshrc && source $HOME/.zshrc"
 
 grb() { g show $1:$2 > $2 }
 
