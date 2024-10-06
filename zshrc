@@ -244,7 +244,8 @@ source ~/dotfiles/viper-env.plugin.zsh
 source ~/.config/broot/launcher/bash/br
 
 alias cd=z
-alias pw="pwgen -s 20"
+alias pw=motus
+alias pwgen=motus
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
