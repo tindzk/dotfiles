@@ -54,7 +54,7 @@ focus_wrapping workspace
 # Switch workspaces
 bindsym $mod+comma    workspace prev_on_output
 bindsym $mod+period   workspace next_on_output
-bindsym $mod+Tab      workspace back_and_forth
+bindsym $mod+Tab      [con_mark=_prev] focus
 bindsym $mod+o        exec ~/dotfiles/sway/open-workspace.py
 bindsym $mod+shift+o  exec ~/dotfiles/sway/open-workspace.py move
 bindsym $mod+semicolon  focus output left
@@ -152,6 +152,7 @@ exec swayidle \
 exec waybar
 #exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
 exec ~/dotfiles/sway/workspace-names.py
+exec ~/dotfiles/sway/track_prev_focus.sh
 
 # E Ink monitor
 output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
