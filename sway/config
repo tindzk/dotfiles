@@ -156,8 +156,8 @@ output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
 output "Unknown Paperlike H D 0x00000000" bg #FFFFFF solid_color
 
 # Laptop screen
-output eDP-1 scale 2
-output eDP-1 bg ~/Wallpapers/T1WAU5W2ZB.jpg fill
+output eDP-1 scale 1.6
+output eDP-1 bg ~/wallpapers/wallhaven-jx52wy.jpg fill
 
 input * xkb_layout  us-custom,ua-custom,de-custom,tr-custom
 input * xkb_variant us-custom
