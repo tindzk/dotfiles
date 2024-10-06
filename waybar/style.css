@@ -3,8 +3,7 @@
 * {
     border: none;
     border-radius: 0;
-	/** See https://github.com/ryanoasis/nerd-fonts/issues/127 */
-    font-family: NotoSansMono Nerd Font;
+    font-family: Noto Sans Mono;
     font-size: 12px;
     min-height: 0;
 }
