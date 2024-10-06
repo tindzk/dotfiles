@@ -64,6 +64,8 @@ ln -s ~/dotfiles/bin/reconnect ~/bin/reconnect
 ln -s ~/dotfiles/bin/skype ~/bin/skype
 ln -s /opt/sublime_merge/sublime_merge ~/bin/smerge
 ln -s ~/dotfiles/bin/output ~/bin/output
+ln -s ~/dotfiles/bin/dark.sh ~/bin/dark.sh
+ln -s ~/dotfiles/bin/light.sh ~/bin/light.sh
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes
