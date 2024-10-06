@@ -154,6 +154,7 @@ exec waybar
 exec ~/dotfiles/sway/workspace-names.py
 exec ~/dotfiles/sway/track_prev_focus.sh
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always nm-applet --indicator
 
 # E Ink monitor
 output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
