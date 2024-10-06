@@ -174,8 +174,14 @@ for_window [class="morphologica"] floating enable
 # Arrange all windows as tabs by default
 workspace_layout tabbed
 
-input "1739:32652:SYNA2B31:00_06CB:7F8C_Touchpad" {
+input type:touchpad {
 	tap enabled
+	dwt enabled
+	dwtp enabled
+	natural_scroll disabled
+	pointer_accel 0.1
+	scroll_factor 1.0
+	accel_profile adaptive
 }
 
 input "1739:6022:SYNA7813:00_06CB:1786" {
