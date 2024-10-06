@@ -100,10 +100,10 @@
 
 	" colorscheme bclear
 
-	" let g:gruvbox_italic = 1
-	" colorscheme gruvbox8
+	let g:gruvbox_italic = 1
+	colorscheme gruvbox8
 
-	colorscheme lucius
+	" colorscheme lucius
 
 	" if $TERM != ''
 	" 	" Transparent background in TUI
