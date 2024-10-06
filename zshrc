@@ -256,3 +256,7 @@ eval "$(zoxide init zsh)"
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 fi
+
+# fnm
+export PATH="$HOME/.local/share/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
