@@ -16,3 +16,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \
 		. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 fi
+
+. "$HOME/.cargo/env"
