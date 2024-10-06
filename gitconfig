@@ -7,8 +7,6 @@
 	co = checkout
 	df = diff
 	lg = log --stat --date=auto:human
-    # `git dlog` to show `git log -p` with difftastic.
-    dlog = "!f() { GIT_EXTERNAL_DIFF=difft git log -p --ext-diff; }; f"
 	rb = svn rebase
 	rlog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"%
 	st = status -a
@@ -20,16 +18,10 @@
 	branch = auto
 	ui = true
 [diff]
-    tool = difftastic
-    external = difft
 	rename = copy
 	color = auto
 	tool = vimdiff
 	submodule = diff
-[difftool]
-    prompt = false
-[difftool "difftastic"]
-    cmd = difft "$LOCAL" "$REMOTE"
 [merge]
 	tool = vimdiff
 [mergetool]
