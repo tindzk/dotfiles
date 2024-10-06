@@ -98,4 +98,4 @@ cp ~/dotfiles/octave/qt-settings ~/.config/octave/qt-settings
 ln -s ~/dotfiles/octaverc ~/.octaverc
 
 mkdir -p ~/.cargo
-ln -s ~/dotfiles/cargo/config ~/.cargo/config
+ln -s ~/dotfiles/cargo/config.toml ~/.cargo/config.toml
