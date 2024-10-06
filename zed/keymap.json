@@ -1,0 +1,59 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "H": "pane::GoBack",
+      "L": "pane::GoForward"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-c": "editor::Copy",
+      "cmd-insert": "editor::Copy",
+      "cmd-shift-z": "editor::Redo",
+      "cmd-v": "editor::Paste",
+      "cmd-x": "editor::Cut",
+      "cmd-y": "editor::Redo",
+      "cmd-z": "editor::Undo",
+      "cmd-r": "editor::Rename",
+      "shift-k": "editor::Hover",
+      "ctrl-u": ["workspace::SendKeystrokes", "1 5 k z z"],
+      "ctrl-d": ["workspace::SendKeystrokes", "1 5 j z z"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-c": "terminal::Copy",
+      "cmd-v": "terminal::Paste"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-enter": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-s": "workspace::Save",
+      "cmd-t": "task::Rerun",
+      "cmd-shift-t": "task::Spawn",
+      "ctrl-t": "project_symbols::Toggle"
+    }
+  }
+]

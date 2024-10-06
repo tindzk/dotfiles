@@ -12,6 +12,7 @@ ln -s ~/dotfiles/inputrc ~/.inputrc
 # ln -s ~/dotfiles/screenrc ~/.screenrc
 ln -s ~/dotfiles/vimpcrc ~/.vimpcrc
 ln -s ~/dotfiles/helix ~/.config/helix
+ln -s ~/dotfiles/zed ~/.config/zed
 
 rm ~/.config/rio/config.toml
 mkdir ~/.config/rio/

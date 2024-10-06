@@ -2,7 +2,9 @@
 *.spl
 *.sug
 
-nvim/plugged/
-nvim/.netrwhist
+/nvim/plugged/
+/nvim/.netrwhist
 
 /seed-credentials.toml
+
+/zed/.tmp*
