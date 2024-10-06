@@ -67,6 +67,7 @@ ln -s /opt/sublime_merge/sublime_merge ~/bin/smerge
 ln -s ~/dotfiles/bin/output ~/bin/output
 ln -s ~/dotfiles/bin/dark.sh ~/bin/dark.sh
 ln -s ~/dotfiles/bin/light.sh ~/bin/light.sh
+ln -s ~/dotfiles/bin/record ~/bin/record
 
 mkdir -p ~/.config/git/
 ln -s ~/dotfiles/gitattributes ~/.config/git/attributes

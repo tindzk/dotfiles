@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/recordings/
+wf-recorder -g "$(slurp)" -f "$(date).mkv"
