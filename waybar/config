@@ -3,7 +3,7 @@
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "custom/media", "pulseaudio", "backlight", "clock"],
+    "modules-right": ["network", "cpu", "memory", "battery", "tray", "idle_inhibitor", "wireplumber", "backlight", "custom/weather", "clock"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -63,19 +63,18 @@
         "format-ethernet": " {ipaddr}",
         "format-disconnected": "⚠ Disconnected"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
+        "format-icons": ["🔊", "🔊", "🔊"],
         "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+        "format": "{}°C",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --location Girne",
+        "return-type": "json"
     }
 }
