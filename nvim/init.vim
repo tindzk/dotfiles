@@ -32,6 +32,8 @@
 	Plug 'lervag/vimtex'
 	Plug 'rust-lang/rust.vim'
 
+	Plug 'nvim-tree/nvim-tree.lua'
+
 	call plug#end()
 " }}}
 " {{{ General
@@ -393,4 +395,7 @@ let g:closetag_close_shortcut = '<leader>>'"
 " }}}
 " {{{ vimtex
 	let g:tex_flavor = 'latex'
+" }}}
+" {{{ Tree
+	lua require 'tree'
 " }}}
