@@ -1,5 +1,6 @@
 [navigation]
-mode = "NativeTab"
+# NativeTab is not supported on Linux
+mode = "TopTab"
 
 #[adaptive-theme]
 #light = "belafonte-day"
