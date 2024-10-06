@@ -233,7 +233,11 @@ httpd miniserve
 """
 
 if [[ -f "/usr/share/fzf/key-bindings.zsh" ]]; then
+	# Arch Linux
 	source /usr/share/fzf/key-bindings.zsh
+elif [[ -f "/usr/share/fzf/shell/key-bindings.zsh" ]]; then
+	# Fedora
+	source /usr/share/fzf/shell/key-bindings.zsh
 else
 	source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
 fi
