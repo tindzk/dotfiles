@@ -43,11 +43,9 @@
     },
     "cpu": {
         "format": " {usage:2}%",
-        "on-click": "kitty htop"
     },
     "memory": {
         "format": " {used:0.0f}G",
-        "on-click": "kitty htop"
     },
     "battery": {
         "states": {
