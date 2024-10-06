@@ -18,6 +18,8 @@ rm ~/.config/rio/config.toml
 mkdir ~/.config/rio/
 ln -s ~/dotfiles/rio/config.toml ~/.config/rio/config.toml
 
+ln -s ~/dotfiles/wezterm.lua ~/.wezterm.lua
+
 mkdir -p ~/.xkb/symbols/
 # Sway
 ln -s ~/dotfiles/xkb/symbols/us-custom ~/.xkb/symbols/us-custom
