@@ -3,6 +3,16 @@ xkb_symbols "us-custom" {
 	name[Group1]= "US (custom)";
 	include "us"
 
+	# Non-Apple keyboards
 	key <ESC>  {[ grave, asciitilde ]};
+
+	# Apple keyboard
+	#
+	# Map the key below Esc to ` and ~. The key code is 102 according to
+	# `sudo libinput debug-events`, which corresponds to <LSGT> in xkb.
+	#
+	# See also https://askubuntu.com/questions/444810/editing-keyboard-layout
+	key <LSGT>   {[ grave, asciitilde ]};
+
 	key <CAPS> {[ Escape ]};
 };
