@@ -103,6 +103,8 @@
 	" colorscheme neodark
 
 	" colorscheme bclear
+	colorscheme bclear_modified
+	" colorscheme lucius
 
 	let g:gruvbox_italic = 1
 	colorscheme gruvbox8
