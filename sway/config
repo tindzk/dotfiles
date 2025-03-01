@@ -162,6 +162,11 @@ input type:touchpad {
 	accel_profile adaptive
 }
 
+input type:pointer {
+	pointer_accel 0.5
+	accel_profile flat
+}
+
 input "1739:6022:SYNA7813:00_06CB:1786" {
 	map_to_output eDP-1
 }
