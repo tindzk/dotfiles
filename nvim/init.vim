@@ -41,6 +41,9 @@
 	call plug#end()
 " }}}
 " {{{ General
+	" Disable intro message when starting Vim
+	set shortmess=I
+"
 	" Enable mouse
 	set mouse=a
 
