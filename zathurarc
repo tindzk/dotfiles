@@ -1,5 +1,5 @@
 set guioptions  			svh
-set adjust-open 			width
+#set adjust-open 			width
 set statusbar-basename      true
 set window-title-basename   true
 set selection-clipboard     clipboard
