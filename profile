@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# $TERMINAL is read by fuzzel
+export TERMINAL=foot
+
 export EDITOR=nvim
 export PATH=$HOME/.cargo/bin:$HOME/.rye/shims:$HOME/.yarn/bin:$HOME/bin:$HOME/.local/share/coursier/bin:$PATH
 export LD_LIBRARY_PATH=~/usr/lib:$LD_LIBRARY_PATH
