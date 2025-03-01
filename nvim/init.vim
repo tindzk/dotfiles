@@ -45,7 +45,7 @@
 	set mouse=a
 
 	" Show matching bracket
-	set showmatch
+	" set showmatch
 
 	" Toggle paste mode
 	set pastetoggle=<F7>
