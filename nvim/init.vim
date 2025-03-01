@@ -16,6 +16,7 @@
 	Plug 'michal-h21/vim-zettel'
 	Plug 'sbdchd/neoformat'
 	Plug 'tpope/vim-eunuch'
+	Plug 'dyng/ctrlsf.vim'
 
 	" Colour schemes
 	"Plug 'KeitaNakamura/neodark.vim'
