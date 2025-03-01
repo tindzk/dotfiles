@@ -180,6 +180,7 @@ function gitzip {
 }
 
 alias pubip="curl ifconfig.co/json | jq"
+alias pa="mpv --vo=null"
 
 alias .=source
 alias '?'="""
