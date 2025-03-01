@@ -10,7 +10,7 @@ layouts = [
 ]
 
 p = Popen(
-	["wofi", "--show", "dmenu", "-i"],
+	["fuzzel", "-d"],
 	stdout=PIPE,
 	stdin=PIPE,
 	stderr=PIPE
