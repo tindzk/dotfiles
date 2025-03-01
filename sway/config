@@ -6,10 +6,13 @@ font pango:DejaVu Sans Mono 8
 # Borders
 smart_borders             on
 smart_gaps                on
-hide_edge_borders         both
 titlebar_border_thickness 1
 titlebar_padding          2 1
 default_border            pixel 1
+hide_edge_borders         both
+
+# Windows
+popup_during_fullscreen smart
 
 # Colours
 set $bg-color            #404552
@@ -18,11 +21,6 @@ set $focused-bg-color    #FFFFFF
 set $active-bg-color     #FFFFFF
 set $inactive-bg-color   #FFFFFF
 set $urgent-bg-color     #FFFFFF
-
-#set $focused-border-color    #404552
-#set $active-border-color     #000000
-#set $inactive-border-color   #9da3ad
-#set $urgent-border-color     #E53935
 
 set $focused-border-color    #000000
 set $active-border-color     #a6a6a6
