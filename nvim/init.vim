@@ -19,11 +19,11 @@
 	Plug 'tpope/vim-eunuch'
 
 	" Colour schemes
-	Plug 'KeitaNakamura/neodark.vim'
-	Plug 'mhartington/oceanic-next'
-	Plug 'lifepillar/vim-gruvbox8'
-	Plug 'jonathanfilip/vim-lucius'
-	Plug 'vim-scripts/bclear'
+	"Plug 'KeitaNakamura/neodark.vim'
+	"Plug 'mhartington/oceanic-next'
+	"Plug 'lifepillar/vim-gruvbox8'
+	"Plug 'jonathanfilip/vim-lucius'
+	"Plug 'vim-scripts/bclear'
 
 	Plug 'norcalli/nvim-colorizer.lua'
 
