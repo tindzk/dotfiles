@@ -402,6 +402,20 @@ let g:closetag_close_shortcut = '<leader>>'"
 " {{{ vimtex
 	let g:tex_flavor = 'latex'
 " }}}
+" {{{ Vimwiki
+	let g:vimwiki_list = [{'path':'~/notes/zettel/','ext':'.md','syntax':'markdown'}, {'path':'~/notes/inbox/','ext':'.md','syntax':'markdown'}]
+	let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
+	let g:zettel_options = [{"front_matter" : {"tags" : ""}}, {"front_matter" : {"tags" : ""}}]
+
+	" inbox
+	nnoremap <silent> <leader>zi :e ~/notes/inbox/index.md<CR>
+	" knowledge base
+	nnoremap <silent> <leader>zk :e ~/notes/zettel/index.md<CR>
+
+	autocmd FileType vimwiki nmap <buffer> <leader>zo :ZettelOpen<CR>
+	autocmd FileType vimwiki nmap <buffer> <leader>zn :ZettelNew<CR>
+	autocmd FileType vimwiki nmap <buffer> <leader>zs :ZettelSearch<CR>
+" }}}
 " {{{ Tree
 	lua require 'tree'
 " }}}
