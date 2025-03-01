@@ -1,3 +1,1 @@
-#*.docx diff=pandoc
-#*.doc diff=pandoc
 *.odt diff=odt

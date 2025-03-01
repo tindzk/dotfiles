@@ -4,10 +4,14 @@ set $mod Mod1
 font pango:DejaVu Sans Mono 8
 
 # Borders
-smart_borders             on
-smart_gaps                on
-hide_edge_borders         both
-titlebar_border_thickness 1
+smart_borders              on
+smart_gaps                 on
+titlebar_border_thickness  0
+titlebar_padding           2
+default_border             pixel 1
+
+# Windows
+popup_during_fullscreen smart
 
 # Colours
 set $bg-color            #404552
@@ -105,9 +109,9 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+r reload
 
 # Application launcher
-bindsym $mod+d     exec dmenu_run
+bindsym $mod+d     exec fuzzel
 # MacBook
-bindsym XF86Search exec dmenu_run
+bindsym XF86Search exec fuzzel
 
 # Start terminal
 bindsym $mod+Return exec foot
@@ -119,7 +123,7 @@ bindsym XF86AudioNext exec playerctl --player="mpv,%any" next
 bindsym XF86AudioPrev exec playerctl --player="mpv,%any" previous
 
 # Lock screen
-# bindsym $mod+x exec lock
+bindsym $mod+x exec lock
 
 exec waybar
 #exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
@@ -133,8 +137,8 @@ output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
 output "Unknown Paperlike H D 0x00000000" bg #FFFFFF solid_color
 
 # Laptop screen
-output eDP-1 scale 1.6
-output eDP-1 bg ~/wallpapers/wallhaven-jx52wy.jpg fill
+#output eDP-1 scale 1.6
+#output eDP-1 bg ~/wallpapers/wallhaven-jx52wy.jpg fill
 
 input * xkb_layout  us-custom,ua-custom,de-custom,tr-custom
 input * xkb_variant us-custom

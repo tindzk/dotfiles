@@ -3,7 +3,7 @@
     "height": 24,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["network", "cpu", "memory", "temperature", "tray", "clock", "idle_inhibitor"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "tray", "idle_inhibitor", "clock"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

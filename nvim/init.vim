@@ -36,14 +36,12 @@
 	Plug 'lervag/vimtex'
 	Plug 'rust-lang/rust.vim'
 
-	Plug 'nvim-tree/nvim-tree.lua'
-
 	call plug#end()
 " }}}
 " {{{ General
 	" Disable intro message when starting Vim
 	set shortmess=I
-"
+
 	" Enable mouse
 	set mouse=a
 
@@ -106,13 +104,13 @@
 	" colorscheme neodark
 
 	" colorscheme bclear
+
+	"let g:gruvbox_italic = 1
+	"colorscheme gruvbox8
+
+	" colorscheme lucius
+
 	colorscheme bclear_modified
-	" colorscheme lucius
-
-	let g:gruvbox_italic = 1
-	colorscheme gruvbox8
-
-	" colorscheme lucius
 
 	" if $TERM != ''
 	" 	" Transparent background in TUI
@@ -244,7 +242,7 @@
 	tnoremap <silent> <C-w> <C-\><C-n>
 " }}}
 " {{{ Fuzzy Path Matching
-" 	" From https://dev.to/zanets/fancy-fzf-on-neovim-41m8
+ 	" From https://dev.to/zanets/fancy-fzf-on-neovim-41m8
 	let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Comment' } }
 	let g:fzf_colors = {
 	  \ 'fg':      ['fg', 'fzf_fg'],
@@ -439,7 +437,4 @@ let g:closetag_close_shortcut = '<leader>>'"
 	autocmd FileType vimwiki nmap <buffer> <leader>zo :ZettelOpen<CR>
 	autocmd FileType vimwiki nmap <buffer> <leader>zn :ZettelNew<CR>
 	autocmd FileType vimwiki nmap <buffer> <leader>zs :ZettelSearch<CR>
-" }}}
-" {{{ Tree
-	lua require 'tree'
 " }}}
