@@ -110,8 +110,7 @@ bindsym $mod+d     exec dmenu_run
 bindsym XF86Search exec dmenu_run
 
 # Start terminal
-#bindsym $mod+Return exec wezterm
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec foot
 
 # Player controls
 bindsym XF86AudioPlay exec playerctl --player="mpv,%any" play-pause
