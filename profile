@@ -17,6 +17,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 		. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 fi
 
-if [[ "$HOSTNAME" != "pi4-desktop" ]]; then
+if [[ "$HOST" != "pi4-desktop" ]]; then
 	. "$HOME/.cargo/env"
 fi

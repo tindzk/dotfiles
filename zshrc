@@ -258,7 +258,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 fi
 
-if [[ "$HOSTNAME" != "pi4-desktop" ]]; then
+if [[ "$HOST" != "pi4-desktop" ]]; then
 	# fnm
 	export PATH="$HOME/.local/share/fnm:$PATH"
 	eval "$(fnm env --use-on-cd)"
