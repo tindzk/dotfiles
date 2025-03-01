@@ -128,6 +128,7 @@ bindsym $mod+x exec lock
 
 exec waybar
 #exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
+exec ~/dotfiles/sway/eink-init.sh
 exec ~/dotfiles/sway/workspace-names.py
 exec ~/dotfiles/sway/track_prev_focus.sh
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
