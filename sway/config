@@ -126,17 +126,25 @@ bindsym XF86AudioPrev exec playerctl --player="mpv,%any" previous
 # Lock screen
 bindsym $mod+x exec lock
 
-exec waybar
+seat * xcursor_theme default 48
+
+# Timeout in milliseconds
+seat * hide_cursor 60000
+
+# Timeout in seconds
+exec swayidle \
+    timeout 60 /home/tim/dotfiles/sway/start-slideshow.sh \
+       resume /home/tim/dotfiles/sway/stop-slideshow.sh
+
 #exec wlsunset -l 41.0 -L 28.9 -t 2500 -T 5500 -g 0.75
-exec ~/dotfiles/sway/eink-init.sh
+exec /home/tim/dotfiles/sway/stop-slideshow.sh
 exec ~/dotfiles/sway/workspace-names.py
 exec ~/dotfiles/sway/track_prev_focus.sh
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec_always nm-applet --indicator
 
 # E Ink monitor
 output "Unknown Paperlike H D 0x00000000" res 2200x1650 scale 1.4
-output "Unknown Paperlike H D 0x00000000" bg #FFFFFF solid_color
 
 # Laptop screen
 #output eDP-1 scale 1.6
