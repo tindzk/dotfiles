@@ -244,7 +244,28 @@
 	tnoremap <silent> <C-w> <C-\><C-n>
 " }}}
 " {{{ Fuzzy Path Matching
-	nnoremap <silent> <C-p> :<C-u>FZF<CR>
+" 	" From https://dev.to/zanets/fancy-fzf-on-neovim-41m8
+	let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Comment' } }
+	let g:fzf_colors = {
+	  \ 'fg':      ['fg', 'fzf_fg'],
+	  \ 'hl':      ['fg', 'fzf_hl'],
+	  \ 'fg+':     ['fg', 'fzf_fgp'],
+	  \ 'hl+':     ['fg', 'fzf_hlp'],
+	  \ 'info':    ['fg', 'fzf_info'],
+	  \ 'prompt':  ['fg', 'fzf_prompt'],
+	  \ 'pointer': ['fg', 'fzf_pointer'],
+	  \ 'spinner': ['fg', 'fzf_spinner'] }
+
+	nnoremap <silent> <C-p> :<C-u>Files<CR>
+
+	set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+	nnoremap <C-f> :<C-u>Rg<space>
+
+	" Preview for rg
+	command! -bang -nargs=* Rg
+	  \ call fzf#vim#grep(
+	  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+	  \   fzf#vim#with_preview(), <bang>0)
 " }}}
 " {{{ Clipboard
 	" Use system clipboard
