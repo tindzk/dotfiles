@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: DejaVu Sans Mono;
+    font-family: Noto Sans Mono;
     font-size: 14px;
     min-height: 0;
 }
@@ -24,7 +24,7 @@ window#waybar {
     border: 1px solid #5C6773;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #tray, #mode {
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #wireplumber, #idle_inhibitor, #tray, #mode {
     padding: 0;
     margin: 0 8px;
 }
