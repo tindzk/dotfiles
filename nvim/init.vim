@@ -43,9 +43,6 @@
 	" Show matching bracket
 	set showmatch
 
-	" Toggle paste mode
-	set pastetoggle=<F7>
-
 	" Incremental substitutions
 	set inccommand=split
 
