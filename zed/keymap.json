@@ -3,14 +3,14 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "H": "pane::GoBack",
-      "L": "pane::GoForward"
-    }
+      "L": "pane::GoForward",
+    },
   },
   {
     "context": "Pane",
     "bindings": {
-      "cmd-w": "pane::CloseActiveItem"
-    }
+      "cmd-w": "pane::CloseActiveItem",
+    },
   },
   {
     "context": "Editor",
@@ -23,29 +23,29 @@
       "cmd-y": "editor::Redo",
       "cmd-z": "editor::Undo",
       "cmd-r": "editor::Rename",
-      "shift-k": "editor::Hover",
       "ctrl-u": ["workspace::SendKeystrokes", "1 5 k z z"],
-      "ctrl-d": ["workspace::SendKeystrokes", "1 5 j z z"]
-    }
+      "ctrl-d": ["workspace::SendKeystrokes", "1 5 j z z"],
+    },
   },
   {
     "context": "Terminal",
     "bindings": {
       "cmd-c": "terminal::Copy",
-      "cmd-v": "terminal::Paste"
-    }
+      "cmd-v": "terminal::Paste",
+    },
   },
   {
     "context": "vim_mode == normal",
     "bindings": {
-      "g r": "editor::FindAllReferences"
-    }
+      "g r": "editor::FindAllReferences",
+    },
   },
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "cmd-enter": "editor::ToggleCodeActions"
-    }
+      "cmd-enter": "editor::ToggleCodeActions",
+      "ctrl-p": "file_finder::Toggle",
+    },
   },
   {
     "context": "Workspace",
@@ -53,7 +53,21 @@
       "cmd-s": "workspace::Save",
       "cmd-t": "task::Rerun",
       "cmd-shift-t": "task::Spawn",
-      "ctrl-t": "project_symbols::Toggle"
-    }
-  }
+      "ctrl-t": "project_symbols::Toggle",
+    },
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction",
+      "alt-l": null,
+    },
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "super-tab": "editor::AcceptEditPrediction",
+      "alt-l": null,
+    },
+  },
 ]
