@@ -1,4 +1,4 @@
-$env.PATH = ($env.PATH | prepend '/opt/homebrew/bin')
+$env.PATH = ($env.PATH | prepend ['/opt/homebrew/bin' '/opt/homebrew/sbin'])
 $env.PATH = ($env.PATH | prepend '~/bin')
 $env.PATH = ($env.PATH | prepend '~/.cargo/bin')
 
@@ -9,11 +9,11 @@ $env.LDFLAGS = "-L/opt/homebrew/opt/llvm/lib"
 
 $env.PATH = ($env.PATH | prepend '~/.local/lib/kache/shims')
 
-# Running an external command like brew to set an env var
-$env.LIBCLANG_PATH = $"((brew --prefix llvm | str trim)/lib)"
+$env.LIBCLANG_PATH = '/opt/homebrew/opt/llvm/lib'
 
 # GPG and SSH Agent
-$env.GPG_TTY = (tty | str trim)
+# tty fails without a terminal, which would abort the whole config
+$env.GPG_TTY = (try { tty | str trim } catch { '' })
 $env.SSH_AUTH_SOCK = $"($env.HOME)/.gnupg/S.gpg-agent.ssh"
 
 # Launching gpg-agent (external command)
@@ -30,3 +30,5 @@ if not (which fnm | is-empty) {
         }
     )
 }
+
+$env.PATH = ($env.PATH | uniq)
