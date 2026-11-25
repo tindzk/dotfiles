@@ -8,3 +8,5 @@
 /seed-credentials.toml
 
 /zed/.tmp*
+
+/macos/karabiner/automatic_backups/
