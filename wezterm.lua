@@ -16,8 +16,14 @@ function scheme_for_appearance(appearance)
   end
 end
 
-return {
+local config = {
   color_scheme = scheme_for_appearance(get_appearance()),
   check_for_updates = false,
   hide_tab_bar_if_only_one_tab = true
 }
+
+if wezterm.target_triple:find 'darwin' then
+  config.default_prog = { '/opt/homebrew/bin/nu' }
+end
+
+return config
