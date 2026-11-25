@@ -64,10 +64,22 @@
     },
   },
   {
-    "context": "Editor && edit_prediction_conflict",
+    "context": "Editor && (edit_prediction && (showing_completions || in_leading_whitespace))",
     "bindings": {
       "super-tab": "editor::AcceptEditPrediction",
       "alt-l": null,
+    },
+  },
+  {
+    // The JetBrains base keymap binds cmd-- to editor::Fold and cmd-+ to
+    // editor::UnfoldLines in the Editor context, which shadows the font size
+    // bindings. Rebind them here so they also work while an editor is focused.
+    // These keys change only the buffer font size.
+    "context": "Editor",
+    "bindings": {
+      "cmd--": ["zed::DecreaseBufferFontSize", { "persist": false }],
+      "cmd-=": ["zed::IncreaseBufferFontSize", { "persist": false }],
+      "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
     },
   },
 ]
