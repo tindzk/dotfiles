@@ -7,50 +7,93 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "group_by": "staging",
+    "dock": "left"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    },
+  },
+  "agent": {
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {
+        "delete_path": {
+          "default": "deny",
+        },
+      },
+    },
+  },
   "project_panel": {
+    "dock": "left",
     "auto_reveal_entries": false,
   },
   "auto_update": false,
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
-  "outline_panel": {
-    "dock": "right",
-  },
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark",
+    "light": "Gradox Light",
+    "dark": "Gruvbox Dark",
   },
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 12,
   // "buffer_font_family": "Zed Plex Mono",
   // "buffer_font_family": "CommitMono",
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_size": 14,
+  // "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 12,
   "base_keymap": "JetBrains",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
   "autosave": "on_focus_change",
   "tabs": { "file_icons": true },
   "languages": {
     "Rust": {
+      // Display width of hard tabs; most repos here use `hard_tabs = true`
       "tab_size": 2,
       "inlay_hints": {
         "enabled": true,
-        "show_type_hints": true,
-        "show_parameter_hints": true,
-        "show_other_hints": true,
       },
-    },
-    "Python": {
-      "format_on_save": "off",
     },
   },
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
+        "cargo": {
+          // Separate from `target/` so terminal builds neither wait on its lock nor rebuild
+          // after a run with different env or features
+          "targetDir": "target/zed-rust-analyzer",
+        },
         // Use `-p` instead of `--workspace` for cargo check
         "check": {
           "workspace": false,
+        },
+        "procMacro": {
+          "enable": true,
+          "ignored": {
+            "async-trait": ["async_trait"],
+            "napi-derive": ["napi"],
+            "async-recursion": ["async_recursion"]
+          }
+        },
+        "checkOnSave": true,
+        "diagnostics": {
+          "disabled": [
+            // Emitted for the macros in `procMacro.ignored`
+            "proc-macro-disabled",
+          ],
         },
       },
     },
@@ -60,6 +103,9 @@
       "on": {
         "activate_script": "nushell",
       },
+    },
+    "shell": {
+      "program": "/opt/homebrew/bin/nu",
     },
   },
   "git": {
