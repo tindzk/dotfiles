@@ -8,3 +8,10 @@ ln -s ~/dotfiles/nvim ~/.config/nvim
 
 mkdir -p ~/.cargo
 ln -s ~/dotfiles/macos/cargo/config.toml ~/.cargo/config.toml
+
+mkdir -p ~/Library/Application\ Support/nushell
+ln -s ~/dotfiles/macos/nushell/config.nu ~/Library/Application\ Support/nushell/config.nu
+
+# Karabiner rewrites karabiner.json atomically, so link the directory, not the file
+mkdir -p ~/.config
+ln -s ~/dotfiles/macos/karabiner ~/.config/karabiner
